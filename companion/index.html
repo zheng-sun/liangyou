@@ -2,13 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3672694-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?fa98b91e638fc607d0335693fb173e7f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="css/layout.css" />
-<link rel="stylesheet" type="text/css" href="css/lrtk.css" />
+<link rel="stylesheet" type="text/css" href="css/org.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/pptBox.js"></script>
+<script type="text/javascript" src="js/gun.js"></script>
+<script type="text/javascript" src="js/org.js"></script>
 </head>
 <body>
 <!-- logo 和 搜索连接 -->
@@ -64,20 +84,39 @@
 <!-- 内容部分开始  -->
 <div class="content" style="margin-top:0px;">
 	<div class="xxl_clear"></div>
-	<div id="xxx">
-		 <script>
-		 var box =new PPTBox();
-		 box.width = 900; //宽度
-		 box.height = 350;//高度
-		 box.autoplayer = 3;//自动播放间隔时间
-
-		 box.add({"url":"images/tu1.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室1"})
-		 box.add({"url":"images/tu2.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室2"})
-		 box.add({"url":"images/tu3.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室3"})
-		 box.add({"url":"images/tu4.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室4"})
-		 box.show();
-		</script>
+	<div class="pro-switch">
+		<div class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_home.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_yuetu.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_nba.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_stock.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_auto.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript">
+	    $(function(){
+	      $('.flexslider').flexslider({
+	        animation: "slide",
+	        start: function(slider){
+	          //$('body').removeClass('loading');
+	        }
+	      });
+	    });
+    </script>
 	<div class="xxl_clear"></div>
 	<div class="zx">
 		<p class="xxl_title">最新 News</p>	
