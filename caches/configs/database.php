@@ -4,14 +4,14 @@ return array (
 	'default' => array (
 		'hostname' => 'localhost',
 		'port' => 3306,
-		'database' => 'phpcmsv9',
-		'username' => '',
+		'database' => 'liangyou',
+		'username' => 'root',
 		'password' => '',
 		'tablepre' => 'v9_',
 		'charset' => 'utf8',
 		'type' => 'mysql',
 		'debug' => true,
-		'pconnect' => 0,
+		'pconnect' => 1,
 		'autoconnect' => 0
 		),
 );
