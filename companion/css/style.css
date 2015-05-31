@@ -830,16 +830,10 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     height: 195px;
 }
 
-#new_slider{width:450px; height:390px; overflow:hidden; position:relative;}
-#new_slider ul{height:224px;}
-#new_slider ul li{width:450px; height:390px; float:left; text-align:center;}
-#new_slider ul li img{width:450px; height:390px; display:block; border:none;}
-
-#new_slider #slider_counter{bottom:10px; right:10px; position:absolute; height:16px;}
-#new_slider #slider_counter li{width:8px; height:8px; background:#60746a; margin-left:5px; font-size:0; cursor:pointer; border-radius: 8px;margin-top: 12px;}
-#new_slider #slider_counter .current{background:#f39801;}
-
-#new_slider #slider_title{width:450px; height:60px; bottom:0; left:0; position:absolute; background:#000000; color:#ffffff; opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50); text-align: center; font: 400 19px/60px "黑体";display: none;}
+.page4-block1 .picshow {
+    width:450px;
+    height:390px;
+}
 
 .page4-block2 {
     margin-bottom: 100px;
