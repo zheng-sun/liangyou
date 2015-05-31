@@ -1,0 +1,59 @@
+.mainbox{
+    overflow:hidden;
+    position:relative;
+}
+.flashbox{
+   overflow:hidden;
+    position:relative;
+}
+.imagebox{
+    text-align:right;position:relative;z-index:999;
+}
+
+.bitdiv{display:inline-block;width:18px;height:18px;margin:0 10px 10px 0px;cursor:pointer;float:right;}
+.defimg{background-image:url(../images/02.png)}
+.curimg{background-image:url(../images/01.png)}
+
+
+
+
+
+/* 顶部搜索框样式 */
+#search input[type="text"] {
+    background: url(../images/search-dark.png) no-repeat 10px 6px #D5D5D5;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 200px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    width: 200px;
+    }
+
+
+
+ul,li {list-style-type:none; text-transform:capitalize;}
+/*menu*/
+#nav { display:block;}
+#nav .jquery_out {float:left;line-height:32px;display:block; text-align:center; color:#000;font:18px/32px "微软雅黑"; background:#062723 repeat-x;}
+#nav .jquery_out .smile {padding-left:1em;}
+#nav .jquery_inner {margin-left:16px;}
+#nav .jquery {margin-right:1px;padding:0 2em;}
+#nav .mainlevel {background:#fff; float:left; background-image:url(../images/xljt.png); background-repeat:no-repeat; background-position:90px 10px;  width:120px; color:#333333;/*IE6 only*/}
+#nav .mainlevel a {color:#000; text-decoration:none; line-height:32px; display:block; padding:0 20px; width:100px;}
+#nav .mainlevel a:hover {color:#000; text-decoration:none;}
+#nav .mainlevel ul {display:none; position:absolute; z-index:99999;}
+#nav .mainlevel li {border-top:1px solid #fff; background:#164C3F; width:120px;/*IE6 only*/}b
