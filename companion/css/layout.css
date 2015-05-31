@@ -45,6 +45,15 @@ hr{
 	width:225px;
 	float:left;
 }
+.zx .art_top{
+	width: 450px;
+	height: 250px;
+	float: left;
+}
+.art_top .art_top_pic img{
+	width: 450px;
+	height: 250px;
+}
 .zx ul li .title{
 	width:225px;
 	height: 30px;
