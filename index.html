@@ -1,30 +1,271 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
-<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
-<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
-<title>PHPCMS</title>
-<style type="text/css">
-<!--
-.style1 {
-	color: #006699;
-	font-weight: bold;
-	font-size: 14px;
-}
-body,td,th {
-	color: #7C99E2;
-}
-body {
-	background-color: #0066CC;
-}
-.style2 {color: #FFFFFF}
--->
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHPCMS演示站</title>
+<meta name="keywords" content="PHPCMS演示站">
+<meta name="description" content="PHPCMS演示站">
+<link rel="stylesheet" type="text/css" href="http://localhost/liangyou/statics/css/liangyou/css/layout.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost/liangyou/statics/css/liangyou/css/lrtk.css" />
+<link rel="stylesheet" type="text/css" href="http://localhost/liangyou/statics/css/liangyou/css/style.css" />
+<script type="text/javascript" src="http://localhost/liangyou/statics/js/liangyou/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://localhost/liangyou/statics/js/liangyou/js/index.js"></script>
+<script type="text/javascript" src="http://localhost/liangyou/statics/js/liangyou/js/pptBox.js"></script>
 </head>
 <body>
-<div align="center" class="style1"><a href="index.php?m=admin" class="style2">首页尚未生成，请点击这里进入后台设置相关参数并发布网页</a></div>
+<!-- logo 和 搜索连接 -->
+<div class="block1 container-900 mg-auto clearfix">
+  <h1>良友</h1>
+  <div class="block1right">
+        <ul class="ul">
+                    <li><a href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=9" title="良友北京">良友北京<span>Beijing</span></a></li>
+                    <li><a href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=10" title="良友上海">良友上海<span>Shanghai</span></a></li>
+                    <li><a href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=11" title="良友香港">良友香港<span>Hong Kang</span></a></li>
+                    <li><a href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=12" title="东方良友">东方良友<span>Oriental Companion</span></a></li>
+                    <li><a href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=13" title="良友书院">良友书院<span>Companion</span></a></li>
+                </ul>
+            <div class="searchcontent">
+          <form id="searchForm" method="get" target="_blank" action="" name="form_search">
+              <input id="searchWord" class="searchname fl" type="text" onclick=" document.getElementById('searchWord').style.color='#000000';
+    if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
+              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl">
+          </form>
+      </div>
+
+      <div id="dropdown">
+          <input class="input_select" type="text" value="类型"/>
+          <ul>
+              <li><a href="#" rel="2" target="_self">1</a></li>
+              <li><a href="#" rel="3" target="_self">12</a></li>
+              <li><a href="#" rel="4" target="_self">12</a></li>
+              <li><a href="#" rel="5" target="_self">24</a></li>
+          </ul>
+      </div>
+
+      <div id="dropdown2">
+          <input class="input_select" type="text" value="智能"/>
+          <ul>
+              <li><a href="#" rel="2" target="_self">1</a></li>
+              <li><a href="#" rel="3" target="_self">12</a></li>
+              <li><a href="#" rel="4" target="_self">12</a></li>
+              <li><a href="#" rel="5" target="_self">24</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<!-- 主导航 -->
+<div class="block2 container-900 mg-auto overflow clearfix" style="margin-bottom: 0px;">
+  <ul class="clearfix">
+                                                          <li><a  href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=14" title="良友动态" >良友动态<span>Trends</span></a></li>
+                  <li><a  href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=15" title="行业资讯" >行业资讯<span>Doc Time</span></a></li>
+                  <li><a  href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=16" title="文化空间" >文化空间<span>Saloon</span></a></li>
+                  <li><a  href="http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=17" title="良友出品" >良友出品<span>Production</span></a></li>
+          </ul>
+</div>
+<!-- 头部结束  -->
+<!-- 内容部分开始  -->
+<div class="content" style="margin-top:0px;">
+	<div class="xxl_clear"></div>
+	<div id="xxx">
+		 <script>
+		 var box =new PPTBox();
+		 box.width = 900; //宽度
+		 box.height = 350;//高度
+		 box.autoplayer = 3;//自动播放间隔时间
+
+		 box.add({"url":"images/tu1.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室1"})
+		 box.add({"url":"images/tu2.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室2"})
+		 box.add({"url":"images/tu3.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室3"})
+		 box.add({"url":"images/tu4.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室4"})
+		 box.show();
+		</script>
+	</div>
+	<div class="xxl_clear"></div>
+	<div class="zx">
+		<p class="xxl_title">最新 News</p>
+        		<ul class="xxl_clear">
+        			<li>
+				<div class="pic">
+					<a href="http://localhost/liangyou/index.php?m=content&c=index&a=show&catid=14&id=1" target="_blank"><img src="http://localhost/liangyou/uploadfile/2015/0531/20150531125150937.jpg" width="225px" /></a>
+				</div>
+				<div class="title"><a href="#" >《2015GZDOC》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+        		</ul>
+        	</div>
+	<div class="xxl_clear"></div>
+	<div class="zx">
+		<p class="xxl_title">记录时间 Doc Time</p>	
+        		<ul class="xxl_clear">
+                  
+                    <li class="art_top">
+				<div class="art_top_pic">
+					<a href="http://localhost/liangyou/index.php?m=content&c=index&a=show&catid=15&id=2">
+						<img src="http://localhost/liangyou/uploadfile/2015/0531/20150531012358968.jpg" width="450px" height="250px" />
+					</a>
+				</div>
+			</li>
+                		</ul>
+        	</div>
+	<!-- 文化活动 -->
+	<div class="page3-block1 container-900 mg-auto overflow clearfix">
+		<p class="xxl_title">文化活动 Activity</p>
+		<p class="xxl_title activity_nav">
+			<span>沙龙&nbsp;&nbsp;|</span>
+			<span>公益讲堂&nbsp;&nbsp;|</span>
+			<span>音乐会&nbsp;&nbsp;|</span>
+			<span>课程</span>
+		</p>
+	    <div class="slideinner overflow">
+		    <ul class="clearfix overflow">
+		        <li>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                        <div class="text">
+		                            <a href=""><h2>《中国记录人》</h2></a>
+		                            <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                        </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+
+		        </li>
+		        <li>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		            <div class="list-inner fl tianstion">
+		                <div class="time">6月1 Mon</div>
+		                <a href="" class="imgCon" title="">
+		                    <img src="images/pic.jpg" alt=""  />
+		                </a>
+		                <div class="priceCon">
+
+		                    <div class="text">
+		                        <a href=""><h2>中国记录人</h2></a>
+		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                    </div>
+
+		                </div>
+		            </div>
+		        </li>
+		    </ul>
+	    </div>
+	</div>
+
+</div>
+<div class="xxl_clear"></div>
+<!--友情连接-->
+<div class="block5" style="margin-top:50px;">
+  <div class="container-900 mg-auto overflow clearfix">
+      <div class="title">与良友成为合作伙伴 <span>Work with COMPANION</span></div>
+      <ul>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我要投广告</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+          <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
+      </ul>
+  </div>
+  <div class="footer">
+      <div><a href="" title="影像制品营业许可证">影像制品营业许可证</a><a href="" title="影像制品营业许可证">影像制品营业许可证</a><a href="" title="影像制品营业许可证">影像制品营业许可证</a></div>
+      <p>中国赴马里维和部队在马里加奥维部队在马里加奥维和任务区正式完成第二次轮换交接任务区正式完成第二次轮换交接</p>
+      <p>中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接</p>
+      <p>中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接</p>
+  </div>
+</div>
+
+<script>
+    slideSwitch3(".slideinner","slidehover");
+</script>
 </body>
 </html>
