@@ -1,40 +1,86 @@
 {template "content","header"}
-<!--main-->
-<div class="main">
-	<div class="col-left">
-    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
-    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
-        <ul class="list lh24 f14">
-{loop $data $r}
-	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
-	{if $n%5==0}<li class="bk20 hr"></li>{/if}
-{/loop}
-        </ul>
-        <div id="pages" class="text-c">{$pages}</div>
-{/pc}
-  </div>
-    <div class="col-auto">
-        <div class="box">
-            <h5 class="title-2">频道总排行</h5>
-             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
-            <ul class="content digg">
-				{loop $data $r}
-					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
-				{/loop}
-            </ul>
-            {/pc}
-        </div>
-        <div class="bk10"></div>
-        <div class="box">
-            <h5 class="title-2">频道本月排行</h5>
-             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
-            <ul class="content rank">
-				{loop $data $r}
-				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
-				{/loop}
-            </ul>
-            {/pc}
-        </div>
-    </div>
+
+<!-- 内容部分开始  -->
+<div class="xxl_clear"></div>
+<div class="zxzx">
+	<div class="xxl_top_5">
+		<p class="xxl_top5_title">TOP 5</p>	
+		<ul class="xxl_clear" style="float:left;">
+			<li>
+				<div class="pic">
+					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+				</div>
+				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+			<li>
+				<div class="pic">
+					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+				</div>
+				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+			<li>
+				<div class="pic">
+					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+				</div>
+				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+			<li>
+				<div class="pic">
+					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+				</div>
+				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+			<li>
+				<div class="pic">
+					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+				</div>
+				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="xxl_line"></div>
+				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+			</li>
+		</ul>
+	</div>
 </div>
+<div class="xxl_clear"></div>
+<div class="content">
+	<div class="searchcontent">
+          <form id="searchForm" method="get" target="_blank" action="" name="form_search">
+              <input id="searchWord" class="searchname fl" type="text" onclick=" document.getElementById('searchWord').style.color='#000000';
+    if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
+              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl">
+          </form>
+    </div>
+    <div class="xxl_clear"></div>
+	<div class="zx-con">
+    {pc:content action="lists" catid="$catid" num="5" order="id DESC" page="$page"}
+		<ul>
+        {loop $data $r}
+			<li>
+				<div class="zx-con-1">
+					<img src="{$r[thumb]}" />
+				</div>
+				<div class="zx-con-2">
+					<div class="con_title"><a href="#" >{$r[title]}</a></div>
+					<div class="xxl_line"></div>
+					<div class="con_time"><a href="#" >{$r[inputtime]}</a></div>
+					<div class="con_message">{$r[description]}</div>
+				</div>
+				<div class="clear"> </div>
+			</li>
+        {/loop}
+		</ul>
+	</div>
+	<div class="paging">{$pages}</div>
+    {/pc}
+</div>
+<div class="xxl_clear"></div>
+
 {template "content","footer"}
