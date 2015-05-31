@@ -536,3 +536,24 @@
 <?php exit;?>05-31 09:21:47 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
 <?php exit;?>05-31 09:24:28 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
 <?php exit;?>05-31 09:24:28 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 2 | mysql_pconnect(): MySQL server has gone away | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:49 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:51 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:51 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:51 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:26:51 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:27:08 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:27:08 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:29:48 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:29:48 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:28 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:28 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:44 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:44 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:45 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
+<?php exit;?>05-31 09:32:45 | 8192 | mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead | phpcms\libs\classes\mysql.class.php | 56
