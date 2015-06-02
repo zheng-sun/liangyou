@@ -17,7 +17,7 @@ return array(
 'tpl_name' => 'default', //当前模板方案目录
 'tpl_css' => 'default', //当前样式目录
 'tpl_referesh' => 1,
-'tpl_edit'=> 0,//是否允许在线编辑模板
+'tpl_edit'=> 1,//是否允许在线编辑模板
 
 //附件相关配置
 'upload_path' => PHPCMS_PATH.'uploadfile/',

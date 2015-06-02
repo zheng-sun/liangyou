@@ -130,6 +130,7 @@ final class template_cache {
 		}
 		$str = '';
 		$num = isset($num) && intval($num) ? intval($num) : 20;
+        $start = isset($start) && intval($start) ? intval($start) : 0;
 		$cache = isset($cache) && intval($cache) ? intval($cache) : 0;
 		$return = isset($return) && trim($return) ? trim($return) : 'data';
 		if (!isset($urlrule)) $urlrule = '';
@@ -172,12 +173,16 @@ final class template_cache {
 						if (isset($page)) {
 							$str .= '$pagesize = '.$num.';';
 							$str .= '$page = intval('.$page.') ? intval('.$page.') : 1;if($page<=0){$page=1;}';
-							$str .= '$offset = ($page - 1) * $pagesize;';
+							$str .= '$offset = ($page - 1 ) * $pagesize + '.$start.';';
 							$limit = '$offset,$pagesize';
-							$sql = 'SELECT COUNT(*) as count FROM ('.$datas['sql'].') T';
+                            if( $start > 0){
+                                $sql = 'SELECT COUNT(*) as count FROM ('.$datas['sql'].' LIMIT '.$limit.') T';
+                            }
+                            else{
+                                $sql = 'SELECT COUNT(*) as count FROM ('.$datas['sql'].') T';
+                            }
 							$str .= '$r = $get_db->sql_query("'.$sql.'");$s = $get_db->fetch_next();$pages=pages($s[\'count\'], $page, $pagesize, $urlrule);';
 						}
-						
 						
 						$str .= '$r = $get_db->sql_query("'.$datas['sql'].' LIMIT '.$limit.'");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$'.$return.' = $a;unset($a);';
 					break;

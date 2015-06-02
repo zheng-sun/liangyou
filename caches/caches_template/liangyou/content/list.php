@@ -4,49 +4,21 @@
 <div class="xxl_clear"></div>
 <div class="zxzx">
 	<div class="xxl_top_5">
-		<p class="xxl_top5_title">TOP 5</p>	
+		<p class="xxl_top5_title">TOP 5</p>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=4888eb439e1b1be3a81bd5d4d22e4d09&sql=select+%2A+from+v9_news+where+catid+%3D+%24catid+order+by+id+desc&start=0&num=5&cache=3600&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$tag_cache_name = md5(implode('&',array('sql'=>'select * from v9_news where catid = $catid order by id desc',)).'4888eb439e1b1be3a81bd5d4d22e4d09');if(!$data = tpl_cache($tag_cache_name,3600)){pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid = $catid order by id desc LIMIT 5");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);if(!empty($data)){setcache($tag_cache_name, $data, 'tpl_data');}}?>
 		<ul class="xxl_clear" style="float:left;">
+        <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 			<li>
 				<div class="pic">
-					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
+					<a href="<?php echo $r['url'];?>" target="_blank"><img src="<?php echo $r['thumb'];?>" width="180px" /></a>
 				</div>
-				<div class="top5_title"><a href="#" >《记录时间》</a></div>
+				<div class="top5_title"><a href="<?php echo $r['url'];?>" ><?php echo $r['title'];?></a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
+				<div class="zx_message top5_message"><a href="#" ><?php echo $r['description'];?></a></div>
 			</li>
-			<li>
-				<div class="pic">
-					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
-				</div>
-				<div class="top5_title"><a href="#" >《记录时间》</a></div>
-				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
-			</li>
-			<li>
-				<div class="pic">
-					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
-				</div>
-				<div class="top5_title"><a href="#" >《记录时间》</a></div>
-				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
-			</li>
-			<li>
-				<div class="pic">
-					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
-				</div>
-				<div class="top5_title"><a href="#" >《记录时间》</a></div>
-				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
-			</li>
-			<li>
-				<div class="pic">
-					<a href="http://sc.admin5.com/jiaoben" target="_blank"><img src="images/tu5.jpg" width="180px" /></a>
-				</div>
-				<div class="top5_title"><a href="#" >《记录时间》</a></div>
-				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕</a></div>
-			</li>
+        <?php $n++;}unset($n); ?>
 		</ul>
+        <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 	</div>
 </div>
 <div class="xxl_clear"></div>
@@ -60,7 +32,7 @@
     </div>
     <div class="xxl_clear"></div>
 	<div class="zx-con">
-    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=20d4e2ae1f91ae804a512503d2bd2285&action=lists&catid=%24catid&num=5&order=id+DESC&page=%24page\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$pagesize = 5;$page = intval($page) ? intval($page) : 1;if($page<=0){$page=1;}$offset = ($page - 1) * $pagesize;$content_total = $content_tag->count(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));$pages = pages($content_total, $page, $pagesize, $urlrule);$data = $content_tag->lists(array('catid'=>$catid,'order'=>'id DESC','limit'=>$offset.",".$pagesize,'action'=>'lists',));}?>
+    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=dbbcefa52392e930f8a0fa58081709b3&sql=select+%2A+from+v9_news+where+catid+%3D+%24catid+order+by+id+desc&start=6&num=1&cache=3600&page=%24page&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$pagesize = 1;$page = intval($page) ? intval($page) : 1;if($page<=0){$page=1;}$offset = ($page - 1 ) * $pagesize + 6;$r = $get_db->sql_query("SELECT COUNT(*) as count FROM (select * from v9_news where catid = $catid order by id desc LIMIT $offset,$pagesize) T");$s = $get_db->fetch_next();$pages=pages($s['count'], $page, $pagesize, $urlrule);$r = $get_db->sql_query("select * from v9_news where catid = $catid order by id desc LIMIT $offset,$pagesize");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
 		<ul>
         <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 			<li>

@@ -272,7 +272,7 @@ return array (
     'parentdir' => '',
     'catdir' => 'Trends',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=14',
-    'items' => '0',
+    'items' => '2',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -323,7 +323,7 @@ return array (
     'parentdir' => '',
     'catdir' => 'information',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=15',
-    'items' => '0',
+    'items' => '1',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
