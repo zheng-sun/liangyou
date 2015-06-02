@@ -19,11 +19,9 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .clearfix{ *zoom:1;}
 .overflow{ overflow:hidden;}
 .mg-auto{ margin-left:auto; margin-right:auto;}
+
 /**xiaolan start**/
-.xxl_mall{
-    /*background: red;*/
-    /*padding-bottom: 50px;*/
-}
+/*商城样式*/
 .mall1{
     background: #f39801;
     height: 505px;
@@ -35,6 +33,109 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .mall_c{
     width:843px;
     margin: 0 auto;
+}
+
+/*片目列表页样式*/
+.xxl_clear {
+    clear: both;
+}
+.xxl_line{
+    width:100px;
+    height: 2px;
+    margin-top:5px;
+    border-bottom: 1px solid #000;
+}
+.xxl_article {
+    line-height: 20px;
+    width: 710px;
+    height: 177px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.xxl_article .xxl_pic {
+    display: block;
+    width: 177px;
+    height: 177px;
+    float: left;
+    margin-right: 25px;
+    float: left;
+}
+
+.block4 .left .xxl_article .xxl_pic img {
+    display: block;
+    width: 177px;
+    height: 177px;
+    margin: 0;
+}
+
+.xxl_article .xxl_text{
+    width: 345px;
+    height: 160px;
+    float: left;
+}
+.xxl_article .xxl_text a{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.xxl_article .xxl_text p{
+    margin-top: 6px;
+}
+
+.xxl_stop{
+    height:30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.xxl_asear{
+    width: 200px;
+    float:left;    
+}
+.xxl_bsear{
+    height: 28px;
+    line-height: 28px;
+    margin-left: 20px;
+    float:left;
+}
+
+.xxl_bsear .xxl_font{
+    color: #9f343a;
+}
+.xxl_bsear a{
+    padding:0 5px; 
+    font-size: 12px;
+}
+.xxl_search {
+    width: 185px;
+    height: 28px;
+    background: url(../images/s1.jpg) no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.xxl_searchname {
+    width: 125px;
+    height: 23px;
+    line-height: 23px;
+    margin-top: 2px;
+    position: absolute;
+    left: 14px;
+    color: #fff;
+    background: #d5d5d5;
+    outline: medium;
+}
+
+.xxl_searchbtn {
+    width: 40px;
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    outline:medium;
+    cursor: pointer;
 }
 /**xiaolan end */
 
@@ -519,14 +620,14 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .paging {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 20px;
 }
 
 .paging {
     height: 32px;
     float: left;
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 
 .paging a,.paging span {
