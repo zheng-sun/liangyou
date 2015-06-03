@@ -2,11 +2,14 @@
 
 return array (
 	'default' => array (
-		'hostname' => 'localhost',
+		'hostname' => '121.42.50.192',
+		'username' => 'root',
+		'password' => 'gyq2989482!',
+		//'hostname' => 'localhost',
 		'port' => 3306,
 		'database' => 'liangyou',
-		'username' => 'root',
-		'password' => '',
+		//'username' => 'root',
+		//'password' => '',
 		'tablepre' => 'v9_',
 		'charset' => 'utf8',
 		'type' => 'mysql',
