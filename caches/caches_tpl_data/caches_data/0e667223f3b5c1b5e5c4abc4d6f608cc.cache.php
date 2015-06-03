@@ -10,7 +10,7 @@ return array (
     'thumb' => 'http://localhost/liangyou/uploadfile/2015/0531/20150531043503355.jpg',
     'keywords' => '测试',
     'description' => '第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕第五届广州纪录片节第五届广州纪第五届广州纪第五届广州纪开幕',
-    'posids' => '0',
+    'posids' => '1',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=show&catid=14&id=3',
     'listorder' => '0',
     'status' => '99',
@@ -18,7 +18,7 @@ return array (
     'islink' => '0',
     'username' => 'sunzheng',
     'inputtime' => '1433061287',
-    'updatetime' => '1433061393',
+    'updatetime' => '1433344625',
   ),
   1 => 
   array (
@@ -38,7 +38,7 @@ return array (
     'islink' => '0',
     'username' => 'sunzheng',
     'inputtime' => '1433047788',
-    'updatetime' => '1433061431',
+    'updatetime' => '1433344632',
   ),
 );
 ?>

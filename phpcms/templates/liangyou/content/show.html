@@ -31,10 +31,13 @@
       <div class="right">
           <div class="links links1">
               <h2 class="linls-title">相关推荐</h2>
+              {pc:content  action="position" posid="18" order="listorder DESC" num="2"} 
               <ul class="clearfix">
-                  <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
-                  <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+                {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span>{$r[title]}</span></a></li>
+                {/loop}
               </ul>
+              {/pc}
           </div>
           <div class="links links2">
               <h2 class="linls-title">热门点击</h2>
