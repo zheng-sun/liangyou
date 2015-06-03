@@ -20,7 +20,7 @@
 	<div class="xxl_clear"></div>
 	<div class="zx">
 		<p class="xxl_title">最新 News</p>
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=758cc409dcb0b06e2a931ef14f8f5bab&action=lists&catid=14&order=id+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'14','order'=>'id DESC','limit'=>'4',));}?>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=758cc409dcb0b06e2a931ef14f8f5bab&action=lists&catid=14&order=id+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'14','order'=>'id DESC','limit'=>'4',));}?>
 		<ul class="xxl_clear">
         <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
 			<li>
@@ -38,7 +38,7 @@
 	<div class="xxl_clear"></div>
 	<div class="zx">
 		<p class="xxl_title">记录时间 Doc Time</p>	
-        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4785a5a14b9148df47f3a30461b53ca5&action=lists&catid=15&order=id+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'15','order'=>'id DESC','limit'=>'6',));}?>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4785a5a14b9148df47f3a30461b53ca5&action=lists&catid=15&order=id+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'15','order'=>'id DESC','limit'=>'6',));}?>
 		<ul class="xxl_clear">
         <?php $i=1;?>
         <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>  
