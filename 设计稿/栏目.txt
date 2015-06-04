@@ -1,0 +1,91 @@
+﻿界面管理：
+首页：
+－海报轮播
+－最新
+－纪录时间
+   •大海报栏
+   •小海报栏
+－文化活动
+
+
+最新资讯
+－Top5
+－列表（直接抓取最新资讯）
+
+纪录时间：
+－良友动态
+   •海报栏
+   •滚动海报
+－最新推荐
+－良友找良友
+－正在发行
+－商务合作
+－网上选片
+
+文化空间：
+－最新活动
+－纪录片沙龙
+    •简介
+    •推荐
+－公益大讲堂
+    •简介
+    •推荐
+－常规课程
+    •简介
+    •推荐
+－良友剧场
+    •简介
+    •推荐
+
+－良友出品
+    •天脉
+    •淘宝
+
+侧边模块：
+－相关推荐
+    •纪录推荐位
+    •文化推荐位
+－热门点击
+－最新
+
+活动
+   •纪录推荐位
+   •文化推荐位
+－相关阅读
+   •纪录推荐位
+   •文化推荐位
+
+专题
+
+
+1、节展专题
+http://www.1926cn.com/special/gzdoc2014/index.shtml
+
+2、活动专题
+http://www.1926cn.com/special/box/index.shtml
+
+3、纪录片沙龙
+http://www.1926cn.com/special/jlpsldsq/index.shtml
+
+4、良友出品合辑
+http://www.1926cn.com/special/wdxl/index.shtml
+
+5、良友出品单项
+http://www.dvod.com.cn/special/dfwd/
+
+6、话题专题
+http://www.1926cn.com/special/lxsdnxs/index.shtml
+
+7、音乐会专题（请尽量与原本一样）
+http://www.1926cn.com/special/ynzjzt/index.shtml
+
+8、课程专题
+http://www.1926cn.com/special/syhdzq/index.shtml
+
+9、主题专题
+http://www.dvod.com.cn/special/sjbwgr/index.shtml
+
+10、良友书院
+http://www.1926cn.com/special/lysy/index.shtml
+
+
