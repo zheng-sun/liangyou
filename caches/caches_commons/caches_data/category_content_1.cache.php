@@ -476,7 +476,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'news',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=18',
-    'items' => '0',
+    'items' => '4',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -527,7 +527,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'new_recommend',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=19',
-    'items' => '0',
+    'items' => '2',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -578,7 +578,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'look_for',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=20',
-    'items' => '0',
+    'items' => '4',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -629,7 +629,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'issue',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=21',
-    'items' => '0',
+    'items' => '4',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -680,7 +680,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'cooperation',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=22',
-    'items' => '0',
+    'items' => '5',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',
@@ -731,7 +731,7 @@ return array (
     'parentdir' => 'information/',
     'catdir' => 'slice',
     'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=23',
-    'items' => '0',
+    'items' => '4',
     'hits' => '0',
     'setting' => 'array (
   \'workflowid\' => \'\',

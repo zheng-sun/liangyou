@@ -8,9 +8,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>liangyou/css/layout.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>liangyou/css/lrtk.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>liangyou/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo CSS_PATH;?>liangyou/css/jquery.bxslider.css" />
 <script type="text/javascript" src="<?php echo JS_PATH;?>liangyou/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>liangyou/js/index.js"></script>
 <script type="text/javascript" src="<?php echo JS_PATH;?>liangyou/js/pptBox.js"></script>
+<script type="text/javascript" src="<?php echo JS_PATH;?>liangyou/js/jquery.bxslider.js"></script>
+
 </head>
 <body>
 <!-- logo 和 搜索连接 -->
