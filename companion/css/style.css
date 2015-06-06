@@ -21,6 +21,146 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .mg-auto{ margin-left:auto; margin-right:auto;}
 
 /**xiaolan start**/
+.zhezhao{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #2a2c36;
+    opacity: 0.5;
+    z-index: 1001;
+}
+.xxl_set_sapp {
+  width: 420px;
+  min-height: 400px;
+  margin-top: -200px;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #ecf0f5;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -210px;
+  padding: 10px;
+  z-index: 1002; 
+}
+.set_title{
+    width:200px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 40px;
+    display: block;
+    color: #868282;
+}
+.xxl_set_sapp dl{
+    width: 385px;
+    float: left;
+}
+.run_person{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.run_person dt{
+    width:50px;
+    height: 38px;
+    line-height: 38px;
+    float:left;
+}
+.run_person dd{
+    float: left;
+}
+.run_person dd input{
+    width: 230px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #dce4ec;
+    font-size: 14px;
+    text-indent: 1px;
+    border-radius: 6px;
+}
+.xxl_sex{
+    width: 90px;
+    margin-left: 10px;
+    height: 38px;
+    line-height: 38px;
+    float: left;
+}
+.operation_button{
+    width: 385px;
+    padding: 20px;
+    float: left;
+}
+.operation_button .btn-primary{
+    width: 80px;
+    height: 35px;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    background: #62b752;
+    float: left;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 56px;
+}
+.operation_button .btn-block{
+    width: 78px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #62b752;
+    background: #f4f4f4;
+    color: #62b752;
+}
+.page5 .article-detail .action_r p{
+    font-size: 14px;
+}
+.page5 .article-detail .action_r{
+    width: 390px;
+    height: 200px;
+    float: left;
+    font-size: 12px;
+    margin-top: 200px;
+}
+.action_btn{
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+}
+.action_btn .acbtn_ok{
+    width: 90px;
+    height: 35px;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    background: #f19149;
+    float: left;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.action_btn .acbtn_no{
+    width: 90px;
+    height: 35px;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    background: #a7aaa9;
+    float: left;
+    margin-left: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+.xxl_links3{
+    margin-top: 80px;
+}
+
 /*商城样式*/
 .mall1{
     background: #f39801;
@@ -223,7 +363,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .block3 a {
     font-size: 12px;
     padding: 0 5px;
-    border-right: 1px solid #000000;
+    /*border-right: 1px solid #000000;*/
 }
 
 .block4 {
@@ -231,13 +371,13 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .block4 .left  {
-    width: 710px;
+    width: 700px;
     float: left;
     margin-right: 40px;
 }
 
 .block4 .right  {
-    width: 150px;
+    width: 160px;
     float: left;
 }
 
@@ -275,7 +415,8 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .block4 p.content {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    text-indent: 20px;
 }
 
 .block4 .left .links {
@@ -993,7 +1134,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .page5 .article-detail  .content-right {
-    width: 400px;
+    width: 390px;
     height: 360px;
     float: left;
     margin-top: 20px;
@@ -1024,7 +1165,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page5 .article h2 {
     height: 50px;
-    font: 400 12px/50px "";
+    font: 400 14px/50px "";
     border-bottom: 1px dotted #999;
     width: 100%;
 }
@@ -1073,18 +1214,17 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page5 .left .links h2 {
     height: 50px;
-    font: 400 12px/50px "";
+    font: 400 14px/50px "";
     border-bottom: 1px dotted #999;
     width: 100%;
 }
 
 .page5 .left .pictures h2 {
     height: 50px;
-    font: 400 12px/50px "";
+    font: 400 14px/50px "";
     border-bottom: 1px dotted #999;
     width: 100%;
 }
-
 
 .page5 .left .pictures ul {
     overflow: hidden;

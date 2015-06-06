@@ -1,4 +1,15 @@
 $(function(){
+    // 活动页--我要参与-显示页面
+    $(".acbtn_ok").click(function(){
+        $('.zhezhao').css('display','block');
+        $('.xxl_set_sapp').css('display','block');
+    });
+    // 活动页--我要参与-隐藏页面
+    $(".xxl_action_nobtn").click(function(){
+        $('.zhezhao').css('display','none');
+        $('.xxl_set_sapp').css('display','none');
+    });
+
     $("#dropdown .input_select").click(function(){
         var ul = $("#dropdown ul");
         if(ul.css("display")=="none"){
