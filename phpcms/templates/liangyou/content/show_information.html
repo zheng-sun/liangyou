@@ -14,12 +14,11 @@
       </div>
     </div>
     <div class="xxl_bsear">
-      <a href="">全部</a>&nbsp;|
-      <a href="" class="xxl_font">历史</a>&nbsp;|
-      <a href="">人文</a>&nbsp;|
-      <a href="">军事</a>&nbsp;|
-      <a href="">自然</a>&nbsp;|
-      <a href="">社会</a>
+        {pc:content action="category" catid="15" siteid="$siteid" order="listorder ASC"}
+        {loop $data $r}
+            <a href="{$r[url]}">{$r[catname]}</a>&nbsp;|
+        {/loop}
+        {/pc}
     </div>
 </div>
 <!-- 主要内容 -->

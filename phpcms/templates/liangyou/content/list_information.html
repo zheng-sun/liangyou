@@ -1,10 +1,7 @@
 {template "content","header"}
   <!-- 面包屑 -->
   <div class="block3 container-900 mg-auto overflow clearfix">
-      <a href="" title="">首页</a>
-      <a href="" title="">纪录时间</a>
-      <a href="" title="">片目</a>
-      <a href="" title="">历史类</a>
+      <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
   </div>
   <div class="xxl_stop container-900 mg-auto overflow clearfix">
     <div class="xxl_asear xxl_clear">
@@ -15,12 +12,11 @@
       </div>
     </div>
     <div class="xxl_bsear">
-      <a href="">全部</a>&nbsp;|
-      <a href="" class="xxl_font">历史</a>&nbsp;|
-      <a href="">人文</a>&nbsp;|
-      <a href="">军事</a>&nbsp;|
-      <a href="">自然</a>&nbsp;|
-      <a href="">社会</a>
+    {pc:content action="category" catid="15" siteid="$siteid" order="listorder ASC"}
+    {loop $data $r}
+      <a href="{$r[url]}">{$r[catname]}</a>&nbsp;|
+    {/loop}
+    {/pc}
     </div>
   </div>
 
@@ -33,7 +29,7 @@
             <li class="xxl_article">
                 <a class="xxl_pic" href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"></a>
                 <div class="xxl_text">
-                    <a href="">{$r[title]}</a>
+                    <a href="{$r[url]}">{$r[title]}</a>
                     <div class="xxl_line"></div>
                     <p>英文名:{$r[en_title]}</p>
                     <p>导演：{$r[director]}</p>

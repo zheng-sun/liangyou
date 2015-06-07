@@ -7,26 +7,15 @@
 		<div class="slider">
 			<div class="flexslider">
 				<ul class="slides">
+                {pc:content  action="position" posid="1" order="listorder DESC" num="2"}
+                {loop $data $r}
 					<li>
-						<div class="img"><a href="http://www.5icool.org/" target="_blank">
-							<img src="./statics/images/liangyou/images/1.jpg" height="450" width"960" alt="" /></a>
+						<div class="img"><a href="{$r[url]}" target="_blank">
+							<img src="{$r[thumb]}" height="450" width"960" alt="" /></a>
 						</div>
 					</li>
-					<li>
-						<div class="img"><a href="http://www.5icool.org/" target="_blank">
-						<img src="./statics/images/liangyou/images/1.jpg" height="450" width"960" alt="" /></a>
-						</div>
-					</li>
-					<li>
-						<div class="img"><a href="http://www.5icool.org/" target="_blank">
-						<img src="./statics/images/liangyou/images/1.jpg" height="450" width"960" alt="" /></a></div>
-					</li>
-					<li>
-						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_stock.jpg" height="450" width"960" alt="" /></a></div>
-					</li>
-					<li>
-						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="images/ad_auto.jpg" height="450" width"960" alt="" /></a></div>
-					</li>
+                {/loop}
+                {/pc}
 				</ul>
 			</div>
 		</div>
