@@ -187,7 +187,7 @@ class index {
 			$execute_time = execute_time();
 			$pages = isset($pages) ? $pages : '';
 			$totalnums = isset($totalnums) ? $totalnums : 0;
-			$data = isset($data) ? $data : '';
+			$datas = isset($data) ? $data : '';
 
 			include	template('search','list');
 		} else {

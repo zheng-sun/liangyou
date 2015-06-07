@@ -4,74 +4,33 @@
 <div class="page2-block1 container-900 mg-auto overflow clearfix">
     <div class="left">
         <div class="searchcontent">
-            <form id="searchForm2" method="get" target="_blank" action="" name="form_search">
-                <input id="searchWord2" class="searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
-        if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
+            <form id="searchForm2" method="get" action="" name="form_search">
+                <input id="searchWord2" class="searchname fl" type="text" value="{$search_q}" name="q">
                 <input id="searchBtn2" type="submit" value="" class="searchbtn cursor fl">
+                <input type="hidden" name="m" value="search"/>
+                <input type="hidden" name="c" value="index"/>
+                <input type="hidden" name="a" value="init"/>
+                <input type="hidden" name="typeid" value="1" id="typeid"/>
+                <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
             </form>
         </div>
-        <div class="article">
-            <a class="pic" href="" title=""><img src="images/pic.jpg"></a>
-            <div class="text">
-                <a href=""><h2>中国记录人</h2></a>
-                <span>2015年5月24</span>
-                <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-            </div>
-        </div>
-        <ul class="piclist clearfix">
-            <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-            <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-            <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-            <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-        </ul>
         <ul class="articlelist clearfix">
+        {loop $datas $i $r}
             <li class="article">
-                <a class="pic" href="" title=""><img src="images/pic.jpg"></a>
+                <a class="pic" href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/></a>
                 <div class="text">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <span>2015年5月24</span>
-                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+                    <a href=""><h2>{$r[title]}</h2></a>
+                    <span>{date('Y年m月d日',$r[inputtime])}</span>
+                    <p>{str_cut($r[description],356,'...')}</p>
                 </div>
             </li>
-            <li class="article">
-                <a class="pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="text">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <span>2015年5月24</span>
-                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li class="article">
-                <a class="pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="text">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <span>2015年5月24</span>
-                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li class="article">
-                <a class="pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="text">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <span>2015年5月24</span>
-                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
+        {/loop}
+        {if empty($datas)}未找到结果{/if}
     </ul>
 
 
         <div class="paging">
-            <span class="active">1</span>
-            <a href="/2/">2</a>
-            <a href="/3/">3</a>
-            <a href="/4/">4</a>
-            <a href="/5/">5</a>
-            <span>...</span>
-            <a href="/367/">367 </a>
-            <a href="/2/">下一页</a>
-
-            <input class="input" placeholder="输入页码">
-            <a href="">go</a>
+            {$pages}
         </div>
     </div>
     <div class="right">
@@ -82,37 +41,13 @@
            <a href="" title="图片">图片</a>
        </div>
         <ul class="adlist clearfix">
-            <li><a href="" title=""><img class="adimg" src="images/pic.jpg"></a></li>
-            <li><a href="" title=""><img class="adimg" src="images/pic.jpg"></a></li>
+            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
+            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
         </ul>
     </div>
 </div>
 
-<!--友情连接-->
-<div class="block5">
-    <div class="container-900 mg-auto overflow clearfix">
-        <div class="title">与良友成为合作伙伴 <span>Work with COMPANION</span></div>
-        <ul>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我要投广告</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-            <li><div>我有创意</div><a href="" title="">项目孵化</a><a href="" title="">专业评估</a></li>
-        </ul>
-    </div>
-    <div class="footer">
-        <div><a href="" title="影像制品营业许可证">影像制品营业许可证</a><a href="" title="影像制品营业许可证">影像制品营业许可证</a><a href="" title="影像制品营业许可证">影像制品营业许可证</a></div>
-        <p>中国赴马里维和部队在马里加奥维部队在马里加奥维和任务区正式完成第二次轮换交接任务区正式完成第二次轮换交接</p>
-        <p>中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接</p>
-        <p>中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接</p>
-    </div>
-</div>
-
-
-</body>
-</html>
+{template "content","footer"}
 
 <script>
     $(".alllinks").hover(function() {
