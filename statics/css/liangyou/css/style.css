@@ -21,6 +21,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .mg-auto{ margin-left:auto; margin-right:auto;}
 
 /**xiaolan start**/
+.xxl_cover{color: #9f343a;}
 .whkj_p{
     padding-right: 30px;
 }
@@ -809,18 +810,20 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 /*第五屏(更多产品)*/
-.slideinner{ height:490px; width:900px; position:relative;margin-top: 10px;}
-.slideinner ul{ height:470px; width:auto; position:absolute; top:40px; left:0;}
-.slideinner ul li{ height:900px; width:900px; float:left;}
+.slideinner, .slideinner2, .slideinner3, .slideinner4{ height:490px; width:900px; position:relative;margin-top: 10px;}
+.slideinner ul, .slideinner2 ul,  .slideinner3 ul,  .slideinner4 ul{ height:470px; width:auto; position:absolute; top:40px; left:0;}
+.slideinner ul li, .slideinner2 ul li,.slideinner3 ul li,.slideinner4 ul li{ height:900px; width:900px; float:left;}
 .slideinner ul li img{ }
-.slideinner .slidetle{ position:absolute; bottom:4px; left:0; height:37px; width:250px;_width:251px;color:#FFF; text-align:center; font:400 16px/37px 'microsoft yahei';_background:#464651;display: none;}
-.slideinner .slidecon{ position:absolute; bottom:0; left:464px; height:12px; width:250px;display: none;}
-.slideinner .slidecon span{ display:block; float:left; height:12px; width:12px; background:#b8f1af; border-radius: 12px;margin-right: 20px;cursor: pointer;}
-.slideinner .slidecon span:hover,.slideinner .slidecon .slidehover{ background:#66eb4f;}
-.slideinner .slidemove{ position:absolute; top:70px; height:78px; width:46px; z-index:10;}
+.slideinner .slidetle, .slideinner2 .slidetle, .slideinner3 .slidetle, .slideinner4 .slidetle{ position:absolute; bottom:4px; left:0; height:37px; width:250px;_width:251px;color:#FFF; text-align:center; font:400 16px/37px 'microsoft yahei';_background:#464651;display: none;}
+.slideinner .slidecon, .slideinner2 .slidecon,.slideinner3 .slidecon,.slideinner4 .slidecon{ position:absolute; bottom:0; left:464px; height:12px; width:250px;display: none;}
+.slideinner .slidecon span, .slideinner2 .slidecon span, .slideinner3 .slidecon span, .slideinner4 .slidecon span{ display:block; float:left; height:12px; width:12px; background:#b8f1af; border-radius: 12px;margin-right: 20px;cursor: pointer;}
 
-.slideinner .leftbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/left.png) no-repeat center center; left:-10px;cursor:pointer;top: -10px;}
-.slideinner .rightbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/right.png) no-repeat center center; right:-10px;cursor:pointer;top: -10px;}
+.slideinner .slidecon span:hover,.slideinner .slidecon .slidehover{ background:#66eb4f;}
+
+.slideinner .slidemove, .slideinner2 .slidemove, .slideinner3 .slidemove, .slideinner4 .slidemove{ position:absolute; top:70px; height:78px; width:46px; z-index:10;}
+
+.slideinner .leftbtn, .slideinner2 .leftbtn, .slideinner3 .leftbtn, .slideinner4 .leftbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/left.png) no-repeat center center; left:-10px;cursor:pointer;top: -10px;}
+.slideinner .rightbtn, .slideinner2 .rightbtn, .slideinner3 .rightbtn, .slideinner4 .rightbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/right.png) no-repeat center center; right:-10px;cursor:pointer;top: -10px;}
 
 
 
@@ -925,14 +928,14 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     padding-top:115px;
 }
 
-.slideinner .text{
+.slideinner .text,.slideinner2 .text,.slideinner3 .text,.slideinner4 .text{
     width: 185px;
     height: 160px;
     float: left;
     padding-right: 70px;
 }
 
-.slideinner  .text h2 {
+.slideinner  .text h2,.slideinner2  .text h2 ,.slideinner3  .text h2 ,.slideinner4  .text h2 {
     height: 30px;
     font: 400 16px/18px "";
     background: url(../../../images/liangyou/images/border2.png) no-repeat 0 18px;
@@ -940,7 +943,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 }
 
-.slideinner  .text p {
+.slideinner  .text p,.slideinner2  .text p ,.slideinner3  .text p ,.slideinner4  .text p {
     height: 48px;
 }
 
