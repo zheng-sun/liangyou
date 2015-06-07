@@ -5,14 +5,36 @@
 <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
 <meta name="keywords" content="{$SEO['keyword']}">
 <meta name="description" content="{$SEO['description']}">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3672694-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?fa98b91e638fc607d0335693fb173e7f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/layout.css" />
 <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/lrtk.css" />
 <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/org.css" />
 <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/jquery.bxslider.css" />
 <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="{JS_PATH}liangyou/js/index.js"></script>
-<script type="text/javascript" src="{JS_PATH}liangyou/js/pptBox.js"></script>
 <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{JS_PATH}liangyou/js/js/gun.js"></script>
+<script type="text/javascript" src="{JS_PATH}liangyou/js/js/org.js"></script>
+
 
 </head>
 <body>
@@ -28,10 +50,15 @@
       </ul>
       {/pc}
       <div class="searchcontent">
-          <form id="searchForm" method="get" target="_blank" action="" name="form_search">
+          <form id="searchForm" method="get" target="_blank" action="{APP_PATH}index.php" name="form_search">
               <input id="searchWord" class="searchname fl" type="text" onclick=" document.getElementById('searchWord').style.color='#000000';
     if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl">
+              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl"/>
+              <input type="hidden" name="m" value="search"/>
+			<input type="hidden" name="c" value="index"/>
+			<input type="hidden" name="a" value="init"/>
+            <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+			<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
           </form>
       </div>
 

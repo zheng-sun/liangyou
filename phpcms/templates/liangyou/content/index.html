@@ -3,20 +3,39 @@
 <!-- 内容部分开始  -->
 <div class="content" style="margin-top:0px;">
 	<div class="xxl_clear"></div>
-	<div id="xxx">
-		 <script>
-		 var box =new PPTBox();
-		 box.width = 900; //宽度
-		 box.height = 350;//高度
-		 box.autoplayer = 3;//自动播放间隔时间
-
-		 box.add({"url":"images/tu1.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室1"})
-		 box.add({"url":"images/tu2.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室2"})
-		 box.add({"url":"images/tu3.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室3"})
-		 box.add({"url":"images/tu4.jpg","href":"http://www.hebei130.com/","title":"笑天游工作室4"})
-		 box.show();
-		</script>
+	<div class="pro-switch">
+		<div class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="./statics/images/liangyou/images/ad_home.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="./statics/images/liangyou/images/ad_yuetu.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="./statics/images/liangyou/images/ad_nba.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="./statics/images/liangyou/images/ad_stock.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+					<li>
+						<div class="img"><a href="http://www.5icool.org/" target="_blank"><img src="./statics/images/liangyou/images/ad_auto.jpg" height="450" width"960" alt="" /></a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript">
+	    $(function(){
+	      $('.flexslider').flexslider({
+	        animation: "slide",
+	        start: function(slider){
+	          //$('body').removeClass('loading');
+	        }
+	      });
+	    });
+    </script>
 	<div class="xxl_clear"></div>
 	<div class="zx">
 		<p class="xxl_title">最新 News</p>
@@ -200,4 +219,8 @@
 
 </div>
 <div class="xxl_clear"></div>
+<script>
+    slideSwitch3(".slideinner","slidehover");
+</script>
+
 {template "content","footer"}
