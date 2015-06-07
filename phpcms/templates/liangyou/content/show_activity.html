@@ -1,0 +1,76 @@
+{template "content","header"}
+<!-- 面包屑 -->
+<div class="block3 container-900 mg-auto overflow clearfix">
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文</div>
+</div>
+
+<!-- 主要内容 -->
+<div class="block4 container-900 mg-auto overflow clearfix page5">
+    <div class="left">
+        <div class="article-detail">
+            <h2 style="font-size: 32px;">{$title}</h2>
+            <a class="pic-left" href="" title=""><img src="{$thumb}" alt=""></a>
+            <div class="action_r">
+                <p>时间: {$activity_time}</p>
+                <p>地点: {$activity_address}</p>
+                <p>费用: {$activity_cost}</p>
+                <p>类型: {$activity_type}</p>
+                <p>主办方: {$activity_host}</p>
+                <div class="action_btn">
+                    <span class="acbtn_ok">我要参加</span>
+                    <span class="acbtn_no">已结束</span>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <h2>活动简介</h2>
+            <p class="xxl_content">{$content}</p>
+        </div>
+        <div class="pictures">
+            <h2 style="height:50px;line-height:50px;font-size:14px;font-weight: inherit;border-bottom: 1px dotted #999;">活动相册</h2>
+            <ul class="clearfix">
+            {loop $activity_img $r}
+                <li><img src="{$r[url]}" alt="活动相册" style="margin:10px auto 10px auto;width:170px;height:170px;"></li>
+            {/loop}
+            </ul>
+        </div>
+
+        {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+        {if $data}
+        <div class="links">
+            <h2 class="linls-title">相关文章</h2>
+            <ul class="clearfix">
+            {loop $data $r}
+                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+            {/loop}   
+            </ul>
+        </div>
+        {/if}
+        {/pc}
+
+    </div>
+    <div class="right">
+        <div class="links xxl_links3">
+            <h2 class="linls-title">最新活动</h2>
+            <ul class="clearfix">
+                <li>
+                    <a href="" title=""><img src="images/pic.jpg"></a>
+                    <a href="" title="">一念之间琴心音乐正在接</a>
+                </li>
+                <li><a href="" title="">在马奥维和任务区</a></li>
+                <li><a href="" title="">在马奥维和任务区</a></li>
+                <li><a href="" title="">在马奥维和任务区</a></li>
+                <li><a href="" title="">在马奥维和任务区</a></li>
+            </ul>
+        </div>
+        <div class="links links3">
+            <h2 class="linls-title">精彩回顾</h2>
+            <ul class="clearfix">
+                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{template "content","footer"}

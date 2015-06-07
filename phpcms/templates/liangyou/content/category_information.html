@@ -4,14 +4,14 @@
 <div class="page4-block1 container-900 mg-auto overflow clearfix">
    <div class="left">
        <h2>良友动态</h2>
-       {pc:content  action="lists" catid="18" order="id DESC" num="2"}
+       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="0" num="2" cache="3600" return="data"}
        <div style="overflow: hidden;">
             {loop $data $r}
            <div class="picdiv"><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt=""/></a></div>
             {/loop}
        </div>
        {/pc}
-       {pc:content  action="lists" catid="18" order="id DESC" num="5"}
+       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="2" num="5" cache="3600" return="data"}
        <div class="picshow">
            <ul class="bxslider">
            {loop $data $r}

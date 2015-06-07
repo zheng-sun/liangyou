@@ -10,6 +10,25 @@ $(function(){
         $('.xxl_set_sapp').css('display','none');
     });
 
+    // 首页文化活动
+    $('.xxl_cat1').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat1').css('display','block');
+    });
+    $('.xxl_cat2').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat2').css('display','block');
+    });
+    $('.xxl_cat3').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat3').css('display','block');
+    });
+    $('.xxl_cat4').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat4').css('display','block');
+    });
+
+
     $("#dropdown .input_select").click(function(){
         var ul = $("#dropdown ul");
         if(ul.css("display")=="none"){

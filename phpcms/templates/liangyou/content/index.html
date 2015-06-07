@@ -91,132 +91,174 @@
         {/pc}
 	</div>
 	<!-- 文化活动 -->
-	<div class="page3-block1 container-900 mg-auto overflow clearfix">
+	<div class="page3-block1 container-900 mg-auto overflow clearfix xxl_list_cats" style="margin-bottom:20px;">
 		<p class="xxl_title">文化活动 Activity</p>
 		<p class="xxl_title activity_nav">
-			<span>沙龙&nbsp;&nbsp;|</span>
-			<span>公益讲堂&nbsp;&nbsp;|</span>
-			<span>音乐会&nbsp;&nbsp;|</span>
-			<span>课程</span>
+		{pc:content action="category" catid="16" siteid="1" order="listorder ASC"} 
+		<?php $i = 1?>
+		{loop $data $r}
+			<a href="javascript:void(0)" class="xxl_cat{$i}"><span>{$r[catname]}&nbsp;&nbsp;|</span></a>
+		<?php $i++;?>
+		{/loop}
+		{/pc}
 		</p>
-	    <div class="slideinner overflow">
+	    <div class="slideinner overflow xxl_show_cat1">
 		    <ul class="clearfix overflow">
-		        <li>
+				<li>
+		            {pc:get sql="select * from v9_news where catid = 25 order by id desc" start="0" num="4" cache="3600" return="data"}
+		            {loop $data $r}
 		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
 		                </a>
 		                <div class="priceCon">
-
 		                        <div class="text">
-		                            <a href=""><h2>《中国记录人》</h2></a>
-		                            <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
 		                        </div>
-
 		                </div>
 		            </div>
-		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
-		                </a>
-		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
-		                </div>
-		            </div>
-		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
-		                </a>
-		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
-		                </div>
-		            </div>
-		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
-		                </a>
-		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
-		                </div>
-		            </div>
-
+		            {/loop}
+		            {/pc}
 		        </li>
 		        <li>
+		            {pc:get sql="select * from v9_news where catid = 25 order by id desc" start="4" num="4" cache="3600" return="data"}
+		            {loop $data $r}
 		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
 		                </a>
 		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
 		                </div>
 		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		    </ul>
+	    </div>
+	    <div class="slideinner overflow xxl_show_cat2" style="display:none;">
+		    <ul class="clearfix overflow ">
+				<li>
+		            {pc:get sql="select * from v9_news where catid =26 order by id desc" start="0" num="4" cache="3600" return="data"}
+		            {loop $data $r}
 		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
 		                </a>
 		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
 		                </div>
 		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		        <li>
+		            {pc:get sql="select * from v9_news where catid =26 order by id desc" start="4" num="4" cache="3600" return="data"}
+		            {loop $data $r}
 		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
 		                </a>
 		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
 		                </div>
 		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		    </ul>
+	    </div>
+	    <div class="slideinner overflow xxl_show_cat3" style="display:none;">
+		    <ul class="clearfix overflow">
+				<li>
+		            {pc:get sql="select * from v9_news where catid =27 order by id desc" start="0" num="4" cache="3600" return="data"}
+		            {loop $data $r}
 		            <div class="list-inner fl tianstion">
-		                <div class="time">6月1 Mon</div>
-		                <a href="" class="imgCon" title="">
-		                    <img src="images/pic.jpg" alt=""  />
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
 		                </a>
 		                <div class="priceCon">
-
-		                    <div class="text">
-		                        <a href=""><h2>中国记录人</h2></a>
-		                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-		                    </div>
-
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
 		                </div>
 		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		        <li>
+		            {pc:get sql="select * from v9_news where catid =27 order by id desc" start="4" num="4" cache="3600" return="data"}
+		            {loop $data $r}
+		            <div class="list-inner fl tianstion">
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
+		                </a>
+		                <div class="priceCon">
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
+		                </div>
+		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		    </ul>
+	    </div>
+	    <div class="slideinner overflow xxl_show_cat4" style="display:none;">
+		    <ul class="clearfix overflow">
+				<li>
+		            {pc:get sql="select * from v9_activity where catid=32 order by id desc" start="0" num="4" cache="3600" return="data"}
+		            {loop $data $r}
+		            <div class="list-inner fl tianstion">
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
+		                </a>
+		                <div class="priceCon">
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
+		                </div>
+		            </div>
+		            {/loop}
+		            {/pc}
+		        </li>
+		        <li>
+		            {pc:get sql="select * from v9_activity where catid = 32 order by id desc" start="4" num="4" cache="3600" return="data"}
+		            {loop $data $r}
+		            <div class="list-inner fl tianstion">
+		                <div class="time">{$r[activity_time]}</div>
+		                <a href="{$r[url]}" class="imgCon" title="">
+		                    <img src="{$r[thumb]}" alt=""  />
+		                </a>
+		                <div class="priceCon">
+		                        <div class="text">
+		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <p>{$r[description]}</p>
+		                        </div>
+		                </div>
+		            </div>
+		            {/loop}
+		            {/pc}
 		        </li>
 		    </ul>
 	    </div>
@@ -225,6 +267,9 @@
 </div>
 <div class="xxl_clear"></div>
 <script>
-    slideSwitch3(".slideinner","slidehover");
+    slideSwitch3(".xxl_show_cat1","slidehover");
+    slideSwitch3(".xxl_show_cat2","slidehover");
+    slideSwitch3(".xxl_show_cat3","slidehover");
+    slideSwitch3(".xxl_show_cat4","slidehover");
 </script>
 {template "content","footer"}

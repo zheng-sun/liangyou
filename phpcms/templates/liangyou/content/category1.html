@@ -4,123 +4,41 @@
     <div class="slideinner overflow">
     <ul class="clearfix overflow">
         <li>
+            {pc:get sql="select * from v9_activity where catid = 32 order by id desc" start="0" num="4" cache="3600" return="data"}
+            {loop $data $r}
             <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
+                <div class="time">{$r[activity_time]}</div>
+                <a href="{$r[url]}" class="imgCon" title="">
+                    <img src="{$r[thumb]}" alt=""  />
                 </a>
                 <div class="priceCon">
-
                         <div class="text">
-                            <a href=""><h2>中国记录人</h2></a>
-                            <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+                            <a href=""><h2>{$r[title]}</h2></a>
+                            <p>{$r[description]}</p>
                         </div>
-
                 </div>
             </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
-
+            {/loop}
+            {/pc}
         </li>
         <li>
+            {pc:get sql="select * from v9_activity where catid = 32 order by id desc" start="4" num="4" cache="3600" return="data"}
+            {loop $data $r}
             <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
+                <div class="time">{$r[activity_time]}</div>
+                <a href="{$r[url]}" class="imgCon" title="">
+                    <img src="{$r[thumb]}" alt=""  />
                 </a>
                 <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
+                        <div class="text">
+                            <a href=""><h2>{$r[title]}</h2></a>
+                            <p>{$r[description]}</p>
+                        </div>
                 </div>
             </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="list-inner fl tianstion">
-                <div class="time">6月1 Mon</div>
-                <a href="" class="imgCon" title="">
-                    <img src="images/pic.jpg" alt=""  />
-                </a>
-                <div class="priceCon">
-
-                    <div class="text">
-                        <a href=""><h2>中国记录人</h2></a>
-                        <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                    </div>
-
-                </div>
-            </div>
+            {/loop}
+            {/pc}
         </li>
-
     </ul>
 </div>
 </div>
@@ -150,7 +68,7 @@
        </ul>
    </div>
     <div class="pictext">
-        <a class="title1" href="" title="">公益大讲堂</a>
+        <a class="title1" href="http://www.1926cn.com/special/lysy/index.shtml" title="公益大讲堂" target="_blank">公益大讲堂</a>
         <a class="title2" href="" title="">[
         {pc:get sql="select * from  v9_category where catid = 26" cache="3600" return="data"}
         {loop $data $r}
@@ -174,7 +92,7 @@
     </div>
 
     <div class="picture">
-        <a class="title1" href="" title="">常规课程</a>
+        <a class="title1" href="http://www.1926cn.com/special/lysy/index.shtml" title="常规课程" target="_blank">常规课程</a>
         <a class="title2" href="" title="">[
         {pc:get sql="select * from  v9_category where catid = 27" cache="3600" return="data"}
         {loop $data $r}
