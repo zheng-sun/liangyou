@@ -1,7 +1,7 @@
 <?php
 return array(
 //网站路径
-'web_path' => '/liangyou/',
+'web_path' => '/',
 //Session配置
 'session_storage' => 'mysql',
 'session_ttl' => 1800,
