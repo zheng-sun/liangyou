@@ -29,7 +29,7 @@
 				</div>
 				<div class="title"><a href="#" ><?php echo $r['title'];?></a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" ><?php echo $r['description'];?></a></div>
+				<div class="zx_message"><a href="#" ><?php echo str_cut($r[description],130,'');?></a></div>
 			</li>
         <?php $n++;}unset($n); ?>
 		</ul>
@@ -57,7 +57,7 @@
 				</div>
 				<div class="title"><a href="#" ><?php echo $r['title'];?></a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" ><?php echo $r['description'];?></a></div>
+				<div class="zx_message"><a href="#" ><?php echo str_cut($r[description],130,'');?></a></div>
 			</li>
         <?php }
             $i++;

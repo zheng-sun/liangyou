@@ -176,7 +176,7 @@ final class template_cache {
 							$str .= '$offset = ($page - 1 ) * $pagesize + '.$start.';';
 							$limit = '$offset,$pagesize';
                             if( $start > 0){
-                                $sql = 'SELECT COUNT(*) as count FROM ('.$datas['sql'].' LIMIT '.$limit.') T';
+                                $sql = 'SELECT COUNT(*) - '.$start.' as count FROM ('.$datas['sql'].' ) T';
                             }
                             else{
                                 $sql = 'SELECT COUNT(*) as count FROM ('.$datas['sql'].') T';

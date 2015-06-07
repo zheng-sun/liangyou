@@ -3,12 +3,12 @@ return array (
   1 => 
   array (
     'siteid' => '1',
-    'name' => '默认站点',
+    'name' => '良友',
     'dirname' => '',
     'domain' => 'http://liangyou.com/',
-    'site_title' => 'PHPCMS演示站',
-    'keywords' => 'PHPCMS演示站',
-    'description' => 'PHPCMS演示站',
+    'site_title' => '良友',
+    'keywords' => '良友',
+    'description' => '良友',
     'release_point' => '',
     'default_style' => 'liangyou',
     'template' => 'liangyou',

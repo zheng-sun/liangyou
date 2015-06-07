@@ -1,10 +1,7 @@
 {template "content","header"}
 <!-- 面包屑 -->
 <div class="block3 container-900 mg-auto overflow clearfix">
-    <a href="" title="">首页</a>
-    <a href="" title="">文化空间</a>
-    <a href="" title="">片名</a>
-    <a href="" title="">豆腐味道</a>
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文</div>
 </div>
 
 <!-- 搜素+面包 -->
@@ -55,36 +52,40 @@
                 {/loop}
             </ul>
         </div>
+        {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+        {if $data}
         <div class="links">
             <h2 class="linls-title">看更多</h2>
             <ul class="clearfix">
-                <li><a href="" title="">在马里加奥维和任务区</a></li>
-                <li><a href="" title="">在马里加奥维和任务区</a></li>
-                <li><a href="" title="">在马里加奥维和任务区</a></li>
-                <li><a href="" title="">在马里加奥维和任务区</a></li>
-                <li><a href="" title="">在马里加奥维和任务区</a></li>
+            {loop $data $r}
+                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+            {/loop}   
             </ul>
         </div>
-
+        {/if}
+        {/pc}
 
     </div>
     <div class="right">
         <div class="links links1">
             <h2 class="linls-title">相关推荐</h2>
+            {pc:content action="lists" catid="19" num="2" order="id DESC"}
             <ul class="clearfix">
-                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+            {loop $data $r}
+                 <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span>{$r[title]}</span></a></li>
+            {/loop}
             </ul>
+            {/pc}
         </div>
         <div class="links links2">
             <h2 class="linls-title">热门点击</h2>
+            {pc:content  action="hits" catid="$catid" num="5" order="views DESC" cache="3600"}
             <ul class="clearfix">
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
+            {loop $data $r}
+                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+            {/loop}    
             </ul>
+            {/pc}
         </div>
         <div class="links links3">
             <h2 class="linls-title">最新活动</h2>

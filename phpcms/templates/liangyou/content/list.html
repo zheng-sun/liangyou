@@ -14,7 +14,7 @@
 				</div>
 				<div class="top5_title"><a href="{$r[url]}" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >{$r[description]}</a></div>
+				<div class="zx_message top5_message"><a href="#" >{str_cut($r[description],156,'...')}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -32,7 +32,7 @@
     </div>
     <div class="xxl_clear"></div>
 	<div class="zx-con">
-    {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="4" num="1" cache="3600" page="$page" return="data"}
+    {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="5" num="5" cache="3600" page="$page" return="data"}
 		<ul>
         {loop $data $r}
 			<li>
@@ -40,10 +40,10 @@
 					<img src="{$r[thumb]}" />
 				</div>
 				<div class="zx-con-2">
-					<div class="con_title"><a href="#" >{$r[title]}</a></div>
+					<div class="con_title"><a href="{$r[url]}" >{$r[title]}</a></div>
 					<div class="xxl_line"></div>
-					<div class="con_time"><a href="#" >{$r[inputtime]}</a></div>
-					<div class="con_message">{$r[description]}</div>
+					<div class="con_time"><a href="{$r[url]}" >{date('Y年m月d日',$r[inputtime])}</a></div>
+					<div class="con_message">{str_cut($r[description],356,'...')}</div>
 				</div>
 				<div class="clear"> </div>
 			</li>

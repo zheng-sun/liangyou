@@ -6,6 +6,12 @@ return array (
     'name' => '电影模型',
     'sort' => '0',
   ),
+  13 => 
+  array (
+    'typeid' => '61',
+    'name' => '活动模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

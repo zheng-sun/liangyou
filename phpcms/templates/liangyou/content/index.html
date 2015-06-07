@@ -29,7 +29,7 @@
 				</div>
 				<div class="title"><a href="#" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{$r[description]}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],130,'')}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -57,7 +57,7 @@
 				</div>
 				<div class="title"><a href="#" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{$r[description]}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],130,'')}</a></div>
 			</li>
         <?php }
             $i++;
