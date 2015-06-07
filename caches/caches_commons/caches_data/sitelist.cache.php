@@ -5,7 +5,7 @@ return array (
     'siteid' => '1',
     'name' => '默认站点',
     'dirname' => '',
-    'domain' => 'http://localhost/liangyou/',
+    'domain' => 'http://liangyou.com/',
     'site_title' => 'PHPCMS演示站',
     'keywords' => 'PHPCMS演示站',
     'description' => 'PHPCMS演示站',
@@ -24,7 +24,7 @@ return array (
   \'watermark_pos\' => \'9\',
 )',
     'uuid' => 'b6af5f33-0686-11e5-8418-54271e0c9522',
-    'url' => 'http://localhost/liangyou/',
+    'url' => 'http://liangyou.com/',
   ),
 );
 ?>

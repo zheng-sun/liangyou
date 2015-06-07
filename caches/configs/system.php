@@ -21,13 +21,13 @@ return array(
 
 //附件相关配置
 'upload_path' => PHPCMS_PATH.'uploadfile/',
-'upload_url' => 'http://localhost/liangyou/uploadfile/', //附件路径
+'upload_url' => 'http://liangyou.com/uploadfile/', //附件路径
 'attachment_stat' => '1',//是否记录附件使用状态 0 统计 1 统计， 注意: 本功能会加重服务器负担
 
-'js_path' => 'http://localhost/liangyou/statics/js/', //CDN JS
-'css_path' => 'http://localhost/liangyou/statics/css/', //CDN CSS
-'img_path' => 'http://localhost/liangyou/statics/images/', //CDN img
-'app_path' => 'http://localhost/liangyou/',//动态域名配置地址
+'js_path' => 'http://liangyou.com/statics/js/', //CDN JS
+'css_path' => 'http://liangyou.com/statics/css/', //CDN CSS
+'img_path' => 'http://liangyou.com/statics/images/', //CDN img
+'app_path' => 'http://liangyou.com/',//动态域名配置地址
 
 'charset' => 'utf-8', //网站字符集
 'timezone' => 'Etc/GMT-8', //网站时区（只对php 5.1以上版本有效），Etc/GMT-8 实际表示的是 GMT+8
@@ -44,7 +44,7 @@ return array(
 
 'phpsso' => '1',	//是否使用phpsso
 'phpsso_appid' => '1',	//应用id	
-'phpsso_api_url' => 'http://localhost/liangyou/phpsso_server',	//接口地址
+'phpsso_api_url' => 'http://liangyou.com/phpsso_server',	//接口地址
 'phpsso_auth_key' => 'ERz72O9U0GxYc8XCHdGL4Pl4VfKOqCh4', //加密密钥
 'phpsso_version' => '1', //phpsso版本
 

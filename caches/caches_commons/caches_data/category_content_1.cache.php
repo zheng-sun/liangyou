@@ -16,7 +16,7 @@ return array (
     'description' => 'Beijing',
     'parentdir' => '',
     'catdir' => 'Beijing',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=9',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=9',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -67,7 +67,7 @@ return array (
     'description' => 'Shanghai',
     'parentdir' => '',
     'catdir' => 'Shanghai',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=10',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=10',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -118,7 +118,7 @@ return array (
     'description' => 'Hong Kang',
     'parentdir' => '',
     'catdir' => 'xianggang',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=11',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=11',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -169,7 +169,7 @@ return array (
     'description' => 'Oriental Companion',
     'parentdir' => '',
     'catdir' => 'East',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=12',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=12',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -220,7 +220,7 @@ return array (
     'description' => 'Companion',
     'parentdir' => '',
     'catdir' => 'college',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=13',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=13',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -271,7 +271,7 @@ return array (
     'description' => 'Trends',
     'parentdir' => '',
     'catdir' => 'Trends',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=14',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=14',
     'items' => '7',
     'hits' => '0',
     'setting' => 'array (
@@ -322,7 +322,7 @@ return array (
     'description' => 'Doc Time',
     'parentdir' => '',
     'catdir' => 'information',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=15',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=15',
     'items' => '1',
     'hits' => '0',
     'setting' => 'array (
@@ -373,7 +373,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => '',
     'catdir' => 'zong',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=16',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=16',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -424,7 +424,7 @@ return array (
     'description' => 'Production',
     'parentdir' => '',
     'catdir' => 'produce',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=17',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=17',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -475,7 +475,7 @@ return array (
     'description' => '',
     'parentdir' => 'information/',
     'catdir' => 'news',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=18',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=18',
     'items' => '5',
     'hits' => '0',
     'setting' => 'array (
@@ -526,7 +526,7 @@ return array (
     'description' => 'Doc Time',
     'parentdir' => 'information/',
     'catdir' => 'new_recommend',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=19',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=19',
     'items' => '5',
     'hits' => '0',
     'setting' => 'array (
@@ -577,7 +577,7 @@ return array (
     'description' => 'Doc Time',
     'parentdir' => 'information/',
     'catdir' => 'cooperation',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=22',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=22',
     'items' => '5',
     'hits' => '0',
     'setting' => 'array (
@@ -628,7 +628,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => 'zong/',
     'catdir' => 'new_activity',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=24',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=24',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -679,7 +679,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => 'zong/',
     'catdir' => 'salon',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=25',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=25',
     'items' => '1',
     'hits' => '0',
     'setting' => 'array (
@@ -730,7 +730,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => 'zong/',
     'catdir' => 'forum',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=26',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=26',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -781,7 +781,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => 'zong/',
     'catdir' => 'general_course',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=27',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=27',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -832,7 +832,7 @@ return array (
     'description' => 'Saloon',
     'parentdir' => 'zong/',
     'catdir' => 'theatre',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=28',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=28',
     'items' => '0',
     'hits' => '0',
     'setting' => 'array (
@@ -883,7 +883,7 @@ return array (
     'description' => '',
     'parentdir' => 'information/',
     'catdir' => 'look',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=29',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=29',
     'items' => '2',
     'hits' => '0',
     'setting' => 'array (
@@ -934,7 +934,7 @@ return array (
     'description' => '',
     'parentdir' => 'information/',
     'catdir' => 'issue',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=30',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=30',
     'items' => '2',
     'hits' => '0',
     'setting' => 'array (
@@ -985,7 +985,7 @@ return array (
     'description' => '',
     'parentdir' => 'information/',
     'catdir' => 'slice',
-    'url' => 'http://localhost/liangyou/index.php?m=content&c=index&a=lists&catid=31',
+    'url' => 'http://liangyou.com/index.php?m=content&c=index&a=lists&catid=31',
     'items' => '2',
     'hits' => '0',
     'setting' => 'array (

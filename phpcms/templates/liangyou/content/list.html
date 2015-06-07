@@ -32,7 +32,7 @@
     </div>
     <div class="xxl_clear"></div>
 	<div class="zx-con">
-    {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="6" num="1" cache="3600" page="$page" return="data"}
+    {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="4" num="1" cache="3600" page="$page" return="data"}
 		<ul>
         {loop $data $r}
 			<li>
