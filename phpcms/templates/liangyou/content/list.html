@@ -23,13 +23,6 @@
 </div>
 <div class="xxl_clear"></div>
 <div class="content">
-	<div class="searchcontent">
-          <form id="searchForm" method="get" target="_blank" action="" name="form_search">
-              <input id="searchWord" class="searchname fl" type="text" onclick=" document.getElementById('searchWord').style.color='#000000';
-    if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl">
-          </form>
-    </div>
     <div class="xxl_clear"></div>
 	<div class="zx-con">
     {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="5" num="5" cache="3600" page="$page" return="data"}
