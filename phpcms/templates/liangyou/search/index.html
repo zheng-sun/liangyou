@@ -1,43 +1,99 @@
-{template 'search', 'header'}
-	<div class="clr sr_body">
-    	<div class="sr_main">
-        	<div class="sr_head">
-            	<div class="l" id="search">
-				{php $j=0}
-				{loop $search_model $k=>$v}
-				{php $j++;}
-					<a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this));" {if $j==1 && $typeid=$v['typeid']} class="on" {/if}>{$v['name']}</a>{if $j != count($search_model)} - {/if}
-				{/loop}
-				{php unset($j);}
-				</div>
-            	<div class="r"><script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script>
-				</div>
-            </div>
-            <div class="sr_logo"><a href="javascript:;"><img src="{IMG_PATH}search/se_logo.png" width="230" height="158" /></a></div>
+{template "search","header"}
 
-			<form name="search" type="get">
-			  <input type="hidden" name="m" value="search"/>
-			  <input type="hidden" name="c" value="index"/>
-			  <input type="hidden" name="a" value="init"/>
-			  <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
-			  <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
-            <div class="sr_frm">
-            	<div class="sr_frm_box">
-                	<div class="sr_frmipt"><input type="text" name="q" id="q" class="ipt"><div class="sp" id="aca">▼</div><input type="submit" class="ss_btn" value="搜 索"></div>
-                </div>
-                <div id="sr_infos" class="wrap sr_infoul">
-                </div>
+<!-- 主要内容 -->
+<div class="page2-block1 container-900 mg-auto overflow clearfix">
+    <div class="left">
+        <div class="searchcontent">
+            <form id="searchForm2" method="get" target="_blank" action="" name="form_search">
+                <input id="searchWord2" class="searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
+        if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
+                <input id="searchBtn2" type="submit" value="" class="searchbtn cursor fl">
+            </form>
+        </div>
+        <div class="article">
+            <a class="pic" href="" title=""><img src="./statics/images/liangyou/images/pic.jpg"></a>
+            <div class="text">
+                <a href=""><h2>中国记录人</h2></a>
+                <span>2015年5月24</span>
+                <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
             </div>
-			</form>
-{if $setting['suggestenable']}
-<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
-<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
-{/if}
-<script language="JavaScript">
-<!--
-$(document).ready(function(){
-	$("#q").focus();
-}); 
-//-->
+        </div>
+        <ul class="piclist clearfix">
+            <li><a href="" title=""><img src="./statics/images/liangyou/images/pic.jpg" alt=""></a></li>
+            <li><a href="" title=""><img src="./statics/images/liangyou/images/pic.jpg" alt=""></a></li>
+            <li><a href="" title=""><img src="./statics/images/liangyou/images/pic.jpg" alt=""></a></li>
+            <li><a href="" title=""><img src="./statics/images/liangyou/images/pic.jpg" alt=""></a></li>
+        </ul>
+        <ul class="articlelist clearfix">
+            <li class="article">
+                <a class="pic" href="" title=""><img src="./statics/images/liangyou/images/pic.jpg"></a>
+                <div class="text">
+                    <a href=""><h2>中国记录人</h2></a>
+                    <span>2015年5月24</span>
+                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+                </div>
+            </li>
+            <li class="article">
+                <a class="pic" href="" title=""><img src="./statics/images/liangyou/images/pic.jpg"></a>
+                <div class="text">
+                    <a href=""><h2>中国记录人</h2></a>
+                    <span>2015年5月24</span>
+                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+                </div>
+            </li>
+            <li class="article">
+                <a class="pic" href="" title=""><img src="./statics/images/liangyou/images/pic.jpg"></a>
+                <div class="text">
+                    <a href=""><h2>中国记录人</h2></a>
+                    <span>2015年5月24</span>
+                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+                </div>
+            </li>
+            <li class="article">
+                <a class="pic" href="" title=""><img src="./statics/images/liangyou/images/pic.jpg"></a>
+                <div class="text">
+                    <a href=""><h2>中国记录人</h2></a>
+                    <span>2015年5月24</span>
+                    <p>5月26日，在马里加奥维和任务区，佩赴马里维和部队在马里加奥维佩赴马里维和部队在马里加奥维和任务区正式完成第务区，佩赴马里维和部队在马里加奥维和任务区正式完成第二二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+                </div>
+            </li>
+    </ul>
+
+
+        <div class="paging">
+            <span class="active">1</span>
+            <a href="/2/">2</a>
+            <a href="/3/">3</a>
+            <a href="/4/">4</a>
+            <a href="/5/">5</a>
+            <span>...</span>
+            <a href="/367/">367 </a>
+            <a href="/2/">下一页</a>
+
+            <input class="input" placeholder="输入页码">
+            <a href="">go</a>
+        </div>
+    </div>
+    <div class="right">
+       <div class="alllinks">
+           <span>全部</span>
+           <a href="" title="专题">专题</a>
+           <a href="" title="资讯">资讯</a>
+           <a href="" title="图片">图片</a>
+       </div>
+        <ul class="adlist clearfix">
+            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
+            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
+        </ul>
+    </div>
+</div>
+
+{template "content","footer"}
+
+<script>
+    $(".alllinks").hover(function() {
+        $(this).find("a").css({"visibility":"visible"});
+    },function() {
+        $(this).find("a").css({"visibility":"hidden"});
+    })
 </script>
-{template 'search', 'footer'}

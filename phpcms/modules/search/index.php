@@ -188,9 +188,10 @@ class index {
 			$pages = isset($pages) ? $pages : '';
 			$totalnums = isset($totalnums) ? $totalnums : 0;
 			$data = isset($data) ? $data : '';
-			
+
 			include	template('search','list');
 		} else {
+
 			include	template('search','index');
 		}
 	}
