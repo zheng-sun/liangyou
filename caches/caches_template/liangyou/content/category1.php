@@ -1,4 +1,4 @@
-{template "content","header"}
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 
 <div class="page3-block1 container-900 mg-auto overflow clearfix">
     <div class="slideinner overflow">
@@ -130,17 +130,17 @@
        <a class="title1" href="" title="">纪录片沙龙</a>
        <a class="title2" href="" title="">[良友纪录片沙龙简介]</a>
        <ul class="clearfix">
-            {pc:content  action="lists" catid="25" order="id DESC" num="4"}
-            {loop $data $r}
+            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b04198c1eae3c21b57d1905e3b9c9304&action=lists&catid=25&order=id+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'25','order'=>'id DESC','limit'=>'4',));}?>
+            <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
            <li>
-               <a class="leftpic" href="" class="title"><img src="{$r[thumb]}" alt=""></a>
+               <a class="leftpic" href="" class="title"><img src="<?php echo $r['thumb'];?>" alt=""></a>
                <div class="righttext">
-                   <a href=""><h2>{$r[title]}</h2></a>
-                   <p>{str_cut($r[description],110)}</p>
+                   <a href=""><h2><?php echo $r['title'];?></h2></a>
+                   <p><?php echo str_cut($r[description],110);?></p>
                </div>
            </li>
-           {/loop}
-           {/pc}
+           <?php $n++;}unset($n); ?>
+           <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
        </ul>
    </div>
     <div class="pictext">
@@ -247,4 +247,4 @@
         </ul>
     </div>
 </div>
-{template "content","footer"}
+<?php include template("content","footer"); ?>

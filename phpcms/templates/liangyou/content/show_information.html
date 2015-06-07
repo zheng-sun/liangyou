@@ -8,54 +8,51 @@
 </div>
 
 <!-- 搜素+面包 -->
-<div class="block3 container-900 mg-auto overflow clearfix page5-block">
-    <div class="searchcontent">
-        <form id="searchForm2" method="get" target="_blank" action="" name="form_search">
-            <input id="searchWord2" class="searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
-        if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-            <input id="searchBtn2" type="submit" value="" class="searchbtn cursor fl">
-        </form>
+<div class="xxl_stop container-900 mg-auto overflow clearfix">
+    <div class="xxl_asear xxl_clear">
+      <div class="xxl_search">
+          <input id="searchWord2" class="xxl_searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
+          if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
+          <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl">
+      </div>
     </div>
-    <a href="" title="">首页</a>
-    <a href="" title="">文化空间</a>
-    <a href="" title="">片名</a>
-    <a href="" title="">豆腐味道</a>
+    <div class="xxl_bsear">
+      <a href="">全部</a>&nbsp;|
+      <a href="" class="xxl_font">历史</a>&nbsp;|
+      <a href="">人文</a>&nbsp;|
+      <a href="">军事</a>&nbsp;|
+      <a href="">自然</a>&nbsp;|
+      <a href="">社会</a>
+    </div>
 </div>
-
 <!-- 主要内容 -->
 <div class="block4 container-900 mg-auto overflow clearfix page5">
     <div class="left">
         <div class="article-detail">
-            <h2>豆腐味道</h2>
-            <a class="pic-left" href="" title=""><img src="images/pic.jpg" alt=""></a>
+            <h2>{$title}</h2>
+            <a class="pic-left" href="" title=""><img src="{$thumb}" alt=""></a>
             <div class="content-right">
-                <p>中文片名: 豆腐味道</p>
-                <p>英文片名: 豆腐味道</p>
-                <p>导演: <a href="" title="">糊糊</a></p>
-                <p>国家/地区: 中国大陆</p>
-                <p>出品: 糊糊传媒有限公司</p>
+                <p>中文片名: {$title}</p>
+                <p>英文片名: {$en_title}</p>
+                <p>导演: <a href="" title="">{$director}</a></p>
+                <p>国家/地区: {$area}</p>
+                <p>出品: {$produced}</p>
                 <p>摘要:</p>
-                <p>在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式</p>
-                <p>标签：<a href="" title="">人文</a><a href="" title="">美食</a><a href="" title="">豆腐</a></p>
-                <a class="abutton" href="" title=""></a>
+                <p>{$description}</p>
+                <p>标签：<a href="" title="">{$title}</a></p>
+                <a class="abutton" href="{$link_url}" title="{$title}" target="_blank"></a>
             </div>
         </div>
         <div class="article">
             <h2>影片简介</h2>
-            <h3 class="title">流动的传承</h3>
-            <p class="content">5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-            <p class="content">5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-            <h3 class="title">流动的传承</h3>
-            <p class="content">5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
-            <p class="content">5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</p>
+            <p class="xxl_content">{$content}</p>
         </div>
-        <div class="pictures">
+        <div class="xxl_juzhao">
             <h2>剧照</h2>
             <ul class="clearfix">
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
+                {loop $stills $r}
+                <li><img src="{$r[url]}" alt="剧照" width="170" height="170"></li>
+                {/loop}
             </ul>
         </div>
         <div class="links">

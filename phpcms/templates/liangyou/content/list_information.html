@@ -28,92 +28,24 @@
   <div class="block4 container-900 mg-auto overflow clearfix xxl_clear">
       <div class="left">
         <ul class="xxl_articlelist clearfix">
+            {pc:content  action="lists" catid="$catid" order="id DESC" num="15"  page="$page"}
+            {loop $data $r}
             <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
+                <a class="xxl_pic" href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"></a>
                 <div class="xxl_text">
-                    <a href="">豆腐味道</a>
+                    <a href="">{$r[title]}</a>
                     <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
+                    <p>英文名:{$r[en_title]}</p>
+                    <p>导演：{$r[director]}</p>
+                    <p>国家/地区:{$r[area]}</p>
+                    <p>出品:{$r[produced]}</p>
+                    <p>时长:{$r[duration]}</p>
                 </div>
             </li>
-            <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="xxl_text">
-                    <a href="">豆腐味道</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
-                </div>
-            </li>
-            <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="xxl_text">
-                    <a href="">豆腐味道</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
-                </div>
-            </li>
-            <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="xxl_text">
-                    <a href="">豆腐味道</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
-                </div>
-            </li>
-            <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="xxl_text">
-                    <a href="">豆腐味道</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
-                </div>
-            </li>
-            <li class="xxl_article">
-                <a class="xxl_pic" href="" title=""><img src="images/pic.jpg"></a>
-                <div class="xxl_text">
-                    <a href="">豆腐味道</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:Tofu Legend</p>
-                    <p>导演：陈建设</p>
-                    <p>国家/地区:中国大陆</p>
-                    <p>出品:良友(北京)文化传媒有限公司</p>
-                    <p>时长:4集 45分钟</p>
-                </div>
-            </li>
+            {/loop}
+            {/pc}
         </ul>
-        <div class="paging">
-            <span class="active">1</span>
-            <a href="/2/">2</a>
-            <a href="/3/">3</a>
-            <a href="/4/">4</a>
-            <a href="/5/">5</a>
-            <span>...</span>
-            <a href="/367/">367 </a>
-            <a href="/2/">下一页</a>
-
-            <input class="input" placeholder="输入页码">
-            <a href="">go</a>
-        </div>
+        <div class="paging">{$pages}</div>
       </div>
       <div class="right">
           <div class="links links1">
