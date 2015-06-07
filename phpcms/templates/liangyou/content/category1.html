@@ -127,123 +127,96 @@
 
 <div class="page3-block2 container-900 mg-auto overflow clearfix">
    <div class="pictext">
-       <a class="title1" href="" title="">纪录片沙龙</a>
-       <a class="title2" href="" title="">[良友纪录片沙龙简介]</a>
+       <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=25" title="">纪录片沙龙</a>
+       <a class="title2" href="" title="">[
+       {pc:get sql="select * from  v9_category where catid = 25" cache="3600" return="data"}
+       {loop $data $r}
+        {str_cut($r[description],130)}
+       {/loop}
+       {/pc}
+       ]</a>
        <ul class="clearfix">
             {pc:content  action="lists" catid="25" order="id DESC" num="4"}
             {loop $data $r}
-           <li>
-               <a class="leftpic" href="" class="title"><img src="{$r[thumb]}" alt=""></a>
+            <li>
+               <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt=""></a>
                <div class="righttext">
-                   <a href=""><h2>{$r[title]}</h2></a>
+                   <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
                    <p>{str_cut($r[description],110)}</p>
                </div>
-           </li>
+            </li>
            {/loop}
            {/pc}
        </ul>
    </div>
     <div class="pictext">
-        <a class="title1" href="" title="">纪录片沙龙</a>
-        <a class="title2" href="" title="">[良友纪录片沙龙简介]</a>
+        <a class="title1" href="" title="">公益大讲堂</a>
+        <a class="title2" href="" title="">[
+        {pc:get sql="select * from  v9_category where catid = 26" cache="3600" return="data"}
+        {loop $data $r}
+            {str_cut($r[description],130)}
+        {/loop}
+        {/pc}
+        ]</a>
         <ul class="clearfix">
+            {pc:content  action="lists" catid="26" order="id DESC" num="4"}
+            {loop $data $r}
             <li>
-                <a class="leftpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="righttext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
+               <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
+               <div class="righttext">
+                   <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
+                   <p>{str_cut($r[description],110)}</p>
+               </div>
             </li>
-            <li>
-                <a class="leftpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="righttext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="leftpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="righttext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="leftpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="righttext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
+           {/loop}
+           {/pc}
         </ul>
     </div>
 
     <div class="picture">
-        <a class="title1" href="" title="">纪录片沙龙</a>
-        <a class="title2" href="" title="">[良友纪录片沙龙简介]</a>
+        <a class="title1" href="" title="">常规课程</a>
+        <a class="title2" href="" title="">[
+        {pc:get sql="select * from  v9_category where catid = 27" cache="3600" return="data"}
+        {loop $data $r}
+            {str_cut($r[description],130)}
+        {/loop}
+        {/pc}
+        ]</a>
         <ul class="clearfix">
+            {pc:content  action="lists" catid="27" order="id DESC" num="4"}
+            {loop $data $r}
             <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
+                <a class="toptpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+                    <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
+                    <p class="whkj_p">{str_cut($r[description],65)}</p>
                 </div>
             </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
+            {/loop}
+            {/pc}
         </ul>
     </div>
     <div class="picture">
-        <a class="title1" href="" title="">纪录片沙龙</a>
-        <a class="title2" href="" title="">[良友纪录片沙龙简介]</a>
+        <a class="title1" href="" title="">良友剧场</a>
+        <a class="title2" href="" title="">[
+        {pc:get sql="select * from  v9_category where catid = 28" cache="3600" return="data"}
+        {loop $data $r}
+            {str_cut($r[description],130)}
+        {/loop}
+        {/pc}
+        ]</a>
         <ul class="clearfix">
+            {pc:content  action="lists" catid="28" order="id DESC" num="4"}
+            {loop $data $r}
             <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
+                <a class="toptpic" href="" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
+                    <a href=""><h2>{$r[title]}</h2></a>
+                    <p class="whkj_p">{str_cut($r[description],65)}</p>
                 </div>
             </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
-            <li>
-                <a class="toptpic" href="" class="title"><img src="images/pic.jpg" alt=""></a>
-                <div class="bottomtext">
-                    <a href=""><h2>中国记录人</h2></a>
-                    <p>5月26日，在马是，新一批维和官兵胸前英、法三种文字标记姓名、血</p>
-                </div>
-            </li>
+            {/loop}
+            {/pc}
         </ul>
     </div>
 </div>

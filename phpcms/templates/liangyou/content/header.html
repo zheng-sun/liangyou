@@ -31,11 +31,9 @@ var _hmt = _hmt || [];
 <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/jquery.bxslider.css" />
 <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="{JS_PATH}liangyou/js/index.js"></script>
+<script type="text/javascript" src="{JS_PATH}liangyou/js/gun.js"></script>
+<script type="text/javascript" src="{JS_PATH}liangyou/js/org.js"></script>
 <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="{JS_PATH}liangyou/js/js/gun.js"></script>
-<script type="text/javascript" src="{JS_PATH}liangyou/js/js/org.js"></script>
-
-
 </head>
 <body>
 <!-- logo 和 搜索连接 -->
@@ -50,15 +48,10 @@ var _hmt = _hmt || [];
       </ul>
       {/pc}
       <div class="searchcontent">
-          <form id="searchForm" method="get" target="_blank" action="{APP_PATH}index.php" name="form_search">
+          <form id="searchForm" method="get" target="_blank" action="" name="form_search">
               <input id="searchWord" class="searchname fl" type="text" onclick=" document.getElementById('searchWord').style.color='#000000';
     if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl"/>
-              <input type="hidden" name="m" value="search"/>
-			<input type="hidden" name="c" value="index"/>
-			<input type="hidden" name="a" value="init"/>
-            <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
-			<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl">
           </form>
       </div>
 

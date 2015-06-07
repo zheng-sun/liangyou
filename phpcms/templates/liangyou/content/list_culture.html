@@ -1,0 +1,31 @@
+{template "content","header"}
+
+<!-- 内容部分开始  -->
+<div class="xxl_clear"></div>
+<div class="content">
+	<div class="zx-con">
+		<ul>
+		{pc:content  action="lists" catid="$catid" order="id DESC" num="15"  page="$page"}
+        {loop $data $r}
+			<li>
+				<div class="zx-con-1">
+					<a href="{$r[url]}"><img src="{$r[thumb]}" /></a>
+				</div>
+				<div class="zx-con-2">
+					<div class="con_title"><a href="{$r[url]}" >{$r[title]}</a></div>
+					<div class="xxl_line"></div>
+					<div class="con_time">{$r[inputtime]}</div>
+					<div class="con_message">{$r[description]}</div>
+				</div>
+				<div class="clear"> </div>
+			</li>
+        {/loop}
+        {/pc}
+		</ul>
+	</div>
+	<div class="paging">{$pages}</div>
+    
+</div>
+<div class="xxl_clear"></div>
+
+{template "content","footer"}

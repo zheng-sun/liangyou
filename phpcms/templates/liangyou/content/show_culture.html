@@ -1,0 +1,65 @@
+{template "content","header"}
+
+  <!-- 面包屑 -->
+  <div class="block3 container-900 mg-auto overflow clearfix">
+      <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 正文</div>
+  </div>
+
+  <!-- 主要内容 -->
+  <div class="block4 container-900 mg-auto overflow clearfix">
+      <div class="left">
+          <div class="article">
+              <h2 class="big">{$title}</h2>
+              <div class="author"><span>责任编辑：{$username}</span> <span>发布时间：{$inputtime}</span></div>
+              <div class="author-detail">
+              {$content}
+              </div>
+          </div>
+        {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+        {if $data}
+          <div class="links">
+              <h2 class="linls-title">相关阅读</h2>
+              <ul class="clearfix">
+                {loop $data $r}
+                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                {/loop}
+              </ul>
+          </div>
+       {/if}
+      {/pc}
+      </div>
+      <div class="right">
+          <div class="links links1">
+              <h2 class="linls-title">相关推荐</h2>
+              {pc:content  action="position" posid="18" order="listorder DESC" num="2"} 
+              <ul class="clearfix">
+                {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span>{$r[title]}</span></a></li>
+                {/loop}
+              </ul>
+              {/pc}
+          </div>
+          <div class="links links2">
+              <h2 class="linls-title">热门点击</h2>
+              {pc:content  action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+              <ul class="clearfix">
+                {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                {/loop}
+              </ul>
+              {/pc}
+          </div>
+          <div class="links links3">
+              <h2 class="linls-title">最新活动</h2>
+              <a href="" title=""><img src="images/pic.jpg"></a>
+              <ul class="clearfix">
+                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  <li><a href="" title="">在马奥维和任务区</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+{template "content","footer"}
