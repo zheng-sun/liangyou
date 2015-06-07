@@ -42,7 +42,7 @@
 				</div>
 				<div class="title"><a href="#" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],110)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],130,'')}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -70,7 +70,7 @@
 				</div>
 				<div class="title"><a href="#" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],110)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],130,'')}</a></div>
 			</li>
         <?php }
             $i++;
@@ -131,7 +131,7 @@
 		        </li>
 		    </ul>
 	    </div>
-	    <div class="slideinner2 overflow xxl_show_cat2" style="display:none;">
+	    <div class="slideinner overflow xxl_show_cat2" style="display:none;">
 		    <ul class="clearfix overflow ">
 				<li>
 		            {pc:get sql="select * from v9_news where catid =26 order by id desc" start="0" num="4" cache="3600" return="data"}
@@ -171,7 +171,7 @@
 		        </li>
 		    </ul>
 	    </div>
-	    <div class="slideinner3 overflow xxl_show_cat3" style="display:none;">
+	    <div class="slideinner overflow xxl_show_cat3" style="display:none;">
 		    <ul class="clearfix overflow">
 				<li>
 		            {pc:get sql="select * from v9_news where catid =27 order by id desc" start="0" num="4" cache="3600" return="data"}
@@ -211,7 +211,7 @@
 		        </li>
 		    </ul>
 	    </div>
-	    <div class="slideinner4 overflow xxl_show_cat4" style="display:none;">
+	    <div class="slideinner overflow xxl_show_cat4" style="display:none;">
 		    <ul class="clearfix overflow">
 				<li>
 		            {pc:get sql="select * from v9_activity where catid=32 order by id desc" start="0" num="4" cache="3600" return="data"}
@@ -256,9 +256,9 @@
 </div>
 <div class="xxl_clear"></div>
 <script>
-    slideSwitch3(".slideinner","slidehover");
-    slideSwitch3(".slideinner2","slidehover");
-    slideSwitch3(".slideinner3","slidehover");
-    slideSwitch3(".slideinner4","slidehover");
+    slideSwitch3(".xxl_show_cat1","slidehover");
+    slideSwitch3(".xxl_show_cat2","slidehover");
+    slideSwitch3(".xxl_show_cat3","slidehover");
+    slideSwitch3(".xxl_show_cat4","slidehover");
 </script>
 {template "content","footer"}
