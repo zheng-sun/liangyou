@@ -1,4 +1,9 @@
-﻿59.108.91.188 ip
+﻿绑定的域名：http://www.1926cn.com
+远程桌面：
+administrator
+liangyou2015
+
+59.108.91.188 ip
 服务器：
 webadmin    liangyouweb2015
 
