@@ -1,4 +1,14 @@
-﻿http://www.tvmcloud.com/home/mall/index/s/TWqbL 商城链接
+﻿59.108.91.188 ip
+服务器：
+webadmin    liangyouweb2015
+
+管理员：
+sysadmin   liangyou2015admin
+
+数据库
+dataadmin　　　liangyouadmin2015
+
+http://www.tvmcloud.com/home/mall/index/s/TWqbL 商城链接
 
 
 界面管理：
