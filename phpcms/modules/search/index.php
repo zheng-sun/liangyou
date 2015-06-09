@@ -77,11 +77,8 @@ class index {
 				//分词结果
 				$segment_q = $segment->get_keyword($segment->split_result($q));
 				//如果分词结果为空
-				if(!empty($segment_q)) {
-					$sql = "`siteid`= '$siteid' AND `typeid` = '$typeid' $sql_time AND MATCH (`data`) AGAINST ('$segment_q' IN BOOLEAN MODE)";
-				} else {
-					$sql = "`siteid`= '$siteid' AND `typeid` = '$typeid' $sql_time AND `data` like '%$q%'";
-				}
+
+                $sql = "`siteid`= '$siteid' AND `typeid` = '$typeid' $sql_time AND `data` like '%$q%'";
 
 				$result = $this->db->listinfo($sql, 'searchid DESC', $page, 10);
 			}
@@ -162,20 +159,9 @@ class index {
 					}
 				
 					//如果分词结果为空
-					if(!empty($segment_q)) {
-						$replace = explode(' ', $segment_q);
-						foreach($replace as $replace_arr_v) {
-							$replace_arr[] =  '<font color=red>'.$replace_arr_v.'</font>';
-						}
-						foreach($data as $_k=>$_v) {
-							$data[$_k]['title'] = str_replace($replace, $replace_arr, $_v['title']);
-							$data[$_k]['description'] = str_replace($replace, $replace_arr, $_v['description']);
-						}
-					} else {
-						foreach($data as $_k=>$_v) {
-							$data[$_k]['title'] = str_replace($q, '<font color=red>'.$q.'</font>', $_v['title']);
-							$data[$_k]['description'] = str_replace($q, '<font color=red>'.$q.'</font>', $_v['description']);
-						}
+					foreach($data as $_k=>$_v) {
+						$data[$_k]['title'] = str_replace($q, '<font color=red>'.$q.'</font>', $_v['title']);
+						$data[$_k]['description'] = str_replace($q, $q, $_v['description']);
 					}
 				} else {
 					//读取专辑搜索接口
