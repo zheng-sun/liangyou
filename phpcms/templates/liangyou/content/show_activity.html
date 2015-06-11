@@ -72,5 +72,40 @@
         </div>
     </div>
 </div>
-
+<!-- 遮罩层 -->
+<div class="zhezhao" style="display:none;"></div>
+<div class="xxl_set_sapp" style="display:none;">
+    <div class="clearfix">
+      <span class="set_title">请填写您的报名信息</span>
+    </div>
+    <dl class="run_person">
+      <dt>手机<span style="color:red">*</span></dt>
+      <dd class="fl">
+        <input type="text" class="info-input" name="phone" placeholder="请填写您的手机号码"></dd>
+    </dl>
+    <dl class="run_person">
+      <dt>邮箱<span style="color:red">*</span></dt>
+      <dd>
+        <input type="text" class="info-input" placeholder="请输入您的电子邮箱"></dd>
+    </dl>
+    <dl class="run_person">
+      <dt>姓名<span style="color:red">*</span></dt>
+      <dd>
+        <input type="text" class="info-input" placeholder="请填写您的姓名，限10字以内">
+      </dd>
+      <p class="xxl_sex">
+          <input type="radio" name="" value="1" />先生
+          <input type="radio" name="" value="2" />小姐
+      </p>
+    </dl>
+    <dl class="run_person">
+      <dt>单位</dt>
+      <dd>
+        <input type="text" class="info-input" placeholder="请填写您的单位，限20字以内"></dd>
+    </dl>
+    <div class="operation_button">
+      <a href="javascript:void(0);" class="btn-primary xxl_action_okbtn">确定</a>
+      <a href="javascript:void(0);" class="btn-primary btn-block xxl_action_nobtn">返回</a>
+    </div>
+  </div>
 {template "content","footer"}
