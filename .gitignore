@@ -42,8 +42,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-=======
-#ThinkPHP Temp Files
 caches/*
-#phpstorm
-.idea/
+caches/error_log.php
+
