@@ -81,31 +81,41 @@
     <dl class="run_person">
       <dt>手机<span style="color:red">*</span></dt>
       <dd class="fl">
-        <input type="text" class="info-input" name="phone" placeholder="请填写您的手机号码"></dd>
+        <input type="text" class="info-input" id="phone" name="phone" placeholder="请填写您的手机号码"/></dd>
     </dl>
     <dl class="run_person">
       <dt>邮箱<span style="color:red">*</span></dt>
       <dd>
-        <input type="text" class="info-input" placeholder="请输入您的电子邮箱"></dd>
+        <input type="text" class="info-input" id="eamil" name="email" placeholder="请输入您的电子邮箱"/></dd>
     </dl>
     <dl class="run_person">
       <dt>姓名<span style="color:red">*</span></dt>
       <dd>
-        <input type="text" class="info-input" placeholder="请填写您的姓名，限10字以内">
+        <input type="text" class="info-input" id="name" name="name" placeholder="请填写您的姓名，限10字以内"/>
       </dd>
       <p class="xxl_sex">
-          <input type="radio" name="" value="1" />先生
-          <input type="radio" name="" value="2" />小姐
+          <input type="radio" name="sex" value="1" />先生
+          <input type="radio" name="sex" value="2" />小姐
       </p>
     </dl>
     <dl class="run_person">
       <dt>单位</dt>
       <dd>
-        <input type="text" class="info-input" placeholder="请填写您的单位，限20字以内"></dd>
+        <input type="text" class="info-input" id="unit" name="unit" placeholder="请填写您的单位，限20字以内"/></dd>
     </dl>
     <div class="operation_button">
-      <a href="javascript:void(0);" class="btn-primary xxl_action_okbtn">确定</a>
+      <a href="javascript:void(0);" class="btn-primary xxl_action_okbtn" onclick="do_sumbit();">确定</a>
       <a href="javascript:void(0);" class="btn-primary btn-block xxl_action_nobtn">返回</a>
     </div>
   </div>
+  <script type="text/javascript">
+  function do_sumbit(){
+  	alert('12332');
+  	var phone = $("#phone").val();
+  	var eamil = $("#eamil").val();
+  	var name = $("#name").val();
+  	var sex = $("#sex").val();
+  	var unit = $("#unit").val();
+  }
+  </script>
 {template "content","footer"}

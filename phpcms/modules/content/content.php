@@ -1145,5 +1145,12 @@ class content extends admin {
 		}
 		return true;
 	}
+	
+	//查看报名信息
+	public function show_enroll(){
+		$enroll_model = pc_base::load_model('enroll_model');
+		$list = $enroll_model->listinfo();
+		var_dump($list);
+	}
 }
 ?>
