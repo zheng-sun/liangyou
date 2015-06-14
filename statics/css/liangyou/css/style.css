@@ -1242,7 +1242,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     overflow: hidden;
 }
 .page5 .left .pictures li {
-    width: 170px;
+    width: 165px;
     height:200px;
     float: left;
     margin-right: 5px;
@@ -1254,9 +1254,90 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin: 20px 0 0 0;
 }
 
+.page5 .left .pictures li a {
+    cursor: pointer;
+}
+
 .page5 .left .links {
     margin-top: 0;
 }
+
+/* inside pictures (bxslider)*/
+.inside_pictures_wrapper {
+    width: 900px;
+    background: #000;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -450px;
+    display: block;
+    position: fixed;
+}
+
+.inside_pictures_wrapper .bx-viewport{
+    height: 400px!important;
+}
+
+.inside_pictures_wrapper .close {
+    width: 48px;
+    height: 48px;
+    background: url(../../../images/liangyou/images/close.png) no-repeat center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: 20px 20px ;
+    cursor: pointer;
+}
+
+.inside_pictures .bx-wrapper {
+    overflow: hidden;
+    margin: 0;
+    margin: 30px 0 50px 0;
+}
+
+.inside_pictures {
+    width:900px;
+    overflow: hidden;
+}
+
+.inside_pictures .bx-wrapper img {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+}
+
+.inside_pictures .bx-wrapper .bx-controls-direction a {
+    display: block;
+}
+
+.inside_pictures .bx-wrapper .bx-prev {
+    background: url(../../../images/liangyou/images/left1.png) no-repeat center center;
+}
+
+.inside_pictures .bx-wrapper .bx-next {
+    background: url(../../../images/liangyou/images/right1.png)  no-repeat center center;
+}
+
+.inside_pictures .bx-wrapper .bx-controls-direction a {
+    width: 100px;
+    height: 400px;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.inside_pictures_wrapper .num {
+    color: #fff;
+    position: relative;
+    top: 400px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -10px;
+}
+
+.inside_pictures_wrapper .bx-wrapper .bx-pager {
+    display: none;
+}
+
 .xxl_juzhao{
     margin-top: 10px;
 }
@@ -1270,4 +1351,5 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     height:170px;
     margin-top: 10px;
 }
+
 

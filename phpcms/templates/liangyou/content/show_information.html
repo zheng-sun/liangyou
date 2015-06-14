@@ -43,11 +43,11 @@
             <h2>影片简介</h2>
             <p class="xxl_content">{$content}</p>
         </div>
-        <div class="xxl_juzhao">
+        <div class="pictures xxl_juzhao">
             <h2>剧照</h2>
             <ul class="clearfix">
                 {loop $stills $r}
-                <li><img src="{$r[url]}" alt="剧照"  style="margin:10px auto 10px auto;width:170px;height:170px;"></li>
+                <li><a title=""><img src="{$r[url]}" alt="剧照"  style="margin:10px auto 10px auto;width:170px;height:170px;"></a></li>
                 {/loop}
             </ul>
         </div>
@@ -106,4 +106,52 @@
     </div>
 </div>
 
+<!-- 图集 start -->
+<div class="inside_pictures_wrapper container-900 mg-auto overflow clearfix">
+    <div class="close"></div>
+    <div class="num"><span></span>/<em></em></div>
+    <div class="inside_pictures">
+        <ul class="bxslider">
+            {loop $stills $r}
+            <li><a href=""><img src="{$r[url]}"/></a></li>
+            {/loop}
+        </ul>
+        <script>
+            var picNum = $(".bxslider li").length;
+            $(".num em").html(picNum);
+
+        </script>
+    </div>
+</div>
+
+<script>
+    $('.bxslider').bxSlider({
+        auto: false,
+        autoControls: true,
+        captions: false,
+        onSliderLoad: function(){
+            // do funky JS stuff here
+            $(".num span").html(1);
+        },
+        onSlideAfter: function(){
+            // do mind-blowing JS stuff here
+            //alert('A slide has finished transitioning. Bravo. Click OK to continue!');
+            var picactiveNum = parseInt($(".bx-wrapper .bx-pager.bx-default-pager a.active").attr("data-slide-index")) ;
+            $(".num span").html(picactiveNum+1);
+        }
+    });
+
+    $(function() {
+        $(".inside_pictures_wrapper").css({"display":"none"});
+    })
+
+    $(".page5 .left .pictures li a").click(function() {
+        $(".inside_pictures_wrapper").css({"display":"block"});
+    })
+
+    $(".close").click(function() {
+        $(".inside_pictures_wrapper").css({"display":"none"});
+    })
+</script>
+<!-- 图集 end -->
 {template "content","footer"}

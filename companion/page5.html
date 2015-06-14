@@ -6,12 +6,13 @@
     <meta name="keywords" content="良友"/>
     <meta name="description" content="良友"/>
     <link rel="shortcut icon" href="" type="image/x-icon" />
-
-
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script src="js/index.js"></script>
     <base target="_blank" />
+
+    <!--picture-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
 
 </head>
 <body>
@@ -62,8 +63,8 @@
 <div class="block2 container-900 mg-auto overflow clearfix">
     <ul class="clearfix">
         <li><a href="" title="">最新资讯<span>Trends</span></a></li>
-        <li><a class="current" href="" title="">记录时间<span>Doc Time</span></a></li>
-        <li><a href="" title="" >文化空间<span>Saloon</span></a></li>
+        <li><a href="" title="">记录时间<span>Doc Time</span></a></li>
+        <li><a class="current" href="" title="" >文化空间<span>Saloon</span></a></li>
         <li><a href="" title="">良友出品<span>Production</span></a></li>
     </ul>
 </div>
@@ -121,10 +122,10 @@
         <div class="pictures">
             <h2>剧照</h2>
             <ul class="clearfix">
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg" alt=""></a></li>
+                <li><a title=""><img src="images/pic.jpg" alt=""></a></li>
+                <li><a title=""><img src="images/pic.jpg" alt=""></a></li>
+                <li><a title=""><img src="images/pic.jpg" alt=""></a></li>
+                <li><a title=""><img src="images/pic.jpg" alt=""></a></li>
             </ul>
         </div>
         <div class="links">
@@ -194,6 +195,56 @@
     </div>
 </div>
 
+<div class="inside_pictures_wrapper container-900 mg-auto overflow clearfix">
+    <div class="close"></div>
+    <div class="num"><span></span>/<em></em></div>
+<div class="inside_pictures">
+    <ul class="bxslider">
+        <li><a href=""><img src="images/pic.jpg"/></a></li>
+        <li><a href=""><img src="images/pic.jpg" /></a></li>
+        <li><a href=""><img src="images/pic.jpg"/></a></li>
+        <li><a href=""><img src="images/pic.jpg" /></a></li>
+        <li><a href=""><img src="images/pic.jpg"/></a></li>
+        <li><a href=""><img src="images/pic.jpg" /></a></li>
+    </ul>
+    <script>
+        var picNum = $(".bxslider li").length;
+        $(".num em").html(picNum);
 
+    </script>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script>
+    $('.bxslider').bxSlider({
+        auto: false,
+        autoControls: true,
+        captions: false,
+        onSliderLoad: function(){
+            // do funky JS stuff here
+            $(".num span").html(1);
+        },
+        onSlideAfter: function(){
+            // do mind-blowing JS stuff here
+            //alert('A slide has finished transitioning. Bravo. Click OK to continue!');
+            var picactiveNum = parseInt($(".bx-wrapper .bx-pager.bx-default-pager a.active").attr("data-slide-index")) ;
+            $(".num span").html(picactiveNum+1);
+        }
+    });
+
+    $(function() {
+        $(".inside_pictures_wrapper").css({"display":"none"});
+    })
+
+  $(".page5 .left .pictures li a").click(function() {
+      $(".inside_pictures_wrapper").css({"display":"block"});
+  })
+
+    $(".close").click(function() {
+        $(".inside_pictures_wrapper").css({"display":"none"});
+    })
+
+
+</script>
 </body>
 </html>
