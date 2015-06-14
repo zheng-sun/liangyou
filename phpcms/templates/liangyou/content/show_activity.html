@@ -53,21 +53,30 @@
         <div class="links xxl_links3">
             <h2 class="linls-title">最新活动</h2>
             <ul class="clearfix">
+                {pc:content action="lists" catid="32" num="5" order="id DESC"}
+                <?php $i=1;?>
+                {loop $data $r}
+                <?php if($i == 1) { ?>
                 <li>
-                    <a href="" title=""><img src="images/pic.jpg"></a>
-                    <a href="" title="">一念之间琴心音乐正在接</a>
+                    <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"></a>
+                    <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
                 </li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
-                <li><a href="" title="">在马奥维和任务区</a></li>
+                <?php }else{?>
+                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                <?php }?>
+                <?php $i++;?>
+                {/loop}
+                {/pc}
             </ul>
         </div>
         <div class="links links3">
             <h2 class="linls-title">精彩回顾</h2>
             <ul class="clearfix">
-                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
-                <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+                {pc:content action="lists" catid="25" num="2" order="id DESC"}
+                {loop $data $r}
+                <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"><span>{$r[title]}</span></a></li>
+                {/loop}
+                {/pc}
             </ul>
         </div>
     </div>
