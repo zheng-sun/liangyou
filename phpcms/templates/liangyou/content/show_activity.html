@@ -86,7 +86,7 @@
     <dl class="run_person">
       <dt>邮箱<span style="color:red">*</span></dt>
       <dd>
-        <input type="text" class="info-input" id="eamil" name="email" placeholder="请输入您的电子邮箱"/></dd>
+        <input type="text" class="info-input" id="email" name="email" placeholder="请输入您的电子邮箱"/></dd>
     </dl>
     <dl class="run_person">
       <dt>姓名<span style="color:red">*</span></dt>
@@ -110,12 +110,16 @@
   </div>
   <script type="text/javascript">
   function do_sumbit(){
-  	alert('12332');
-  	var phone = $("#phone").val();
-  	var eamil = $("#eamil").val();
-  	var name = $("#name").val();
-  	var sex = $("#sex").val();
-  	var unit = $("#unit").val();
+    var phone = $("#phone").val();
+    var email = $("#email").val();
+    var name = $("#name").val();
+    var sex = $("#sex").val();
+    var unit = $("#unit").val();
+    $.post('index.php?m=content&a=add_enroll&c=index',{phone:phone,email:email,name:name,sex:sex,unit:unit},function(data){
+      if(data == 1){
+          alert('添加成功!');
+      }
+    });
   }
   </script>
 {template "content","footer"}

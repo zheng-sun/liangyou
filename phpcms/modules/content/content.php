@@ -1149,8 +1149,19 @@ class content extends admin {
 	//查看报名信息
 	public function show_enroll(){
 		$enroll_model = pc_base::load_model('enroll_model');
-		$list = $enroll_model->listinfo();
-		var_dump($list);
+        $page = intval($_GET['page'])?intval($_GET['page']):1;
+        $datas = array();
+        $where = '';
+        $datas = $enroll_model->listinfo($where,'',$page,15);
+        $pages = $enroll_model->pages;
+        include $this->admin_tpl('enroll_list');
 	}
+
+    // 删除报名信息
+    public function enroll_delete(){
+        $enroll_model = pc_base::load_model('enroll_model');
+        $enroll_model->delete(array('id'=>$_GET['id']));
+        exit('1');
+    }
 }
 ?>

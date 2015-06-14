@@ -355,5 +355,18 @@ class index {
 			return '1';
 		}
 	 }
+
+
+    //添加报名信息
+    public function add_enroll(){
+        $enroll_model = pc_base::load_model('enroll_model');
+        $info['phone'] = $_POST['phone'];
+        $info['email'] = $_POST['email'];
+        $info['name'] = $_POST['name'];
+        $info['sex'] = $_POST['sex'];
+        $info['unit'] = $_POST['unit'];
+        $enroll_model->insert($info,true);
+        echo 1;
+    }
 }
 ?>
