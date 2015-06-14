@@ -1272,6 +1272,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin-left: -450px;
     display: block;
     position: fixed;
+    z-index: 1000;
 }
 
 .inside_pictures_wrapper .bx-viewport{
