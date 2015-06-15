@@ -12,7 +12,7 @@
 				<div class="pic">
 					<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="180px" /></a>
 				</div>
-				<div class="top5_title"><a href="{$r[url]}" >{$r[title]}</a></div>
+				<div class="top5_title"><a href="{$r[url]}" >{str_cut($r[title],30,'...')}</a></div>
 				<div class="xxl_line"></div>
 				<div class="zx_message top5_message"><a href="#" >{str_cut($r[description],156,'...')}</a></div>
 			</li>
