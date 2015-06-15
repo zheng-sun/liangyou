@@ -41,8 +41,11 @@
            <a href="" title="图片">图片</a>
        </div>
         <ul class="adlist clearfix">
-            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
-            <li><a href="" title=""><img class="adimg" src="./statics/images/liangyou/images/pic.jpg"></a></li>
+            {pc:content  action="position" posid="20" order="listorder DESC" num="2"}
+            {loop $data $r}
+            <li><a href="{$r[url]}" title="{$r[title]}"><img class="adimg" src="{$r[thumb]}"></a></li>
+            {/loop}
+            {/pc}
         </ul>
     </div>
 </div>
