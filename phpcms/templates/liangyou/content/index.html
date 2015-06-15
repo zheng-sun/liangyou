@@ -40,9 +40,9 @@
 				<div class="pic">
 					<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="225px" /></a>
 				</div>
-				<div class="title"><a href="#" >{$r[title]}</a></div>
+				<div class="title"><a href="#" >{str_cut($r[title],45)}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],110)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],85)}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -70,7 +70,7 @@
 				</div>
 				<div class="title"><a href="#" >{$r[title]}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],110)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],85)}</a></div>
 			</li>
         <?php }
             $i++;
