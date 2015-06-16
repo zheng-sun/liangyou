@@ -54,7 +54,7 @@ var _hmt = _hmt || [];
             <input type="hidden" name="m" value="search"/>
             <input type="hidden" name="c" value="index"/>
             <input type="hidden" name="a" value="init"/>
-            <input type="hidden" name="typeid" value="1" id="typeid"/>
+            <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
             <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
           </form>
       </div>
@@ -62,12 +62,25 @@ var _hmt = _hmt || [];
       <div id="dropdown">
           <input class="input_select" type="text" value="类型"/>
           <ul>
-              <li><a href="#" rel="2" target="_self">专题</a></li>
-              <li><a href="#" rel="3" target="_self">资讯</a></li>
-              <li><a href="#" rel="4" target="_self">图片</a></li>
+              {php $j=0}
+              {php $search_model = getcache('search_model_'.$siteid, 'search');}
+              {loop $search_model $k=>$v}
+              {php $j++;}
+              <li><a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this));" style="outline:medium none;" hidefocus="true" >{$v['name']}</a></li>
+              {/loop}
+              {php unset($j);}
           </ul>
       </div>
+        <script type="text/javascript">
+            function setmodel(value, id, siteid, q) {
+                $("#typeid").val(value);
+                id.addClass('on');
+                if(q!=null && q!='') {
+                    window.location='?m=search&c=index&a=init&siteid='+siteid+'&typeid='+value+'&q='+q;
+                }
+            }
 
+        </script>
       <div id="dropdown2">
           <input class="input_select" type="text" value="智能"/>
           <ul>
@@ -78,50 +91,31 @@ var _hmt = _hmt || [];
   </div>
 </div>
 <!-- 主导航 -->
-<div class="block2 container-900 mg-auto overflow clearfix" style="margin-bottom: 0px;">
-{pc:content action="category" catid="0" num="9" siteid="$siteid" order="listorder ASC"}
-  <ul class="clearfix">
+<div class="block2 container-900 mg-auto clearfix" style="margin-bottom: 0px;">
+    {pc:content action="category" catid="0" num="9" siteid="$siteid" order="listorder ASC"}
     <?php $i=1;?>
-    {loop $data $r}
-    <?php if($i > 5){?>
-      <li><a <?php if($catid == $r['catid']){?> class="current" <?php }?> href="{$r[url]}" title="{$r[catname]}" >{$r[catname]}<span class="xxl_nav_en">{$r[description]}</span></a></li>
-    <?php }
+    <ul class="clearfix">
+        {loop $data $r}
+        <?php if($i > 5){?>
+            <li class="limore">
+            <a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span>{$r[description]}</span></a>
+            {pc:get sql="select * from v9_category where parentid=$r[catid]" return="data1"}
+                <?php if(count($data1) > 0){?>
+                    <div class="ali<?php echo $i-5;?> xxl_nav_js" style="display:none;">
+                        <?php $j = 1;?>
+                        {loop $data1 $r1}
+                            <a href="{$r1[url]}" title="{$r1[catname]}" class="a a{$j}">{$r1[catname]}</a>
+                        <?php $j++;?>
+                        {/loop}
+                    </div>
+                <?php }?>
+            {/pc}
+            </li>
+        <?php }
         $i++;
-    ?>
-    {/loop}
-  </ul>
-{/pc}
+        ?>
+        {/loop}
+    </ul>
+    {/pc}
 </div>
 <!-- 头部结束  -->
-<div class="block2 container-900 mg-auto clearfix" style="margin-bottom: 0px;">
-    <ul class="clearfix">
-        <li><a href="" title="">最新资讯<span>Trends</span></a></li>
-        <li class="limore">
-            <a href="" title="">记录时间<span>Doc Time</span></a>
-            <div class="ali2 xxl_nav_js" style="display:none;">
-                <a href="" title="" class="a a1">代理发行</a>
-                <a href="" title="" class="a a2">寻求合作</a>
-                <a href="" title="" class="a a3">孵化计划</a>
-                <a href="" title="" class="a a4">节目预告</a>
-                <a href="" title="" class="a a5"></a>
-            </div>
-        </li>
-        <li class="limore">
-            <a  href="" title="" >文化空间<span>Saloon</span></a>
-            <div class="ali3 xxl_nav_js" style="display:none;">
-                <a href="" title="" class="a a1">最新活动</a>
-                <a href="" title="" class="a a2">纪录片沙龙</a>
-                <a href="" title="" class="a a3">公益大讲堂</a>
-                <a href="" title="" class="a a4">常规课程</a>
-                <a href="" title="" class="a a5">良友剧场</a>
-            </div>
-        </li>
-        <li class="limore">
-            <a href="" title="">良友出品<span>Production</span></a>
-            <div class="ali4 xxl_nav_js" style="display:none;">
-                <a href="" title="" class="a a1">纪录片片馆商城</a>
-                <a href="" title="" class="a a2">文化周边产品</a>
-            </div>
-        </li>
-    </ul>
-</div>
