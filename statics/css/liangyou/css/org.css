@@ -1,5 +1,5 @@
 .pro-switch {
-	height: 450px;
+	height: 347px;
 	overflow: hidden;
 	position: relative;
 	width:900px;
@@ -28,7 +28,7 @@ html[xmlns] .slides {
 	display: block;
 }
 .slides {
-	height: 450px;
+	height: 347px;
 }
 .no-js .slides > li:first-child {
 	display: block;

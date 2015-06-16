@@ -11,7 +11,7 @@
                 {loop $data $r}
 					<li>
 						<div class="img"><a href="{$r[url]}" target="_blank">
-							<img src="{$r[thumb]}" height="450" width"960" alt="" /></a>
+							<img src="{$r[thumb]}" height="347" width"960" alt="" /></a>
 						</div>
 					</li>
                 {/loop}
@@ -32,7 +32,7 @@
     </script>
 	<div class="xxl_clear"></div>
 	<div class="zx">
-		<p class="xxl_title">最新 News</p>
+		<p class="xxl_title"><a href="http://www.1926cn.com/index.php?m=content&c=index&a=lists&catid=14">最新 News</a></p>
         {pc:content  action="lists" catid="14" order="id DESC" num="4"}
 		<ul class="xxl_clear">
         {loop $data $r}
@@ -40,9 +40,9 @@
 				<div class="pic">
 					<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="225px" /></a>
 				</div>
-				<div class="title"><a href="#" >{str_cut($r[title],45)}</a></div>
+				<div class="title"><a href="#" >{str_cut($r[title],58)}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],85)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],94)}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -50,7 +50,7 @@
 	</div>
 	<div class="xxl_clear"></div>
 	<div class="zx">
-		<p class="xxl_title">记录时间 Doc Time</p>	
+		<p class="xxl_title"><a href="http://www.1926cn.com/index.php?m=content&c=index&a=lists&catid=15">纪录时间 Doc Time</a></p>	
         {pc:content  action="lists" catid="15" order="id DESC" num="6"}
 		<ul class="xxl_clear">
         <?php $i=1;?>
@@ -68,9 +68,9 @@
 				<div class="pic">
 					<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="225px" /></a>
 				</div>
-				<div class="title"><a href="#" >{$r[title]}</a></div>
+				<div class="title"><a href="#" >{str_cut($r[title],58)}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message"><a href="#" >{str_cut($r[description],85)}</a></div>
+				<div class="zx_message"><a href="#" >{str_cut($r[description],94)}</a></div>
 			</li>
         <?php }
             $i++;
@@ -81,7 +81,7 @@
 	</div>
 	<!-- 文化活动 -->
 	<div class="page3-block1 container-900 mg-auto overflow clearfix xxl_list_cats" style="margin-bottom:20px;">
-		<p class="xxl_title">文化活动 Activity</p>
+		<p class="xxl_title"><a href="http://www.1926cn.com/index.php?m=content&c=index&a=lists&catid=16">文化活动 Activity</a></p>
 		<p class="xxl_title activity_nav">
 		{pc:content action="category" catid="16" siteid="1" order="listorder ASC"} 
 		<?php $i = 1?>
@@ -103,7 +103,8 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
+		                            <div class="xxl_line"></div>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -121,7 +122,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -143,7 +144,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -161,7 +162,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -183,7 +184,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -201,7 +202,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -223,7 +224,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>
@@ -241,7 +242,7 @@
 		                </a>
 		                <div class="priceCon">
 		                        <div class="text">
-		                            <a href=""><h2>{$r[title]}</h2></a>
+		                            <a href=""><h2>{str_cut($r[title],50)}</h2></a>
 		                            <p>{$r[description]}</p>
 		                        </div>
 		                </div>

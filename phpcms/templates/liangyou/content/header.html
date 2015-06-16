@@ -43,7 +43,7 @@ var _hmt = _hmt || [];
   {pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
       <ul class="ul">
           {loop $data $r}
-          <li><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kang';}elseif($r['catid'] == '38'){echo 'Companion';}else{echo $r['description'];}?></span></a></li>
+          <li><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '38'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
           {/loop}
       </ul>
       {/pc}
@@ -62,20 +62,17 @@ var _hmt = _hmt || [];
       <div id="dropdown">
           <input class="input_select" type="text" value="类型"/>
           <ul>
-              <li><a href="#" rel="2" target="_self">1</a></li>
-              <li><a href="#" rel="3" target="_self">12</a></li>
-              <li><a href="#" rel="4" target="_self">12</a></li>
-              <li><a href="#" rel="5" target="_self">24</a></li>
+              <li><a href="#" rel="2" target="_self">专题</a></li>
+              <li><a href="#" rel="3" target="_self">资讯</a></li>
+              <li><a href="#" rel="4" target="_self">图片</a></li>
           </ul>
       </div>
 
       <div id="dropdown2">
           <input class="input_select" type="text" value="智能"/>
           <ul>
-              <li><a href="#" rel="2" target="_self">1</a></li>
-              <li><a href="#" rel="3" target="_self">12</a></li>
-              <li><a href="#" rel="4" target="_self">12</a></li>
-              <li><a href="#" rel="5" target="_self">24</a></li>
+              <li><a href="#" rel="2" target="_self">最新</a></li>
+              <li><a href="#" rel="3" target="_self">最热</a></li>
           </ul>
       </div>
   </div>
@@ -87,7 +84,7 @@ var _hmt = _hmt || [];
     <?php $i=1;?>
     {loop $data $r}
     <?php if($i > 5){?>
-      <li><a <?php if($catid == $r['catid']){?> class="current" <?php }?> href="{$r[url]}" title="{$r[catname]}" >{$r[catname]}<span>{$r[description]}</span></a></li>
+      <li><a <?php if($catid == $r['catid']){?> class="current" <?php }?> href="{$r[url]}" title="{$r[catname]}" >{$r[catname]}<span class="xxl_nav_en">{$r[description]}</span></a></li>
     <?php }
         $i++;
     ?>
@@ -96,3 +93,35 @@ var _hmt = _hmt || [];
 {/pc}
 </div>
 <!-- 头部结束  -->
+<div class="block2 container-900 mg-auto clearfix" style="margin-bottom: 0px;">
+    <ul class="clearfix">
+        <li><a href="" title="">最新资讯<span>Trends</span></a></li>
+        <li class="limore">
+            <a href="" title="">记录时间<span>Doc Time</span></a>
+            <div class="ali2 xxl_nav_js" style="display:none;">
+                <a href="" title="" class="a a1">代理发行</a>
+                <a href="" title="" class="a a2">寻求合作</a>
+                <a href="" title="" class="a a3">孵化计划</a>
+                <a href="" title="" class="a a4">节目预告</a>
+                <a href="" title="" class="a a5"></a>
+            </div>
+        </li>
+        <li class="limore">
+            <a  href="" title="" >文化空间<span>Saloon</span></a>
+            <div class="ali3 xxl_nav_js" style="display:none;">
+                <a href="" title="" class="a a1">最新活动</a>
+                <a href="" title="" class="a a2">纪录片沙龙</a>
+                <a href="" title="" class="a a3">公益大讲堂</a>
+                <a href="" title="" class="a a4">常规课程</a>
+                <a href="" title="" class="a a5">良友剧场</a>
+            </div>
+        </li>
+        <li class="limore">
+            <a href="" title="">良友出品<span>Production</span></a>
+            <div class="ali4 xxl_nav_js" style="display:none;">
+                <a href="" title="" class="a a1">纪录片片馆商城</a>
+                <a href="" title="" class="a a2">文化周边产品</a>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -10,6 +10,33 @@ $(function(){
         $('.xxl_set_sapp').css('display','none');
     });
 
+    // 首页文化活动
+    $('.xxl_cat1').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat1').css('display','block');
+        $('.activity_nav a').removeClass('xxl_cover');
+        $('.xxl_cat1').addClass('xxl_cover');
+    });
+    $('.xxl_cat2').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat2').css('display','block');
+        $('.activity_nav a').removeClass('xxl_cover');
+        $('.xxl_cat2').addClass('xxl_cover');
+    });
+    $('.xxl_cat3').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat3').css('display','block');
+        $('.activity_nav a').removeClass('xxl_cover');
+        $('.xxl_cat3').addClass('xxl_cover');
+    });
+    $('.xxl_cat4').click(function(){
+        $('.xxl_list_cats').children('div').css('display','none');
+        $('.xxl_show_cat4').css('display','block');
+        $('.activity_nav a').removeClass('xxl_cover');
+        $('.xxl_cat4').addClass('xxl_cover');
+    });
+
+
     $("#dropdown .input_select").click(function(){
         var ul = $("#dropdown ul");
         if(ul.css("display")=="none"){
@@ -40,6 +67,12 @@ $(function(){
         $("#dropdown2 ul").hide();
     });
 
+    // 首页导航下拉菜单
+    $(".limore").hover(function() {
+        $(this).find(".xxl_nav_js").css({"display":"block"});
+    },function() {
+        $(this).find(".xxl_nav_js").css({"display":"none"});
+    })
 
 });
 
@@ -68,8 +101,8 @@ function slideSwitch3(wrap,hover){
             timer=setInterval(function(){
                 if(index==(len-1)){index=0;}
                 else{index++; }
-                showPics(index);
-            },20000);
+                //showPics(index);
+            },1000);
         }
     ).trigger("mouseleave");
 

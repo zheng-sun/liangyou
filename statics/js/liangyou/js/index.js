@@ -67,6 +67,12 @@ $(function(){
         $("#dropdown2 ul").hide();
     });
 
+    // 首页导航下拉菜单
+    $(".limore").hover(function() {
+        $(this).find(".xxl_nav_js").css({"display":"block"});
+    },function() {
+        $(this).find(".xxl_nav_js").css({"display":"none"});
+    })
 
 });
 

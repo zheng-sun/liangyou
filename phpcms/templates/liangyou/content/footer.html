@@ -1,12 +1,13 @@
 <!--友情连接-->
 <div class="block5">
   <div class="container-900 mg-auto overflow clearfix">
-      <div class="title">与良友成为合作伙伴 <span>Work with COMPANION</span></div>
+      <div class="title">与良友成为合作伙伴 <span>WORK WITH COMPANION</span></div>
       {pc:link action="type_lists" listorder="asc" siteid="$siteid"}
       <ul>
       {loop $data $type_v}
           <li>
           <div>{$type_v[name]}</div>
+          <p class="xxl_line" style="width:70px;margin-bottom: 5px;"></p>
           {pc:link action="lists" typeid="$type_v['typeid']" siteid="$siteid" linktype="0" num="4" return="dat"}
           {loop $dat $v}
           <a href="{$v[url]}" title="">{$v[name]}</a>
