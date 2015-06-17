@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="publisher" content="TideCMS 8.5">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留学生的那些事儿 - 良友新视界</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="{CSS_PATH}liangyou/css/special/page_zhuanti.css" rel="stylesheet" />
+    <link href="{CSS_PATH}liangyou/css/special/zt2_zhuanti.css" rel="stylesheet" />
+    <link href="{CSS_PATH}liangyou/css/special/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="header">
+    <div class="re">
+        <h1 class="logo tide_iepngfix"><a href="/">良友</a></h1>
+        <ul class="menu">
+            <li><a href="">新视界首页</a><a href="" class="en">文化大成</a></li>
+            <li><a href="">纪录资讯</a><a  href="" class="en">文化资讯</a></li>
+            <li><a href="">纪录片库</a><a href="" class="en">文化大观</a></li>
+            <li><a href="">纪录人</a><a href="" class="en">文化人</a></li>
+            <li><a href="">纪录文库</a><a href="" class="en">文化纵横</a></li>
+            <li><a href="">专题</a><a href="" class="en">商务</a></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="main">
+
+    <!-- TideCMS Module 1415 begin -->
+    <div class="box">
+        <!-- TideCMS Module 1416 begin -->
+        <div class="tideframe_crossbar">
+            <div class="tideframe_block_main">
+                <div class="box9">
+                    <div class="box9_con">
+                        <img src="{$banner}" alt="留学生头图" />
+                    </div>
+                </div>
+                <div class="box12">
+                    <div class="box12_con">
+                        <a href="" title=""><img src="special_style/photos_pic/20135211369101206420_523.jpg" class="bigpic"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TideCMS Module 1416 end   -->
+    </div>
+
+
+    <!-- TideCMS Module 1415 end  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div class="box">
+
+<div class="tideframe_block">
+    <div class="tideframe_column_493">
+        <div class="tideframe_block_main">
+            <?php $i = 1;?>
+            {loop $types $t}
+            <?php if($i <= 2){?>
+            {pc:special action="content_list" specialid="$id" typeid="$t[typeid]" thumb="1" num="3"}
+            {loop $data $r}
+            <div class="box12">
+                <div class="box12_con">
+                    <div class="summary">
+                        <p class="title">
+                            <a href="http://www.dvod.com.cn//video/documentary/pianku/2013-8-15/1376530413864.shtml">
+                                    <span class="ch">{$r[title]} -- {$t[name]}-- {$t[typeid]}</span>
+                                    <span class="en">| Drifting in Los Angeles</span>
+                            </a>
+                        </p>
+                        <br>
+                        <p class="subtitle">
+                            <a href="">{$r[description]}</a>
+                        </p>
+                        <br>
+                        <p class="content">
+                            <a href="">
+                               　{$r[content]}
+                            </a>
+                        </p>
+                        <br>
+                        <p>
+                            <a href=""><img width="465" height="310" border="0" src="{$r[thumb]}" alt=""></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/loop}
+            {/pc}
+            <div class="box9">
+                <div></div>
+                <div class="box9_con">
+                    <img src="special_style/photos_pic/20138251377414006179_524.png" alt="{$t['name']}" />
+                </div>
+            </div>
+            <?php }
+            $i++;
+            ?>
+            {/loop}
+        </div>
+    </div>
+</div>
+
+<div class="tideframe_block">
+    <div class="tideframe_column_493">
+        <div class="tideframe_block_main">
+            <?php $j=1;?>
+            {loop $types $t}
+            <?php if($j > 2){?>
+            <div class="box9">
+                <div></div>
+                <div class="box9_con">
+                    <a href="" target="_blank"><img src="special_style/photos_pic/20138241377349483328_524.png" alt="{$t['name']}" /></a>
+                </div>
+             </div>
+
+            {pc:special action="content_list" specialid="$id" typeid="$t[typeid]" thumb="1" num="3"}
+            {loop $data $r}
+            <div class="box12">
+                <div class="box12_con">
+                    <div class="summary">
+                        <p class="title">
+                            <a href="http://www.dvod.com.cn//video/documentary/pianku/2013-8-15/1376530413864.shtml">
+                                <span class="ch">{$r['title']} -- {$t['name']} -- {$t[typeid]}</span>
+                                <span class="en">| Drifting in Los Angeles</span>
+                            </a>
+                        </p>
+                        <br>
+                        <p class="subtitle">
+                            <a href="">{$r[description]}</a>
+                        </p>
+                        <br>
+                        <p class="content">
+                            <a href="">
+                                　{$r[content]}
+                            </a>
+                        </p>
+                        <br>
+                        <p>
+                            <a href=""><img width="465" height="310" border="0" src="{$r[thumb]}" alt=""></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/loop}
+            {/pc}
+            <?php }
+            $j++;
+            ?>
+            {/loop}
+        </div>
+    </div>
+</div>
+        <div class="clear"></div>
+    </div>
+    <div class="box">
+        <div class="tideframe_block">
+            <div class="tideframe_column_670">
+                <div class="tideframe_block_main">
+                    <div class="con_comment" id="comment_message_div">
+                        <h2>让我说说</h2>
+                        <textarea></textarea>
+                        <div class="inputframe">
+                            <input type="radio" id="radio1" value="学生" checked="checked"/>良友
+                            <input class="name"><span>我的昵称</span>
+                            <span class="span">添加表情</span>
+                            <input type="submit" value="堆上去" class="button"/>
+                        </div>
+                        <ul>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                            <li><div class="divleft">huhu</div><div class="divright">woailianwoailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地woailiangyou维护辉煌方法地gyou维护辉煌方法地</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tideframe_block">
+            <div class="tideframe_column_316" >
+                <div class="tideframe_block_main">
+                    <div class="box6">
+                        <ul class="box6_con">
+                            <li><a href="" title="" target="_blank"><img src="special_style/photos_pic/20135211369101206420_523.jpg" alt="" title=""/>“家乡味道”大学生纪录短片</a></li>
+                            <li><a href="" title="" target="_blank"><img src="special_style/photos_pic/20137151373874304849_524.jpg" alt="" title=""/>《豆腐味道》</a></li>
+                            <li><a href="" title="" target="_blank"><img src="special_style/photos_pic/20138261377497855306_523.jpg" alt="" title=""/>国学与生命修行</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="footer_box">
+    <div class="footer">
+        <p><a href="/news/info/2012-12-27/1356596029732.shtml" target="_blank">网络视听许可证0105081号</a>|<a href="/images/video.jpg" target="_blank">音像制品经营许可证</a>|<a href="/news/info/2012-12-26/135651473328.shtml" target="_blank">招贤纳士</a>|<a href="/news/info/2012-12-26/1356517038653.shtml" target="_blank">联系我们</a>|<a href="/news/info/2012-12-26/1356517045517.shtml" target="_blank">关于我们</a></p>
+        <p>良友文化事业群：<a href="http://www.1926cn.com/">良友（北京）文化传媒有限公司</a>|<a href="http://www.dfliangyou.com/" target="_blank">东方良友影视传媒（北京）有限公司</a>| 良友图书公司 |<a href="http://www.1926life.com/index.asp?t=1" target="_blank">良友生活记忆馆</a>| 良友（北京）文化讲堂</p>
+        <p>© <a href="http://www.dvod.com.cn/" target="_blank">新视界</a>(www.dvod.com.cn). 版权所有.禁止擅自转载节录</p>
+        <p>京ICP备09049183号-2|京公网安备 110101011437903号</p>
+    </div>
+</div>
+
+</body>
+</html>

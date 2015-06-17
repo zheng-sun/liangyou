@@ -1,0 +1,49 @@
+﻿/* ------------------------------
+css for TideCms 7
+design by ZhangLiang & mezeroz@gmail.com
+date 2009-06-01
+---------------------------- */
+.tide_main{width:950px;margin:20px auto;}
+.box_tidemedia{margin:0 0 5px;padding:0 0 5px;clear:both;}
+.tideframe_box{background:#e4f0f7;font-size:12px;}
+.tideframe_box .clear{clear:both;}
+.tideframe_block_left,.tideframe_block_middle{float:left;margin:0 10px 0 0;}
+.tideframe_block_right{float:left}
+
+.tideframe_tools{height:22px;text-align:center;position:relative;}
+.tideframe_tools .tideframe_title{line-height:22px;color:#226700;display:block;font-weight:bold;}
+.tideframe_tools_button{position:absolute;top:4px;left:3px;}
+.tideframe_tools_button img{margin:0 2px 0 0;cursor:pointer;}
+
+.tideframe_column_tools{height:18px;border:1px dashed #b8b8b8;position:relative;text-align:center;}
+.tideframe_column_tools .tideframe_title{font-family:Arial;font-size:10px;color:#226700;display:block;line-height:18px;}
+.tideframe_column_tools_button{position:absolute;left:2px;top:2px;}
+.tideframe_column_tools_button img{margin:0 2px 0 0;cursor:pointer;}
+
+.tideframe_block_tools{background:#edc900;height:20px;}
+.tideframe_block_tools_left{float:left;padding:3px 0 0 3px;}
+.tideframe_block_tools_right{float:right;padding:3px 3px 0 0 ;}
+/* edit 2010.12.10 by ZhangLiang */
+.tideframe_block_tools .tideframe_block_tools_left img,.tideframe_block_tools .tideframe_block_tools_right img{width:14px;height:14px;margin:0 2px 0 0;display:inline;cursor:pointer;padding:0;border:none;float:none;}
+/* Add 2009.05.26 by ZhangLiang */
+.source_iframe{position:absolute;bottom:0px;top:77px;left:0px;right:0px;overflow:auto;}
+/* Add 2009.11.30 by zhangliang */
+.tide_tools{position:relative;height:0;min-width:55px;}
+.tide_tools .tideframe_block_tools{position:absolute;top:0;left:0;right:0;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+
+.tideframe_column_190{width:190px;overflow:hidden;}
+.tideframe_column_230{width:230px;overflow:hidden;}
+.tideframe_column_310{width:310px;overflow:hidden;}
+.tideframe_column_324{width:324px;overflow:hidden;}
+.tideframe_column_350{width:350px;overflow:hidden;}
+.tideframe_column_470{width:470px;overflow:hidden;}
+.tideframe_column_510{width:510px;overflow:hidden;}
+.tideframe_column_590{width:590px;overflow:hidden;}
+.tideframe_column_630{width:630px;overflow:hidden;}
+.tideframe_column_710{width:710px;overflow:hidden;}
+.tideframe_column_750{width:750px;overflow:hidden;}
+.tideframe_column_950{width:950px;overflow:hidden;}
+.tideframe_column_340{width:324px;overflow:hidden;}
+.tideframe_column_316{width:316px;overflow:hidden;}
+.tideframe_column_670{width:655px;overflow:hidden;}
+.tideframe_column_493{width:485px;overflow:hidden;}
