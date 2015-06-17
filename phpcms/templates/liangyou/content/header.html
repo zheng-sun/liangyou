@@ -98,13 +98,18 @@ var _hmt = _hmt || [];
         {loop $data $r}
         <?php if($i > 5){?>
             <li class="limore">
-            <a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span>{$r[description]}</span></a>
-            {pc:get sql="select * from v9_category where parentid=$r[catid]" return="data1"}
+            <a <?php if($catid == $r['catid']){?> class="current" <?php }?>  href="{$r[url]}">{$r[catname]}<span>{$r[description]}</span></a>
+            {pc:get sql="select * from v9_category where parentid=$r[catid] order by catid ASC" return="data1"}
                 <?php if(count($data1) > 0){?>
                     <div class="ali<?php echo $i-5;?> xxl_nav_js" style="display:none;">
                         <?php $j = 1;?>
                         {loop $data1 $r1}
-                            <a href="{$r1[url]}" title="{$r1[catname]}" class="a a{$j}">{$r1[catname]}</a>
+                          <?php
+                            if(in_array($r1[catid],array(18,19,22,29,30,31))){
+                              continue;
+                            }
+                          ?>
+                            <a href="{$r1[url]}" class="a a{$j}">{$r1[catname]}</a>
                         <?php $j++;?>
                         {/loop}
                     </div>

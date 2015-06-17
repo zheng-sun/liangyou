@@ -142,7 +142,7 @@ hr{
 }
 .xxl_top_5 .top5_title{
 	width: 170px;
-	font-size: 16px;
+	font-size: 12px;
 	margin-top: 10px;
 	overflow: hidden;
 }
@@ -180,6 +180,7 @@ hr{
 }
 .zx-con-2 {
 	width:700px;
+	margin-top:10px;
 	float:right;
 }
 .zx-con-2 .con_time{
@@ -190,8 +191,8 @@ hr{
 	overflow: hidden;
 }
 .zx-con-2 .con_title{
-	width: 170px;
-	font-size: 16px;
+	width: 450px;
+	font-size: 12px;
 }
 
 /* 文化空间样式 */

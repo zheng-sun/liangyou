@@ -215,12 +215,12 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .xxl_article .xxl_text{
-    width: 345px;
+    width: 450px;
     height: 160px;
     float: left;
 }
 .xxl_article .xxl_text a{
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     display: block;
@@ -1019,9 +1019,11 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .page3-block2 .pictext li .righttext h2 {
-    height: 40px;
-    font: 400 18px/25px "";
-    background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;
+    height: 30px;
+    font: 400 12px/25px "";
+    margin-top: 10px;
+    /*font: 400 18px/25px "";*/
+    /*background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;*/
 }
 
 .page3-block2 .pictext li .righttext span {
@@ -1046,15 +1048,17 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
  .picture li h2 {
-    height: 40px;
-    font: 400 18px/25px "";
-    background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;
+    height: 30px;
+    font: 400 12px/25px "";
+    /*font: 400 18px/25px "";*/
+    /*background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;*/
     margin-top: 20px;
 }
 
  .picture li p {
     margin: 10px 0;
-    padding-right: 70px;
+    padding-right: 30px;
+    /*padding-right: 70px;*/
 }
 
  .picture .title1, .picture .title2 {
@@ -1147,7 +1151,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page5 .article-detail h2 {
     height: 50px;
-    font: 400 40px/50px "";
+    font: 400 25px/50px "";
     border-bottom: 1px dotted #999;
     padding-bottom: 10px;
     width: 100%;
@@ -1381,7 +1385,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     display: block;
     width: 225px;
     height: 30px;
-    background: red;
+    background: #e86e01;
     /*visibility: hidden;*/
     font: 400 18px/30px "";
     color: #000000;

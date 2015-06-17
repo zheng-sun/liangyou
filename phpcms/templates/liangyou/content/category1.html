@@ -13,7 +13,8 @@
                 </a>
                 <div class="priceCon">
                         <div class="text">
-                            <a href=""><h2>{$r[title]}</h2></a>
+                            <a href=""><h2>{str_cut($r[title],30,'...')}</h2></a>
+                            <div class="xxl_line"></div>
                             <p>{$r[description]}</p>
                         </div>
                 </div>
@@ -31,7 +32,8 @@
                 </a>
                 <div class="priceCon">
                         <div class="text">
-                            <a href=""><h2>{$r[title]}</h2></a>
+                            <a href=""><h2>{str_cut($r[title],30,'...')}</h2></a>
+                            <div class="xxl_line"></div>
                             <p>{$r[description]}</p>
                         </div>
                 </div>
@@ -59,7 +61,8 @@
             <li>
                <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt=""></a>
                <div class="righttext">
-                   <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
+                   <a href="{$r[url]}"><h2>{str_cut($r[title],44,'...')}</h2></a>
+                   <div class="xxl_line"></div>
                    <p>{str_cut($r[description],110)}</p>
                </div>
             </li>
@@ -82,7 +85,8 @@
             <li>
                <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                <div class="righttext">
-                   <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
+                   <a href="{$r[url]}"><h2>{str_cut($r[title],44,'...')}</h2></a>
+                   <div class="xxl_line"></div>
                    <p>{str_cut($r[description],110)}</p>
                </div>
             </li>
@@ -106,8 +110,9 @@
             <li>
                 <a class="toptpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                 <div class="bottomtext">
-                    <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
-                    <p class="whkj_p">{str_cut($r[description],65)}</p>
+                    <a href="{$r[url]}"><h2>{str_cut($r[title],56,'...')}</h2></a>
+                    <div class="xxl_line"></div>
+                    <p class="whkj_p">{str_cut($r[description],96)}</p>
                 </div>
             </li>
             {/loop}
@@ -129,8 +134,9 @@
             <li>
                 <a class="toptpic" href="" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>{$r[title]}</h2></a>
-                    <p class="whkj_p">{str_cut($r[description],65)}</p>
+                    <a href=""><h2>{str_cut($r[title],56,'...')}</h2></a>
+                    <div class="xxl_line"></div>
+                    <p class="whkj_p">{str_cut($r[description],96)}</p>
                 </div>
             </li>
             {/loop}
