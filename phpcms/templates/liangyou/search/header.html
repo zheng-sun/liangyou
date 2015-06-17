@@ -33,7 +33,7 @@
               <input type="hidden" name="m" value="search"/>
 			<input type="hidden" name="c" value="index"/>
 			<input type="hidden" name="a" value="init"/>
-            <input type="hidden" name="typeid" value="1" id="typeid"/>
+            <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
 			<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
           </form>
       </div>
@@ -41,13 +41,24 @@
       <div id="dropdown">
           <input class="input_select" type="text" value="类型"/>
           <ul>
-              <li><a href="#" rel="2" target="_self">1</a></li>
-              <li><a href="#" rel="3" target="_self">12</a></li>
-              <li><a href="#" rel="4" target="_self">12</a></li>
-              <li><a href="#" rel="5" target="_self">24</a></li>
+              {php $j=0}
+              {php $search_model = getcache('search_model_'.$siteid, 'search');}
+              {loop $search_model $k=>$v}
+              {php $j++;}
+              <li><a href="javascript:;" onclick="setmodel1({$v['typeid']}, $(this));" style="outline:medium none;" hidefocus="true" >{$v['name']}</a></li>
+              {/loop}
+              {php unset($j);}
           </ul>
       </div>
-
+      <script type="text/javascript">
+          function setmodel1(value, id, siteid, q) {
+              $("#typeid").val(value);
+              id.addClass('on');
+              if(q!=null && q!='') {
+                  window.location='?m=search&c=index&a=init&siteid='+siteid+'&typeid='+value+'&q='+q;
+              }
+          }
+      </script>
       <div id="dropdown2">
           <input class="input_select" type="text" value="智能"/>
           <ul>
