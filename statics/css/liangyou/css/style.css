@@ -371,7 +371,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .block2 ul li a:hover {
-    background: #DDD9D9;
+    background: #837E7E;
     width:225px;
 }
 
@@ -433,7 +433,9 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin: 40px auto 10px auto;
 }
 .author-detail{
-    letter-spacing: 4px;
+    /*letter-spacing: 4px;*/
+    line-height: 25px;
+    font-size: 14px;
 }
 .block4 .author-detail h3,.block4 .author-detail h4 , .block4 .author-detail p {
     /*text-align: center;*/
@@ -452,8 +454,9 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .xxl_content{
     width:700px;
     margin-top:15px;
-    letter-spacing: 2px;
-    text-indent: 20px;
+    /*letter-spacing: 2px;*/
+    line-height: 25px;
+    /*text-indent: 20px;*/
 }
 
 .block4 .left .links {
