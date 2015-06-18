@@ -1732,4 +1732,17 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 	}
 
  } 
+
+ // 获取管理员真实姓名
+	function get_admin_realname($username) {
+        if(empty($username)){return false;}
+        $admin_db = pc_base::load_model('admin_model');
+        $realname = $admin_db->get_one(array('username'=>$username),'realname');
+        //如果没有真实姓名返回用户名
+        if($realname['realname']) {
+                return $realname['realname'];
+        } else {
+                return $username;
+        }
+	}
 ?>
