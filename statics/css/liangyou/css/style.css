@@ -579,7 +579,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .block5 .footer a {
-    border-right: 1px solid #666;
+    /*border-right: 1px solid #666;*/
     padding: 0 5px;
 }
 
