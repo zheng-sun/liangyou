@@ -125,7 +125,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     font-size: 14px;
 }
 .page5 .article-detail .action_r{
-    width: 390px;
+    width: 360px;
     height: 200px;
     float: left;
     font-size: 12px;
@@ -294,7 +294,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .xxl_juzhao li{
     width:170px;
     float: left;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 .xxl_juzhao ul li img{
     width:170px;
@@ -413,6 +413,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .block4 .left h2.big {
     height: 50px;
     font: 400 25px/50px "";
+    font-family: "microsoft yahei";
     border-bottom: 1px dotted #999;
     padding-bottom: 10px;
 }
@@ -435,12 +436,14 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .author-detail{
     /*letter-spacing: 4px;*/
     line-height: 25px;
+    color: #000;
+    font-family: "宋体";
     font-size: 14px;
 }
-.block4 .author-detail h3,.block4 .author-detail h4 , .block4 .author-detail p {
-    /*text-align: center;*/
-    font: 400 14px/24px "";
-}
+/*.block4 .author-detail h3,.block4 .author-detail h4 , .block4 .author-detail p {
+    text-align: center;
+    font: 400 14px/24px ""; 
+}*/
 
 .block4 h3.title {
     font: 400 26px/70px "";
@@ -452,11 +455,13 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     text-indent: 20px;
 }
 .xxl_content{
-    width:700px;
+    width:670px;
     margin-top:15px;
     /*letter-spacing: 2px;*/
     line-height: 25px;
-    /*text-indent: 20px;*/
+    /* color: #000;
+    font-family: "宋体";
+    font-size: 14px; */
 }
 
 .block4 .left .links {
@@ -1188,7 +1193,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .page5 .article-detail  .content-right {
-    width: 390px;
+    width: 360px;
     height: 360px;
     float: left;
     margin-top: 20px;
@@ -1288,7 +1293,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     width: 165px;
     height:200px;
     float: left;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
 }
 .page5 .left .pictures li a ,.page5 .left .pictures li a img {
     width: 160px;
