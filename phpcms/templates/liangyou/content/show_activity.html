@@ -59,10 +59,10 @@
                 <?php if($i == 1) { ?>
                 <li>
                     <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"></a>
-                    <a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a>
+                    <a href="{$r[url]}" title="{$r[title]}" style="margin-top:10px;display:block;">{$r[title]}</a>
                 </li>
                 <?php }else{?>
-                <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                <li><a href="{$r[url]}" title="{$r[title]}"><span class="xxl_tu_zi">{$r[title]}</span></a></li>
                 <?php }?>
                 <?php $i++;?>
                 {/loop}
@@ -74,7 +74,10 @@
             <ul class="clearfix">
                 {pc:content action="lists" catid="25" num="2" order="id DESC"}
                 {loop $data $r}
-                <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"><span>{$r[title]}</span></a></li>
+                <li style="height:185px;margin-top5px;">
+                    <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" /></a>
+                    <a href="{$r[url]}"><span>{$r[title]}</span></a>
+                </li>
                 {/loop}
                 {/pc}
             </ul>
