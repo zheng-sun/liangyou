@@ -14,9 +14,11 @@
       </div>
     </div>
     <div class="xxl_bsear">
-        {pc:content action="category" catid="15" siteid="$siteid" order="listorder ASC"}
+        {pc:content action="category" catid="15" num="6" siteid="$siteid" order="listorder ASC"}
+        <?php $i=1?>
         {loop $data $r}
-            <a href="{$r[url]}">{$r[catname]}</a>&nbsp;|
+        <a href="{$r[url]}">{$r[catname]}</a>&nbsp;<?php if($i < 6){ echo '|';}?>
+        <?php $i++;?>
         {/loop}
         {/pc}
     </div>

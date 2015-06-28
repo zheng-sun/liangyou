@@ -74,6 +74,46 @@ $(function(){
         $(this).find(".xxl_nav_js").css({"display":"none"});
     })
 
+
+    //page 矛点 ,显示更多
+    $(".list-content-more").click(function() {
+        $(this).parent().find("ul").removeClass("height360");
+        $(this).css({"display":"none"});
+    })
+    $(".go7").click(function() {
+        $(".div1").css("display", "none");
+        $(".div2").css("display", "block");
+        $(".li1").removeClass("current")
+        $(".li2").addClass("current");
+        $("html,body").animate({scrollTop:$(".area7").offset().top},500);
+    })
+    $(".go1,.go2,.go3,.go4,.go5,.go6").click(function() {
+        $(".div2").css("display", "none");
+        $(".div1").css("display", "block");
+        $(".li2").removeClass("current")
+        $(".li1").addClass("current");
+    })
+    $(".go1").click(function() {
+        $("html,body").animate({scrollTop:$(".area7").offset().top},500);
+    })
+    $(".go2").click(function() {
+        $("html,body").animate({scrollTop:$(".area2").offset().top},500);
+    })
+    $(".go3").click(function() {
+        $("html,body").animate({scrollTop:$(".area3").offset().top},500);
+    })
+    $(".go4").click(function() {
+        $("html,body").animate({scrollTop:$(".area4").offset().top},500);
+    })
+    $(".go5").click(function() {
+        $("html,body").animate({scrollTop:$(".area5").offset().top},500);
+    })
+    $(".go6").click(function() {
+        $("html,body").animate({scrollTop:$(".area6").offset().top},500);
+    })
+
+
+
 });
 
 //一屏右侧点击切换
@@ -172,5 +212,27 @@ function new_slider(slidercon,mainspeed,inspeed,outspeed){
     $(slidercon).mouseout(function(){
         move = setInterval(init,mainspeed);
     });
+
+
+
+
+
+
+
+
 };
 
+/* click切换 */
+function cTab(tab_controler,tab_con) {
+    this.tab_controler = tab_controler;
+    this.tab_con = tab_con;
+    var tabs = $(tab_controler).children("li");
+    var panels = $(tab_con).children("div");
+    $(tab_con).children("div").css("display", "none");
+    $(tab_con).children("div:first").css("display", "block");
+    $(tabs).click(function () {
+        var index = $.inArray(this, tabs);
+        tabs.removeClass("current").eq(index).addClass("current");
+        panels.css("display","none").eq(index).css("display","block");
+    });
+}

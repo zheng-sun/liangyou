@@ -1,15 +1,15 @@
 {template "content","header"}
-  <!-- 面包屑 -->
-  <div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:10px;">
-      <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
-  </div>
-  <div class="xxl_stop container-900 mg-auto overflow clearfix">
+<!-- 面包屑 -->
+<div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:20px;">
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
+</div>
+<div class="xxl_stop container-900 mg-auto overflow clearfix">
     <div class="xxl_asear xxl_clear">
-      <div class="xxl_search">
-          <input id="searchWord2" class="xxl_searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
+        <div class="xxl_search">
+            <input id="searchWord2" class="xxl_searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
           if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-          <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl">
-      </div>
+            <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl">
+        </div>
     </div>
     <div class="xxl_bsear">
         {pc:content action="category" catid="15" num="6" siteid="$siteid" order="listorder ASC"}
@@ -20,25 +20,20 @@
         {/loop}
         {/pc}
     </div>
-  </div>
+</div>
 
-  <!-- 主要内容 -->
+<!-- 主要内容 -->
   <div class="block4 container-900 mg-auto overflow clearfix xxl_clear">
       <div class="left">
-        <ul class="xxl_articlelist clearfix">
-            {pc:content  action="lists" catid="$catid" order="id DESC" num="15"  page="$page"}
+        <ul class="clearfix">
+            {pc:content  action="lists" catid="$catid" order="id DESC" num="9"  page="$page"}
             {loop $data $r}
-            <li class="xxl_article">
-                <a class="xxl_pic" href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"></a>
-                <div class="xxl_text">
-                    <a href="{$r[url]}">{$r[title]}</a>
-                    <div class="xxl_line"></div>
-                    <p>英文名:{$r[en_title]}</p>
-                    <p>导演：{$r[director]}</p>
-                    <p>国家/地区:{$r[area]}</p>
-                    <p>出品:{$r[produced]}</p>
-                    <p>时长:{$r[duration]}</p>
-                </div>
+            <li class="dl_li">
+                <a href="{$r[url]}"><img src="{$r[thumb]}" alt="{$r[title]}" style="width: 200px;height: 270px;"/></a>
+                <p>中文片名：{$r[title]}</p>
+                <p>英文名字：{$r[en_title]}</p>
+                <p>导演：<a href="">{$r[director]}</a></p>
+                <p>标签：<a href="">{$r[keywords]}</a></p>
             </li>
             {/loop}
             {/pc}
@@ -50,9 +45,9 @@
               <h2 class="linls-title">相关阅读</h2>
               {pc:content action="lists" catid="19" num="2" order="id DESC"}
               <ul class="clearfix">
-              {loop $data $r}
-                   <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span class="xxl_tu_zi">{$r[title]}</span></a></li>
-              {/loop}
+                  {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span class="xxl_tu_zi">{$r[title]}</span></a></li>
+                  {/loop}
               </ul>
               {/pc}
           </div>
@@ -60,9 +55,9 @@
               <h2 class="linls-title">热门点击</h2>
               {pc:content  action="hits" catid="$catid" num="5" order="views DESC" cache="3600"}
               <ul class="clearfix">
-              {loop $data $r}
+                  {loop $data $r}
                   <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
-              {/loop}    
+                  {/loop}
               </ul>
               {/pc}
           </div>
@@ -73,9 +68,9 @@
                   <?php $i=0;?>
                   {loop $data $r}
                   <?php if($i == 0){ ?>
-                      <a href="{$r[url]}" title="{$r[titlt]}"><img src="{$r[thumb]}"/></a>
+                  <a href="{$r[url]}" title="{$r[titlt]}"><img src="{$r[thumb]}"/></a>
                   <?php }else{  ?>
-                      <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                  <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
                   <?php }
                       $i++;
                   ?>
