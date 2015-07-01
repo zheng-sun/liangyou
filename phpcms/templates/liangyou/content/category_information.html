@@ -2,30 +2,30 @@
 
 <!-- 主要内容 -->
 <div class="page4-block1 container-900 mg-auto overflow clearfix">
-   <div class="left">
+   <div class="left" style="height:540px;">
        <h2>良友动态</h2>
-       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="0" num="2" cache="3600" return="data"}
+       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="0" num="1" cache="3600" return="data"}
        <div style="overflow: hidden;">
             {loop $data $r}
-           <div class="picdiv"><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt=""/></a></div>
+           <div class="picdiv" style="width:450px;height:250px;"><a href="{$r[url]}" title="{$r[title]}" style="width:450px;height:250px;"><img src="{$r[thumb]}" alt="" style="width:450px;height:250px;"/></a></div>
             {/loop}
        </div>
        {/pc}
-       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="2" num="5" cache="3600" return="data"}
+       {pc:get sql="select * from v9_news where catid = 18 order by id desc" start="1" num="5" cache="3600" return="data"}
        <div class="picshow">
            <ul class="bxslider">
            {loop $data $r}
-               <li><a href="{$r[url]}"><img src="{$r[thumb]}"/></a></li>
+               <li><a href="{$r[url]}"><img src="{$r[thumb]}" style="height:250px;"/></a></li>
            {/loop}
            </ul>
        </div>
        {/pc}
    </div>
-   <div class="right">
-       <h2>最新推荐</h2>
-       {pc:content  action="lists" catid="19" order="id DESC" num="6"}
+   <div class="right" style="height:540px;">
+       <h2 style="background: #8c8c8c;">最新推荐</h2>
+       {pc:content  action="lists" catid="19" order="id DESC" num="2"}
        {loop $data $r}
-       <div class="picdiv"><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"/></a></div>
+       <div class="picdiv" style="width:450px;height:250px;"><a href="{$r[url]}" title="{$r[title]}" style="width:450px;height:250px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:450px;height:250px;"/></a></div>
        {/loop}
        {/pc}
    </div>
@@ -33,7 +33,7 @@
 
 <div class="page4-block2 container-900 mg-auto overflow clearfix">
     <div class="picture">
-        <a class="title1" href="?m=content&c=index&a=lists&catid=29" title="">良友找良友</a>
+        <a class="title1" href="?m=content&c=index&a=lists&catid=29" title="">项目运营</a>
         <ul class="clearfix">
             {pc:content action="lists" catid="29" order="id DESC" num=4}
             {loop $data $r}

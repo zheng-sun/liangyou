@@ -36,7 +36,7 @@
                     {pc:content  action="lists" catid="45" order="id DESC" num="8"}
                     {loop $data $r}
                     <li>
-                        <span><?php if($r['typeid'] == 63){ echo '广告';}else{ echo '摄制';}?>&nbsp;&nbsp;</span><span>|</span>
+                        <span><?php if($r['typeid'] == 63){ echo '广告';}else if($r['typeid'] == 64){ echo '摄制';}else if($r['typeid'] == 70){echo '招聘';}else if($r['typeid'] == 71){ echo '项目';}?>&nbsp;&nbsp;</span><span>|</span>
                         <p class="con_li_title"><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></p>
                         <p class="con_li_p">{date('Y年m月d日',$r[inputtime])}</p>
                     </li>
@@ -58,7 +58,7 @@
                     <div class="area1 list-content">
                         <h3>版权方</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="48" order="id DESC"}
+                            {pc:content  action="lists" catid="48" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -72,7 +72,7 @@
                     <div class="area2 list-content">
                         <h3>发行平台</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="49" order="id DESC"}
+                            {pc:content  action="lists" catid="49" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -86,7 +86,7 @@
                     <div class="area3 list-content">
                         <h3>联合出品</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="50" order="id DESC"}
+                            {pc:content  action="lists" catid="50" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -100,7 +100,7 @@
                     <div class="area4 list-content">
                         <h3>广告合作</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="51" order="id DESC"}
+                            {pc:content  action="lists" catid="51" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -114,7 +114,7 @@
                     <div class="area5 list-content">
                         <h3>活动合作</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="52" order="id DESC"}
+                            {pc:content  action="lists" catid="52" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -128,7 +128,7 @@
                     <div class="area6 list-content">
                         <h3>新媒体宣传</h3>
                         <ul class="height360">
-                            {pc:content  action="lists" catid="53" order="id DESC"}
+                            {pc:content  action="lists" catid="53" order="listorder ASC"}
                             {loop $data $r}
                             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
                             {/loop}
@@ -147,7 +147,7 @@
                         <a>国际</a>
                     </div>
                     <ul class="people">
-                        {pc:content  action="lists" catid="46" order="id DESC"}
+                        {pc:content  action="lists" catid="46" order="listorder ASC"}
                         {loop $data $r}
                         <li><a href="" title="{$r[title]}"><div><img src="{$r[thumb]}" alt=""></div><span>{$r[title]}</span></a></li>
                         {/loop}

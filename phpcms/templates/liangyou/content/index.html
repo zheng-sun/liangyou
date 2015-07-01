@@ -51,11 +51,9 @@
 	<div class="xxl_clear"></div>
 	<div class="zx">
 		<p class="xxl_title"><a href="http://www.1926cn.com/index.php?m=content&c=index&a=lists&catid=15">纪录时间 Doc Time</a></p>	
-        {pc:content  action="position" posid="21" order="listorder DESC" num="6"}
+        {pc:content  action="position" posid="21" order="listorder DESC" num="4"}
 		<ul class="xxl_clear">
-        <?php $i=1;?>
         {loop $data $r}  
-        <?php if($i < 3){?>
             <li class="art_top">
 				<div class="art_top_pic">
 					<a href="{$r[url]}">
@@ -63,24 +61,22 @@
 					</a>
 				</div>
 			</li>
-        <?php }else{?>
-			<li>
+    
+			<!-- <li>
 				<div class="pic">
 					<a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}" width="225px" /></a>
 				</div>
 				<div class="title"><a href="{$r[url]}" >{str_cut($r[title],58)}</a></div>
 				<div class="xxl_line"></div>
 				<div class="zx_message"><a href="{$r[url]}" >{str_cut($r[description],96)}</a></div>
-			</li>
-        <?php }
-            $i++;
-        ?>
+			</li>-->
+			 
         {/loop}
 		</ul>
         {/pc}
 	</div>
 	<!-- 文化活动 -->
-	<div class="page3-block1 container-900 mg-auto overflow clearfix xxl_list_cats" style="margin-bottom:20px;">
+	<div class="page3-block1 container-900 mg-auto overflow clearfix xxl_list_cats" style="margin-top:5px;margin-bottom:20px;">
 		<p class="xxl_title"><a href="http://www.1926cn.com/index.php?m=content&c=index&a=lists&catid=16">文化活动 Activity</a></p>
 		<p class="xxl_title activity_nav">
 		{pc:content action="category" catid="16" siteid="1" order="listorder ASC"} 
@@ -105,7 +101,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -124,7 +120,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -147,7 +143,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -166,7 +162,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -189,7 +185,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -208,7 +204,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -231,7 +227,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>
@@ -250,7 +246,7 @@
 		                        <div class="text">
 		                            <a href="{$r[url]}"><h2>{str_cut($r[title],48)}</h2></a>
 		                            <div class="xxl_line"></div>
-		                            <p>{str_cut($r[description],96)}</p>
+		                            <p>{str_cut($r[description],94)}</p>
 		                        </div>
 		                </div>
 		            </div>

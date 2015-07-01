@@ -1015,7 +1015,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page3-block2 .pictext li {
     width: 430px;
-    height: 200px;
+    height: 280px;
     float: left;
     margin-right: 50px;
     margin-bottom: 25px;
@@ -1111,6 +1111,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page4-block1 h2 {
     font: 400 18px/40px "";
+    font-family: "microsoft yahei";
     height: 40px;
     text-align: center;
     color: #ffffff;

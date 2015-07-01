@@ -24,7 +24,7 @@
 .bx-wrapper img {
 	display: block;
     width:450px;
-    height:390px;
+    height:250px;
 }
 
 /** THEME
@@ -34,7 +34,7 @@
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
-	bottom: 13px;
+	bottom: 15px;
 	width: 100%;
   right: 0;
 }
@@ -91,12 +91,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 0;
-	background: url(../images/left.png) no-repeat left center;
+	/*background: url(../images/left.png) no-repeat left center;*/
 }
 
 .bx-wrapper .bx-next {
 	right: 0;
-	background: url(../images/right.png) no-repeat right center;
+	/*background: url(../images/right.png) no-repeat right center;*/
 }
 
 
