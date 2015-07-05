@@ -80,13 +80,7 @@ $(function(){
         $(this).parent().find("ul").removeClass("height360");
         $(this).css({"display":"none"});
     })
-    $(".go7").click(function() {
-        $(".div1").css("display", "none");
-        $(".div2").css("display", "block");
-        $(".li1").removeClass("current")
-        $(".li2").addClass("current");
-        $("html,body").animate({scrollTop:$(".area7").offset().top},500);
-    })
+
     $(".go1,.go2,.go3,.go4,.go5,.go6").click(function() {
         $(".div2").css("display", "none");
         $(".div1").css("display", "block");

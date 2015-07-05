@@ -1015,7 +1015,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page3-block2 .pictext li {
     width: 430px;
-    height: 200px;
+    height: 280px;
     float: left;
     margin-right: 50px;
     margin-bottom: 25px;
@@ -1111,6 +1111,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page4-block1 h2 {
     font: 400 18px/40px "";
+    font-family: "microsoft yahei";
     height: 40px;
     text-align: center;
     color: #ffffff;
@@ -1176,7 +1177,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page5 .article-detail h2 {
     height: 50px;
-    font: 400 25px/50px "";
+    font: 400 24px/50px "";
     border-bottom: 1px dotted #999;
     padding-bottom: 10px;
     width: 100%;
@@ -1465,17 +1466,36 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .cooperation  .content {
-    width: 560px;
+    width:700px;
     float: left;
-    margin-right: 40px;
+    /*margin-right: 40px;*/
+    margin-top:10px;
+}
+.cooperation ul{
+    clear: both;
+    width: 700px;
 }
 
-.cooperation  .time {
-    width: 560px;
-    width: 100px;
+.cooperation ul li{
+    width: 700px;
+    height:30px;
+    line-height: 30px;
     float: left;
 }
-
+.con_li_title{
+    width:520px;
+}
+.con_li_p{
+    width:100px;
+}
+.coontitle{
+    float: left;
+    width:150px;
+}
+.coontime{
+    float: right;
+    width:100px;
+}
 .cooperation h3 {
     font-size: 14px;
     color: #af2f24;
@@ -1486,22 +1506,20 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .cooperation ul li span {
     display: block;
     float: left;
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .cooperation ul li p {
     float: left;
-    background: url(../images/border3.png) no-repeat 0 2px;
-    padding-left: 12px;
+    /*background: url(../../../images/liangyou/images/border3.png) no-repeat 0 2px;*/
+    padding-left: 10px;
 }
 
-.cooperation ul li {
-    height: 20px;
+.page7{
+    margin-top:20px;
 }
-
 .page7 #tabs {
     font-size: 14px;
-
     height: 50px;
     line-height: 50px;
 }
@@ -1516,15 +1534,18 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     color: #af2f24;
 }
 .list-content {
+    margin-top:10px;
     overflow: hidden;
     margin-bottom: 40px;
 }
 
 .list-content h3 {
-    display: inline;
+    width: 80px;
+    text-align: center;
+    /* display: inline; */
     padding: 5px;
     background: #e7e7e7;
-    font: 400 12px/22px '';
+    font: 400 14px/22px '';
 }
 
 .list-content ul {
@@ -1538,14 +1559,16 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .list-content ul li {
-    width: 100%;
+    width: 110px;
+    margin-right: 30px;
     height: 119px;
-    border-bottom: 1px dotted #999;
+    float: left;
+    /*border-bottom: 1px dotted #999;*/
 }
 
 .block4 .list-content ul li img {
     display: block;
-    width: 100px;
+    width: 110px;
     height: 100px;
     margin: 10px 48px 10px 0;
     float: left;
@@ -1628,4 +1651,36 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .dl_li p a{
     color:#d2a442;
     margin-left:5px;
+}
+
+/*合作人作品*/
+.xxl_pictures{
+    width: 670px;
+    margin-top: 20px;
+}
+
+.xxl_pictures h2{
+    height: 30px;
+    font: 700 16px/30px "";
+    border-bottom: 1px dotted #999;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.xxl_pictures ul li{
+    width:167px;
+    /*margin-right: 17px;*/
+    float: left;
+}
+.xxl_pictures ul li a{
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.xxl_pictures ul li p{
+    width: 167px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    overflow: hidden;
 }

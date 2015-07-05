@@ -1652,3 +1652,35 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     color:#d2a442;
     margin-left:5px;
 }
+
+/*合作人作品*/
+.xxl_pictures{
+    width: 670px;
+    margin-top: 20px;
+}
+
+.xxl_pictures h2{
+    height: 30px;
+    font: 700 16px/30px "";
+    border-bottom: 1px dotted #999;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.xxl_pictures ul li{
+    width:167px;
+    /*margin-right: 17px;*/
+    float: left;
+}
+.xxl_pictures ul li a{
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.xxl_pictures ul li p{
+    width: 167px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    overflow: hidden;
+}
