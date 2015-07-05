@@ -1,10 +1,10 @@
 {template "content","header"}
 <!-- 面包屑 -->
 <div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:20px;">
-    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 分类</div>
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
 </div>
-<!-- 搜素+面包 -->
-<div class="block3 container-900 mg-auto overflow clearfix page5-block">
+ <!--搜素+面包 -->
+<!--<div class="block3 container-900 mg-auto overflow clearfix page5-block">
     <div class="xxl_asear xxl_clear">
         <div class="xxl_search">
             <input id="searchWord2" class="xxl_searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
@@ -12,7 +12,7 @@
             <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl">
         </div>
     </div>
-</div>
+</div>-->
 
 <!-- 主要内容 -->
 <div class="block4 container-900 mg-auto overflow clearfix page5">
@@ -39,21 +39,23 @@
         <!--合作机构,合作记录人-->
         <div class="page7 area7">
             <ul id="tabs">
-                <li class="li1">合作机构</li>
-                <li class="current li2"><a href="">合作纪录人</a></li>
+                <li class="li1" ><a href="/index.php?m=content&c=index&a=lists&catid=42">合作机构</a></li>
+                <li class="current li2"><a href="/index.php?m=content&c=index&a=lists&catid=46">合作纪录人</a></li>
             </ul>
             <div id="con">
                 <!--合作人-->
                 <div class="div2">
                     <div class="a">
-                        <a class="first">内地</a>
-                        <a>港澳台</a>
-                        <a>国际</a>
+                        {pc:content action="category" catid="46" siteid="$siteid" order="listorder ASC"}
+                        {loop $data $r}
+                        <a href="{$r[url]}">{$r[catname]}</a>
+                        {/loop}
+                        {/pc}
                     </div>
                     <ul class="people">
                         {pc:content  action="lists" catid="46" order="listorder ASC"}
                         {loop $data $r}
-                        <li><a href="" title="{$r[title]}"><div><img src="{$r[thumb]}" alt=""></div><span>{$r[title]}</span></a></li>
+                        <li><a href="{$r[url]}" title="{$r[title]}"><div><img src="{$r[thumb]}" alt=""></div><span>{$r[title]}</span></a></li>
                         {/loop}
                         {/pc}
                     </ul>

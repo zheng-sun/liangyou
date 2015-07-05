@@ -1530,7 +1530,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     cursor: pointer;
 }
 
-.page7 #tabs li.current {
+.page7 #tabs li.current a {
     color: #af2f24;
 }
 .list-content {
@@ -1678,7 +1678,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .xxl_pictures ul li p{
-    width: 167px;
+    width: 150px;
     height: 20px;
     line-height: 20px;
     margin-left: 10px;

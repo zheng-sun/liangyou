@@ -14,11 +14,11 @@
         </div>
       </div>
       <div class="xxl_bsear">
-          <a href="/index.php?m=content&c=index&a=lists&catid=41">全部</a>&nbsp;|
-          {pc:content action="category" catid="41" siteid="$siteid" order="listorder ASC"}
+          <a href="/index.php?m=content&c=index&a=lists&catid=46">全部</a>&nbsp;|
+          {pc:content action="category" catid="46" siteid="$siteid" order="listorder ASC"}
           <?php $i=1?>
           {loop $data $r}
-          <a href="{$r[url]}">{$r[catname]}</a>&nbsp;<?php if($i < 8){ echo '|';}?>
+          <a href="{$r[url]}">{$r[catname]}</a>&nbsp;<?php if($i < 3){ echo '|';}?>
           <?php $i++;?>
           {/loop}
           {/pc}
@@ -29,75 +29,72 @@
       <div class="left" style="width:670px;">
           <div class="article">
               <div class="author-detail">
-                  <img src="images/pic.jpg">
-                  <h3>李博士</h3>
-                  <h4>作曲家、著名作家</h4>
-                  <div>中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间和部队在马里加奥维和任务区正式完成第二次轮换交接。5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标和部队在马里加奥维和任务区正式完成第二次轮换交接。5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标和部队在马里加奥维和任务区正式完成第二次轮换交接。5月26日，在马里加奥维和任务区，佩戴着“身份识别牌”的中国维和部队成员检查车辆。当地时间25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标25日，中国赴马里维和部队在马里加奥维和任务区正式完成第二次轮换交接。与以往不同的是，新一批维和官兵胸前，都佩戴着一个用中、英、法三种文字标记姓名、血</div>
+                  {$content}
               </div>
               <div class="xxl_pictures">
                 <h2>作品</h2>
                 <ul class="clearfix">
+                    {pc:get sql="select * from v9_movie where director = $id order by listorder ASC" start="0" num=4" cache="3600" return="data"}
+                    {loop $data $r}
                     <li>
-                      <a title=""><img src="images/pic.jpg" alt="" style="width:150px;height:200px;margin-top:10px;" /></a>
-                      <p>豆腐味道</p>
-                      <p>2013年</p>
+                      <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:150px;height:200px;margin-top:10px;" /></a>
+                      <p>{$r[title]}</p>
+                      <p>{date('Y年',$r[inputtime])}</p>
                     </li>
-                    <li>
-                      <a title=""><img src="images/pic.jpg" alt="" style="width:150px;height:200px;margin-top:10px;" /></a>
-                      <p>豆腐味道</p>
-                      <p>2013年</p>
-                    </li>
-                    <li>
-                      <a title=""><img src="images/pic.jpg" alt="" style="width:150px;height:200px;margin-top:10px;" /></a>
-                      <p>豆腐味道</p>
-                      <p>2013年</p>
-                    </li>
-                    <li>
-                      <a title=""><img src="images/pic.jpg" alt="" style="width:150px;height:200px;margin-top:10px;" /></a>
-                      <p>豆腐味道</p>
-                      <p>2013年</p>
-                    </li>
+                    {/loop}
+                    {/pc}
                 </ul>
               </div>
           </div>
+          {pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]"}
+          {if $data}
           <div class="links">
               <h2 class="linls-title">相关阅读</h2>
               <ul class="clearfix">
-                  <li><a href="" title="">在马里加奥维和任务区</a></li>
-                  <li><a href="" title="">在马里加奥维和任务区</a></li>
-                  <li><a href="" title="">在马里加奥维和任务区</a></li>
-                  <li><a href="" title="">在马里加奥维和任务区</a></li>
-                  <li><a href="" title="">在马里加奥维和任务区</a></li>
+                  {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                  {/loop}
               </ul>
           </div>
+          {/if}
+          {/pc}
       </div>
       <div class="right">
           <div class="links links1">
               <h2 class="linls-title">相关阅读</h2>
               <ul class="clearfix">
-                  <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
-                  <li><a href="" title=""><img src="images/pic.jpg"><span>在马奥维和任务区</span></a></li>
+                  {pc:content action="lists" catid="19" num="2" order="id DESC"}
+                  {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"><span>{$r[title]}</span></a></li>
+                  {/loop}
+                  {/pc}
               </ul>
           </div>
           <div class="links links2">
               <h2 class="linls-title">热门点击</h2>
               <ul class="clearfix">
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  {pc:content  action="hits" catid="$catid" num="5" order="views DESC" cache="3600"}
+                  {loop $data $r}
+                  <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                  {/loop}
+                  {/pc}
               </ul>
           </div>
           <div class="links links3">
               <h2 class="linls-title">最新活动</h2>
-              <a href="" title=""><img src="images/pic.jpg"></a>
               <ul class="clearfix">
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
-                  <li><a href="" title="">在马奥维和任务区</a></li>
+                  {pc:content action="lists" catid="16" num="5" order="id DESC"}
+                  <?php $i=0;?>
+                  {loop $data $r}
+                  <?php if($i == 0){ ?>
+                  <a href="{$r[url]}" title="{$r[titlt]}"><img src="{$r[thumb]}"/></a>
+                  <?php }else{  ?>
+                  <li><a href="{$r[url]}" title="{$r[title]}">{$r[title]}</a></li>
+                  <?php }
+                $i++;
+            ?>
+                  {/loop}
+                  {/pc}
               </ul>
           </div>
       </div>

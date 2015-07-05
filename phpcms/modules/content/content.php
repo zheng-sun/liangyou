@@ -170,8 +170,16 @@ class content extends admin {
 				if($category['type']==0) {
 					$modelid = $category['modelid'];
 					if($modelid == '12'){
+						$category_model = pc_base::load_model('category_model');
+						$category_list = $category_model->select("parentid = 46",'catid');
 						$this->db->set_model(1);
-						$director_list = $this->db->select('catid=46','id,title');
+						$director_list = array();
+						if(count($category_list) > 0 ){
+							foreach($category_list as $category){
+								$director_data = $this->db->select('catid='.$category['catid'],'id,title');
+								$director_list = array_merge($director_list,$director_data);
+							}
+						}
 					}
 					//取模型ID，依模型ID来生成对应的表单
 					require CACHE_MODEL_PATH.'content_form.class.php';
@@ -241,8 +249,16 @@ class content extends admin {
 				$category = $this->categorys[$catid];
 				$modelid = $category['modelid'];
 				if($modelid == '12'){
+					$category_model = pc_base::load_model('category_model');
+					$category_list = $category_model->select("parentid = 46",'catid');
 					$this->db->set_model(1);
-					$director_list = $this->db->select('catid=46','id,title');
+					$director_list = array();
+					if(count($category_list) > 0 ){
+						foreach($category_list as $category){
+							$director_data = $this->db->select('catid='.$category['catid'],'id,title');
+							$director_list = array_merge($director_list,$director_data);
+						}
+					}
 				}
 				$this->db->table_name = $this->db->db_tablepre.$this->model[$modelid]['tablename'];
 				$r = $this->db->get_one(array('id'=>$id));
