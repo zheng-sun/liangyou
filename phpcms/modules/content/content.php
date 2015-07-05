@@ -169,6 +169,10 @@ class content extends admin {
 				$category = $this->categorys[$catid];
 				if($category['type']==0) {
 					$modelid = $category['modelid'];
+					if($modelid == '12'){
+						$this->db->set_model(1);
+						$director_list = $this->db->select('catid=46','id,title');
+					}
 					//取模型ID，依模型ID来生成对应的表单
 					require CACHE_MODEL_PATH.'content_form.class.php';
 					$content_form = new content_form($modelid,$catid,$this->categorys);
@@ -236,6 +240,10 @@ class content extends admin {
 				param::set_cookie('catid', $catid);
 				$category = $this->categorys[$catid];
 				$modelid = $category['modelid'];
+				if($modelid == '12'){
+					$this->db->set_model(1);
+					$director_list = $this->db->select('catid=46','id,title');
+				}
 				$this->db->table_name = $this->db->db_tablepre.$this->model[$modelid]['tablename'];
 				$r = $this->db->get_one(array('id'=>$id));
 				$this->db->table_name = $this->db->table_name.'_data';

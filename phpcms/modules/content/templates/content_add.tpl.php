@@ -71,13 +71,34 @@ if(is_array($forminfos['base'])) {
 		}
 	}
  ?>
-	<tr>
-      <th width="80"><?php if($info['star']){ ?> <font color="red">*</font><?php } ?> <?php echo $info['name']?>
-	  </th>
-      <td><?php echo $info['form']?>  <?php echo $info['tips']?></td>
-    </tr>
-<?php
-} }
+	 <?php if($modelid != '12'){?>
+		 <tr>
+			 <th width="80"><?php if($info['star']){ ?> <font color="red">*</font><?php } ?> <?php echo $info['name']?>
+			 </th>
+			 <td><?php echo $info['form']?>  <?php echo $info['tips']?></td>
+		 </tr>
+	 <?php }else{?>
+		 <tr>
+			 <th width="80"><?php if($info['star']){ ?> <font color="red">*</font><?php } ?> <?php echo $info['name']?>
+			 </th>
+			 <td>
+				 <?php if($info['name'] == '导演'){
+					 echo "<select name='info[director]'>";
+					 foreach($director_list as $director){
+						 echo "<option value='".$director['id']."'>".$director['title']."</option>";
+					 }
+					 echo '</select>';
+				 }
+				 else{
+					 echo $info['form'];
+				 }
+				 ?>  <?php echo $info['tips']?>
+			 </td>
+		 </tr>
+	 <?php
+	 }
+ }
+}
 ?>
 
     </tbody></table>
