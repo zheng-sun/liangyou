@@ -33,7 +33,9 @@
             <div class="content-right">
                 <p>中文片名: {$title}</p>
                 <p>英文片名: {$en_title}</p>
-                <p>导演: <a href="" title="">{$director}</a></p>
+                {pc:get sql="select title,url from v9_news where id = '$director'" return="data"}
+                <p>导演: <a href="{$data[0]['url']}" title="">{$data[0]['title']}</a></p>
+                {/pc}
                 <p>国家/地区: {$area}</p>
                 <p>出品: {$produced}</p>
                 <p>摘要:</p>
@@ -74,7 +76,7 @@
             {pc:content action="lists" catid="19" num="2" order="id DESC"}
             <ul class="clearfix">
             {loop $data $r}
-                 <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/><span class="xxl_tu_zi">{$r[title]}</span></a></li>
+                 <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" style="height:83px;"/><span class="xxl_tu_zi">{$r[title]}</span></a></li>
             {/loop}
             </ul>
             {/pc}

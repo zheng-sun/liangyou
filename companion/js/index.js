@@ -1,4 +1,30 @@
 $(function(){
+    // 乳化计划
+    $(".xxl_mes").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_message").css("display","block");
+    });
+    $(".xxl_consg").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_con").css("display","block");
+    });
+    $(".xxl_team").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_team").css("display","block");
+    });
+    $(".xxl_schedule").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_schedule").css("display","block");
+    });
+    $(".xxl_successs").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_success").css("display","block");
+    });
+    $(".xxl_join").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_join").css("display","block");
+    });
+
     // 活动页--我要参与-显示页面
     $(".acbtn_ok").click(function(){
         $('.zhezhao').css('display','block');
