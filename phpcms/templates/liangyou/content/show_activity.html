@@ -17,8 +17,17 @@
                 <p>类型: {$activity_type}</p>
                 <p>主办方: {$activity_host}</p>
                 <div class="action_btn">
+                    <?php
+                        if($activity_status == 1){
+                    ?>
                     <span class="acbtn_ok">我要参加</span>
+                    <?php
+                        }else{
+                    ?>
                     <span class="acbtn_no">已结束</span>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>

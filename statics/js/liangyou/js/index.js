@@ -1,4 +1,30 @@
 $(function(){
+    // 乳化计划
+    $(".xxl_mes").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_message").css("display","block");
+    });
+    $(".xxl_consg").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_con").css("display","block");
+    });
+    $(".xxl_team").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_team").css("display","block");
+    });
+    $(".xxl_schedule").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_schedule").css("display","block");
+    });
+    $(".xxl_successs").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_success").css("display","block");
+    });
+    $(".xxl_join").click(function(){
+        $(".plan_right").css("display","none");
+        $(".xxl_plan_join").css("display","block");
+    });
+
     // 活动页--我要参与-显示页面
     $(".acbtn_ok").click(function(){
         $('.zhezhao').css('display','block');
@@ -80,7 +106,13 @@ $(function(){
         $(this).parent().find("ul").removeClass("height360");
         $(this).css({"display":"none"});
     })
-
+    $(".go7").click(function() {
+        $(".div1").css("display", "none");
+        $(".div2").css("display", "block");
+        $(".li1").removeClass("current")
+        $(".li2").addClass("current");
+        $("html,body").animate({scrollTop:$(".area7").offset().top},500);
+    })
     $(".go1,.go2,.go3,.go4,.go5,.go6").click(function() {
         $(".div2").css("display", "none");
         $(".div1").css("display", "block");

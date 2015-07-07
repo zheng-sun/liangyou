@@ -108,12 +108,12 @@
             {pc:content  action="lists" catid="27" order="id DESC" num="4"}
             {loop $data $r}
             <li>
-                <a class="toptpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
-                <div class="bottomtext">
+                <a class="toptpic" href="{$r[url]}" class="title" style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>
+                <!-- <div class="bottomtext">
                     <a href="{$r[url]}"><h2>{str_cut($r[title],56,'...')}</h2></a>
                     <div class="xxl_line"></div>
                     <p class="whkj_p">{str_cut($r[description],96)}</p>
-                </div>
+                </div> -->
             </li>
             {/loop}
             {/pc}
@@ -132,12 +132,12 @@
             {pc:content  action="lists" catid="28" order="id DESC" num="4"}
             {loop $data $r}
             <li>
-                <a class="toptpic" href="" class="title"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
-                <div class="bottomtext">
+                <a class="toptpic" href="" class="title"  style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>
+                <!-- <div class="bottomtext">
                     <a href=""><h2>{str_cut($r[title],56,'...')}</h2></a>
                     <div class="xxl_line"></div>
                     <p class="whkj_p">{str_cut($r[description],96)}</p>
-                </div>
+                </div> -->
             </li>
             {/loop}
             {/pc}

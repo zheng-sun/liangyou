@@ -255,7 +255,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .xxl_search {
     width: 185px;
     height: 28px;
-    background: url(../../../images/liangyou/images/s1.jpg) no-repeat;
+    background: url(../images/s1.jpg) no-repeat;
     overflow: hidden;
 }
 
@@ -314,7 +314,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .block1 h1 {
     width: 300px;
     height: 70px;
-    background: url(../../../images/liangyou/images/logo.jpg);
+    background: url(../images/logo.jpg);
     float: left;
     text-indent: -1000em;
 }
@@ -568,7 +568,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     float: left;
     margin-right: 10px;
     text-align: left;
-    /*background: url(../../../images/liangyou/images/border.png) 0 27px no-repeat;*/
+    /*background: url(../images/border.png) 0 27px no-repeat;*/
 }
 
 .block5 ul li div {
@@ -599,13 +599,13 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     float: left;
     width: 284px;
     height: 26px;
-    background: url(../../../images/liangyou/images/input.png) no-repeat;
+    background: url(../images/input.png) no-repeat;
     position: relative;
     overflow: hidden;
 }
 
 .block1 .input2 {
-    background: url(../../../images/liangyou/images/input.png) no-repeat;
+    background: url(../images/input.png) no-repeat;
 }
 
 .block1 .searchname {
@@ -632,7 +632,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 #dropdown{width:60px;position: absolute;top: 42px;right: 80px;z-index: 999999;cursor: pointer;}
-#dropdown .input_select,#dropdown2 .input_select{cursor:pointer;width:60px; height:26px; line-height:26px; background:#ffffff url(../../../images/liangyou/images/arrrow.png) no-repeat 37px 3px ; border: none;outline: none;}
+#dropdown .input_select,#dropdown2 .input_select{cursor:pointer;width:60px; height:26px; line-height:26px; background:#ffffff url(../images/arrrow.png) no-repeat 37px 3px ; border: none;outline: none;}
 #dropdown ul, #dropdown2 ul{width:60px ;background:#14b4b4; position:absolute; display:none;top: 28px;left:-7px;z-index: 99999;}
 #dropdown ul li,#dropdown2 ul li{height:24px; line-height:24px;text-align: center;}
 #dropdown ul li a, #dropdown2 ul li a{display:block; height:24px; color:#ffffff; text-decoration:none;background: #1ec7cc;}
@@ -689,7 +689,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     position: absolute;
     right: 0;
     top: 0;
-    background: url(../../../images/liangyou/images/button.png);
+    background: url(../images/button.png);
     outline:medium;
     cursor: pointer;
 }
@@ -736,7 +736,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     height: 40px;
     font: 400 18px/25px "";
     font-family: "microsoft yahei";
-    background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;
+    background: url(../images/border2.png) no-repeat 0 25px;
 }
 
 .page2-block1 .article .text span {
@@ -879,8 +879,8 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .slideinner .slidemove, .slideinner2 .slidemove, .slideinner3 .slidemove, .slideinner4 .slidemove{ position:absolute; top:70px; height:78px; width:46px;/* z-index:10;*/}
 
-.slideinner .leftbtn, .slideinner2 .leftbtn, .slideinner3 .leftbtn, .slideinner4 .leftbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/left.png) no-repeat center center; left:-10px;cursor:pointer;top: -10px;}
-.slideinner .rightbtn, .slideinner2 .rightbtn, .slideinner3 .rightbtn, .slideinner4 .rightbtn{ height:50px; width:50px; background:url(../../../images/liangyou/images/right.png) no-repeat center center; right:-10px;cursor:pointer;top: -10px;}
+.slideinner .leftbtn, .slideinner2 .leftbtn, .slideinner3 .leftbtn, .slideinner4 .leftbtn{ height:50px; width:50px; background:url(../images/left.png) no-repeat center center; left:-10px;cursor:pointer;top: -10px;}
+.slideinner .rightbtn, .slideinner2 .rightbtn, .slideinner3 .rightbtn, .slideinner4 .rightbtn{ height:50px; width:50px; background:url(../images/right.png) no-repeat center center; right:-10px;cursor:pointer;top: -10px;}
 
 
 
@@ -997,7 +997,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     height: 20px;
     font: 400 12px/18px "";
     font-family: "microsoft yahei";
-    /*background: url(../../../images/liangyou/images/border2.png) no-repeat 0 18px;*/
+    /*background: url(../images/border2.png) no-repeat 0 18px;*/
     margin:10px 0;
 
 }
@@ -1063,7 +1063,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     font-family: "microsoft yahei";
     margin-top: 30px;
     /*font: 400 18px/25px "";*/
-    /*background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;*/
+    /*background: url(../images/border2.png) no-repeat 0 25px;*/
 }
 
 .page3-block2 .pictext li .righttext span {
@@ -1092,7 +1092,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     font: 400 12px/25px "";
     font-family: "microsoft yahei";
     /*font: 400 18px/25px "";*/
-    /*background: url(../../../images/liangyou/images/border2.png) no-repeat 0 25px;*/
+    /*background: url(../images/border2.png) no-repeat 0 25px;*/
     margin-top: 20px;
 }
 
@@ -1245,7 +1245,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     display: block;
     width: 145px;
     height: 43px;
-    background: url(../../../images/liangyou/images/abutton.png);
+    background: url(../images/abutton.png);
     margin-top:15px;
 }
 
@@ -1295,7 +1295,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     position: absolute;
     right: 0;
     top: 0;
-    background: url(../../../images/liangyou/images/button2.png) no-repeat;
+    background: url(../images/button2.png) no-repeat;
     outline:medium;
     cursor: pointer;
 }
@@ -1360,7 +1360,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .inside_pictures_wrapper .close {
     width: 48px;
     height: 48px;
-    background: url(../../../images/liangyou/images/close.png) no-repeat center center;
+    background: url(../images/close.png) no-repeat center center;
     position: absolute;
     top: 0;
     right: 0;
@@ -1397,11 +1397,11 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .inside_pictures .bx-wrapper .bx-prev {
-    background: url(../../../images/liangyou/images/left1.png) no-repeat center center;
+    background: url(../images/left1.png) no-repeat center center;
 }
 
 .inside_pictures .bx-wrapper .bx-next {
-    background: url(../../../images/liangyou/images/right1.png)  no-repeat center center;
+    background: url(../images/right1.png)  no-repeat center center;
 }
 
 .inside_pictures .bx-wrapper .bx-controls-direction a {
@@ -1534,7 +1534,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .cooperation ul li p {
     float: left;
-    /*background: url(../../../images/liangyou/images/border3.png) no-repeat 0 2px;*/
+    /*background: url(../images/border3.png) no-repeat 0 2px;*/
     padding-left: 10px;
 }
 

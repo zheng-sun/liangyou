@@ -1709,3 +1709,73 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin-left: 10px;
     overflow: hidden;
 }
+
+/*乳化计划*/
+.plan_content{
+    width: 900px;
+    margin: 0 auto;
+}
+.plan_top {
+    width: 675;
+    margin-top: 20px;
+    float: right;
+}
+.plan_top ul li{
+    width: 225px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #969596;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    float: left;
+}
+.plan_top ul li a{
+    width: 225px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.plan_top ul li.ptop_select, .plan_top ul li a:hover{
+    width: 225px;
+    background: #2f2f2f;
+}
+
+.plan_center{
+    width: 900px;
+    float: left;
+    margin-bottom: 50px;
+    padding-bottom: 80px;
+    border-radius: 5px;
+    box-shadow: #666 0px 0px 30px;
+}
+.plan_center .plan_left{
+    width: 150px;
+    float: left;
+    margin-top: 80px;
+}
+.plan_center .plan_left ul li{
+    width: 150px;
+    text-align: right;
+    font-size: 14px;
+    float: left;
+    height: 70px;
+    cursor: pointer;
+}
+.afr{
+    float: right;
+}
+.plan_center .plan_left ul li span{
+    widows: 100%;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+}
+.plan_center .plan_right{
+    width: 655px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+}
