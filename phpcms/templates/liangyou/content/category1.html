@@ -71,7 +71,7 @@
        </ul>
    </div>
     <div class="pictext">
-        <a class="title1" href="http://www.1926cn.com/special/lysy/index.shtml" title="公益大讲堂" target="_blank">公益大讲堂</a>
+        <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=26" title="公益大讲堂" target="_blank">公益大讲堂</a>
         <p class="description_c">
         {pc:get sql="select * from  v9_category where catid = 26" cache="3600" return="data"}
         {loop $data $r}
@@ -96,7 +96,7 @@
     </div>
 
     <div class="picture">
-        <a class="title1" href="http://www.1926cn.com/special/lysy/index.shtml" title="常规课程" target="_blank">常规课程</a>
+        <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=27" title="常规课程" target="_blank">常规课程</a>
         <p class="description_c">
         {pc:get sql="select * from  v9_category where catid = 27" cache="3600" return="data"}
         {loop $data $r}
@@ -120,7 +120,7 @@
         </ul>
     </div>
     <div class="picture">
-        <a class="title1" href="" title="">良友剧场</a>
+        <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=28" title="良友剧场">良友剧场</a>
         <p class="description_c">
         {pc:get sql="select * from  v9_category where catid = 28" cache="3600" return="data"}
         {loop $data $r}
@@ -132,7 +132,7 @@
             {pc:content  action="lists" catid="28" order="id DESC" num="4"}
             {loop $data $r}
             <li>
-                <a class="toptpic" href="" class="title"  style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>
+                <a class="toptpic" href="{$r[url]}" class="title"  style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>
                 <!-- <div class="bottomtext">
                     <a href=""><h2>{str_cut($r[title],56,'...')}</h2></a>
                     <div class="xxl_line"></div>
