@@ -81,15 +81,39 @@ if(is_array($forminfos['base'])) {
 			 </th>
 			 <td>
 				 <?php if($info['name'] == '导演'){
-						 echo "<select name='info[director]'>";
+						echo "<select name='info[director]'>";
+					 	echo "<option value='0'>请选择</option>";
+						foreach($director_list as $director) {
+							$selected = '';
+							if ($data['director'][0] == $director['id']) {
+								$selected = 'selected';
+							}
+							echo "<option value='" . $director['id'] . "' $selected>" . $director['title'] . "</option>";
+						}
+						echo '</select>&nbsp;&nbsp;';
+
+						 echo "<select name='info[director1]'>";
+					 	echo "<option value='0'>请选择</option>";
 						 foreach($director_list as $director) {
 							 $selected = '';
-							 if ($data['director'] == $director['id']) {
+							 if ($data['director'][1] == $director['id']) {
 								 $selected = 'selected';
 							 }
 							 echo "<option value='" . $director['id'] . "' $selected>" . $director['title'] . "</option>";
 						 }
-					 echo '</select>';
+						 echo '</select>&nbsp;&nbsp;';
+
+						 echo "<select name='info[director2]'>";
+					 	echo "<option value='0'>请选择</option>";
+						 foreach($director_list as $director) {
+							 $selected = '';
+							 if ($data['director'][2] == $director['id']) {
+								 $selected = 'selected';
+							 }
+							 echo "<option value='" . $director['id'] . "' $selected>" . $director['title'] . "</option>";
+						 }
+						 echo '</select>';
+
 				 }
 				 else{
 					 echo $info['form'];

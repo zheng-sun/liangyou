@@ -34,11 +34,15 @@
                 <p>中文片名：{str_cut($r[title],36,'...')}</p>
                 <p>英文名字：{$r[en_title]}</p>
                 <p>标签：<a href="">{$r[keywords]}</a></p>
-                {pc:get sql="select title,url from v9_news where id=$r[director]" return="data1"}
-                {loop $data1 $r1}
-                <p>导演：<a href="{$r1[url]}">{$r1[title]}</a></p>
-                {/loop}
-                {/pc}
+                <p>导演：
+                    <?php if($r['director'] != '0'){?>
+                    {pc:get sql="select title,url from v9_news where id in ($r[director])" return="data1"}
+                    {loop $data1 $r1}
+                    <a href="{$r1[url]}">{$r1[title]}</a>
+                    {/loop}
+                    {/pc}
+                    <?php  }?>
+                </p>
             </li>
             {/loop}
             {/pc}

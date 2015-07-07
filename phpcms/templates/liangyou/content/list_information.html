@@ -37,11 +37,15 @@
                     <p>国家/地区:{$r[area]}</p>
                     <p>出品:{$r[produced]}</p>
                     <p>时长:{$r[duration]}</p>
-                    {pc:get sql="select title,url from v9_news where id=$r[director]" return="data2"}
-                    {loop $data2 $r2}
-                      <p>导演：{$r2[title]}</p>
-                    {/loop}
-                    {/pc}
+                    <p>导演：
+                    <?php if($r['director'] != '0'){?>
+                        {pc:get sql="select title,url from v9_news where id in ($r[director])" return="data2"}
+                        {loop $data2 $r2}
+                          {$r2[title]}
+                        {/loop}
+                        {/pc}
+                    <?php  }?>
+                    </p>
                 </div>
             </li>
             {/loop}

@@ -136,6 +136,16 @@ class content extends admin {
 				} else {
 					$_POST['info']['status'] = 99;
 				}
+				$director = '';
+				if($_POST['info']['director'] != 0)
+					$director .= ','.$_POST['info']['director'];
+				if($_POST['info']['director1'] != 0)
+					$director .= ','.$_POST['info']['director1'];
+				if($_POST['info']['director2'] != 0)
+					$director .= ','.$_POST['info']['director2'];
+				$_POST['info']['director'] = $director == ''?'0':substr($director,1,strlen($director) - 1);
+				unset($_POST['info']['director1']);
+				unset($_POST['info']['director2']);
 				$this->db->add_content($_POST['info']);
 				if(isset($_POST['dosubmit'])) {
 					showmessage(L('add_success').L('2s_close'),'blank','','','function set_time() {$("#secondid").html(1);}setTimeout("set_time()", 500);setTimeout("window.close()", 1200);');
@@ -230,6 +240,16 @@ class content extends admin {
 				if(trim($_POST['info']['title'])=='') showmessage(L('title_is_empty'));
 				$modelid = $this->categorys[$catid]['modelid'];
 				$this->db->set_model($modelid);
+				$director = '';
+				if($_POST['info']['director'] != 0)
+					$director .= ','.$_POST['info']['director'];
+				if($_POST['info']['director1'] != 0)
+					$director .= ','.$_POST['info']['director1'];
+				if($_POST['info']['director2'] != 0)
+					$director .= ','.$_POST['info']['director2'];
+				$_POST['info']['director'] = $director == ''?'0':substr($director,1,strlen($director) - 1);
+				unset($_POST['info']['director1']);
+				unset($_POST['info']['director2']);
 				$this->db->edit_content($_POST['info'],$id);
 				if(isset($_POST['dosubmit'])) {
 					showmessage(L('update_success').L('2s_close'),'blank','','','function set_time() {$("#secondid").html(1);}setTimeout("set_time()", 500);setTimeout("window.close()", 1200);');
@@ -272,6 +292,9 @@ class content extends admin {
 
 				$forminfos = $content_form->get($data);
 				$formValidator = $content_form->formValidator;
+				if($data['director'] != 0 ){
+					$data['director'] = explode(',',$data['director']);
+				}
 				include $this->admin_tpl('content_edit');
 			}
 			header("Cache-control: private");

@@ -34,7 +34,7 @@
               <div class="xxl_pictures">
                 <h2>作品</h2>
                 <ul class="clearfix">
-                    {pc:get sql="select * from v9_movie where director = '$id' order by listorder ASC" start="0" num=4"  return="data"}
+                    {pc:get sql="select * from v9_movie where director like '%$id%' order by listorder ASC" start="0" num=4"  return="data"}
                     {loop $data $r}
                     <li>
                       <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:150px;height:200px;margin-top:10px;" /></a>

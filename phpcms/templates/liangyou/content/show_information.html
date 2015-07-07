@@ -33,9 +33,15 @@
             <div class="content-right">
                 <p>中文片名: {$title}</p>
                 <p>英文片名: {$en_title}</p>
-                {pc:get sql="select title,url from v9_news where id = '$director'" return="data"}
-                <p>导演: <a href="{$data[0]['url']}" title="">{$data[0]['title']}</a></p>
-                {/pc}
+                <p>导演：
+                <?php if($director != '0'){?>
+                    {pc:get sql="select title,url from v9_news where id in ($director)" return="data"}
+                    {loop $data $r}
+                    <a href="{$r['url']}" title="">{$r[title]}</a>
+                    {/loop}
+                    {/pc}
+                <?php  }?>
+                </p>
                 <p>国家/地区: {$area}</p>
                 <p>出品: {$produced}</p>
                 <p>摘要:</p>
