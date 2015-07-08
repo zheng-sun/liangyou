@@ -33,7 +33,7 @@
     </div>
     <div class="right">
        <div class="alllinks" style="margin-top:20px;">
-           <span>资讯</span>
+           <span class="xxxl_zixun">资讯</span>
            {php $j=0}
            {php $search_model = getcache('search_model_'.$siteid, 'search');}
            {loop $search_model $k=>$v}
@@ -44,6 +44,8 @@
        </div>
         <script type="text/javascript">
             function setmodel(value, id, siteid, q) {
+                var aa = id.text();
+                $('.xxxl_zixun').text(aa);
                 $("#typeid1").val(value);
                 id.addClass('on');
                 if(q!=null && q!='') {

@@ -1,0 +1,32 @@
+{template "content","header"}
+<!-- 面包屑 -->
+<div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:20px;">
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
+</div>
+
+<!-- 主要内容 -->
+<div class="page8 container-900 mg-auto clearfix" style="margin-top:20px;">
+    <div class="title">
+        <a class="current" href="" title="">良友纪录片栏目《记录时间》</a>
+        <a href="" title="">良友推送</a>
+    </div>
+    <div class="maincontent">
+        {pc:content  action="lists" catid="71" order="id DESC" num="1"}
+        {loop $data $r}
+            {pc:get sql="select content from v9_news_data where id=$r[id]" return="data1"}
+                {loop $data1 $r1}
+                    {$r1[content]}
+                {/loop}
+            {/pc}
+        {$r[id]}
+        {/loop}
+        {/pc}
+    </div>
+</div>
+
+
+<script>
+    cTab('#tabs','#con');
+</script>
+{template "content","footer"}
+

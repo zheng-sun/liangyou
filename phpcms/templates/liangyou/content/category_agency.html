@@ -8,9 +8,17 @@
         <div class="xxl_search">
             <input id="searchWord2" class="xxl_searchname fl" type="text" onclick=" document.getElementById('searchWord2').style.color='#000000';
           if( this.value == '良友')value=''" onblur=" document.getElementById('searchWord2').style.color='#ffffff';if( this.value.replace(/[ ]/g,'') == '')value='良友'" value="良友" name="wd">
-            <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl">
+            <input id="searchBtn2" type="submit" value="" class="xxl_searchbtn cursor fl" style="left: 140px;z-index:200;">
         </div>
     </div>
+    <script type="text/javascript">
+        $(function(){
+            $('.xxl_searchbtn').click(function(){
+                q = $("#searchWord2").val();
+                window.location='?m=search&c=index&a=init&siteid=1&typeid=72&q='+q;
+            });
+        });
+    </script>
     <div class="xxl_bsear">
         <a href="/index.php?m=content&c=index&a=lists&catid=41">全部</a>&nbsp;|
         {pc:content action="category" catid="41" siteid="$siteid" order="listorder ASC"}

@@ -1,88 +1,125 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
-<meta name="keywords" content="{$SEO['keyword']}">
-<meta name="description" content="{$SEO['description']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3672694-9']);
+        _gaq.push(['_trackPageview']);
 
-<link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/style.css" />
-<link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/jquery.bxslider.css" />
-<script type="text/javascript" src="{JS_PATH}liangyou/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="{JS_PATH}liangyou/js/index.js"></script>
-<script type="text/javascript" src="{JS_PATH}liangyou/js/jquery.bxslider.js"></script>
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
-
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?fa98b91e638fc607d0335693fb173e7f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/lrtk.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/org.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/jquery.bxslider.css" />
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/index.js"></script>
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/gun.js"></script>
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/org.js"></script>
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery.bxslider.js"></script>
 </head>
 <body>
 <!-- logo 和 搜索连接 -->
 <div class="block1 container-900 mg-auto clearfix">
-  <a href="/"><h1>良友</h1></a>
-  <div class="block1right">
-  {pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
-      <ul class="ul">
-          {loop $data $r}
-          <li><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span>{$r[description]}</span></a></li>
-          {/loop}
-      </ul>
-      {/pc}
-      <div class="searchcontent">
-          <form id="searchForm" method="get" target="_blank" action="{APP_PATH}index.php" name="form_search">
-              <input id="searchWord" class="searchname fl" type="text" value="{$search_q}" name="q">
-              <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl"/>
-              <input type="hidden" name="m" value="search"/>
-			<input type="hidden" name="c" value="index"/>
-			<input type="hidden" name="a" value="init"/>
-            <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
-			<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
-          </form>
-      </div>
+    <a href="/"><h1>良友</h1></a>
+    <div class="block1right">
+        {pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
+        <ul class="ul">
+            {loop $data $r}
+            <li><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '38'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
+            {/loop}
+        </ul>
+        {/pc}
+        <div class="searchcontent">
+            <form id="searchForm" method="get" target="_blank" action="{APP_PATH}index.php" name="form_search">
+                <input id="searchWord" class="searchname fl" type="text" value="{$search_q}" name="q">
+                <input id="searchBtn" type="submit" value="" class="searchbtn cursor fl"/>
+                <input type="hidden" name="m" value="search"/>
+                <input type="hidden" name="c" value="index"/>
+                <input type="hidden" name="a" value="init"/>
+                <input type="hidden" name="typeid" value="{$typeid}" id="typeid"/>
+                <input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+            </form>
+        </div>
 
-      <div id="dropdown">
-          <input class="input_select" type="text" value="类型"/>
-          <ul>
-              {php $j=0}
-              {php $search_model = getcache('search_model_'.$siteid, 'search');}
-              {loop $search_model $k=>$v}
-              {php $j++;}
-              <li><a href="javascript:;" onclick="setmodel1({$v['typeid']}, $(this));" style="outline:medium none;" hidefocus="true" >{$v['name']}</a></li>
-              {/loop}
-              {php unset($j);}
-          </ul>
-      </div>
-      <script type="text/javascript">
-          function setmodel1(value, id, siteid, q) {
-              $("#typeid").val(value);
-              id.addClass('on');
-              if(q!=null && q!='') {
-                  window.location='?m=search&c=index&a=init&siteid='+siteid+'&typeid='+value+'&q='+q;
-              }
-          }
-      </script>
-      <div id="dropdown2">
-          <input class="input_select" type="text" value="智能"/>
-          <ul>
-              <li><a href="#" rel="2" target="_self">1</a></li>
-              <li><a href="#" rel="3" target="_self">12</a></li>
-              <li><a href="#" rel="4" target="_self">12</a></li>
-              <li><a href="#" rel="5" target="_self">24</a></li>
-          </ul>
-      </div>
-  </div>
+        <div id="dropdown">
+            <input class="input_select" type="text" value="类型"/>
+            <ul>
+                {php $j=0}
+                {php $search_model = getcache('search_model_'.$siteid, 'search');}
+                {loop $search_model $k=>$v}
+                {php $j++;}
+                <li><a href="javascript:;" onclick="setmodel({$v['typeid']}, $(this));" style="outline:medium none;" hidefocus="true" >{$v['name']}</a></li>
+                {/loop}
+                {php unset($j);}
+            </ul>
+        </div>
+        <script type="text/javascript">
+            function setmodel(value, id, siteid, q) {
+                $("#typeid").val(value);
+                id.addClass('on');
+                if(q!=null && q!='') {
+                    window.location='?m=search&c=index&a=init&siteid='+siteid+'&typeid='+value+'&q='+q;
+                }
+            }
+        </script>
+        <div id="dropdown2">
+            <input class="input_select" type="text" value="智能"/>
+            <ul>
+                <li><a href="#" rel="2" target="_self">最新</a></li>
+                <li><a href="#" rel="3" target="_self">最热</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 <!-- 主导航 -->
-<div class="block2 container-900 mg-auto overflow clearfix" style="margin-bottom: 0px;">
-{pc:content action="category" catid="0" num="9" siteid="$siteid" order="listorder ASC"}
-  <ul class="clearfix">
+<div class="block2 container-900 mg-auto clearfix" style="margin-bottom: 0px;">
+    {pc:content action="category" catid="0" num="9" siteid="$siteid" order="listorder ASC"}
     <?php $i=1;?>
-    {loop $data $r}
-    <?php if($i > 5){?>
-      <li><a <?php if($catid == $r['catid']){?> class="current" <?php }?> href="{$r[url]}" title="{$r[catname]}" >{$r[catname]}<span>{$r[description]}</span></a></li>
-    <?php }
+    <ul class="clearfix">
+        {loop $data $r}
+        <?php if($i > 5){?>
+        <li class="limore">
+            <a <?php if($catid == $r['catid']){?> class="current" <?php }?>  href="{$r[url]}">{$r[catname]}<span>{$r[description]}</span></a>
+            {pc:get sql="select * from v9_category where parentid=$r[catid] order by listorder ASC" return="data1"}
+            <?php if(count($data1) > 0){?>
+            <div class="ali<?php echo $i-5;?> xxl_nav_js" style="display:none;">
+                <?php $j = 1;?>
+                {loop $data1 $r1}
+                <?php
+                            if(in_array($r1[catid],array(18,19,22,29,30,70))){
+                              continue;
+                            }
+                          ?>
+                <a href="{$r1[url]}" class="a a{$j}">{$r1[catname]}</a>
+                <?php $j++;?>
+                {/loop}
+            </div>
+            <?php }?>
+            {/pc}
+        </li>
+        <?php }
         $i++;
-    ?>
-    {/loop}
-  </ul>
-{/pc}
+        ?>
+        {/loop}
+    </ul>
+    {/pc}
 </div>
 <!-- 头部结束  -->
