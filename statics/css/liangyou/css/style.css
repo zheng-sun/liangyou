@@ -1716,7 +1716,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin: 0 auto;
 }
 .plan_top {
-    width: 675;
+    width: 675px;
     margin-top: 20px;
     float: right;
 }
@@ -1744,11 +1744,12 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .plan_center{
-    width: 900px;
+    width: 898px;
     float: left;
     margin-bottom: 50px;
     padding-bottom: 80px;
     border-radius: 5px;
+    border: 1px solid #eee;
     box-shadow: #666 0px 0px 30px;
 }
 .plan_center .plan_left{
@@ -1768,7 +1769,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     float: right;
 }
 .plan_center .plan_left ul li span{
-    widows: 100%;
+    width: 100%;
     display: block;
     height: 25px;
     line-height: 25px;
@@ -1778,4 +1779,115 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     float: left;
     margin-left: 40px;
     margin-top: 40px;
+}
+
+/* page8 */
+.page8 .title {
+    width: 414px;
+    height: 31px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.page8 .title  a {
+    display: block;
+    width: 207px;
+    float: left;
+    background: #9e9e9e;
+    height: 31px;
+    font: 400 14px/31px "";
+    color: #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+
+.page8 .title  a.current {
+    background: #303030;
+}
+
+.page8 .maincontent {
+    width: 738px;
+    height: 1000px;
+    box-shadow: 0 0 35px #eeeeee;
+    margin: 0 auto;
+    padding: 0 80px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #eeeeee;
+}
+
+.page8 .maincontent h2 {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font: 400 16px/50px "";
+}
+
+.page8 .maincontent h3 {
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    font: 400 28px/30px "";
+}
+
+.page8 .maincontent .middle {
+    width: 580px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.page8 .maincontent .middle ul {
+    width: 120%;
+    margin: 30px 0;
+}
+
+.page8 .maincontent .middle ul li {
+    width: 100px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page8 .maincontent .middle ul li p {
+    margin: 5px 0;
+}
+
+.page8 .maincontent .middle ul li.current {
+    color: #000000;
+}
+
+.page8 #con {
+    height: 1000px;
+    overflow: hidden;
+}
+.page8 #con ul {
+    width: 110%;
+}
+
+.page8 #con li {
+    width: 97px;
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.page8 #con li a {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.page8 #con li .dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    background: #9f343a;
+    text-align: center;
+    line-height: 22px;
+    color: #ffffff;
+    margin: 20px auto;
+
 }

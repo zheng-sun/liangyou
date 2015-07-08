@@ -654,7 +654,7 @@ function to_sqls($data, $front = ' AND ', $in_column = false) {
  * @param $array 需要传递的数组，用于增加额外的方法
  * @return 分页
  */
-function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
+function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 7) {
 	if(defined('URLRULE') && $urlrule == '') {
 		$urlrule = URLRULE;
 		$array = $GLOBALS['URL_ARRAY'];
