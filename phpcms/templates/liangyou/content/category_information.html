@@ -35,12 +35,12 @@
     <div class="picture">
         <a class="title1" href="?m=content&c=index&a=lists&catid=29" title="">项目运营</a>
         <ul class="clearfix">
-            {pc:content action="lists" catid="29" order="id DESC" num=4}
+            {pc:content  action="position" posid="23" order="listorder DESC" num="4"}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>{str_cut($r[title],58)}</h2></a>
+                    <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
                     <div class="xxl_line"></div>
                     <p>{str_cut($r[description],96)}</p>
                 </div>
@@ -53,12 +53,12 @@
     <div class="picture">
         <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=30" title="">正在发行</a>
         <ul class="clearfix">
-            {pc:content action="lists" catid="30" order="id DESC" num=4}
+            {pc:content  action="position" posid="22" order="listorder DESC" num="4"}
             {loop $data $r}
             <li>
-                <a class="toptpic" href="{$r[url]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a>
+                <a class="toptpic" href="{$r[url]}" style="width:225px;height:313px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:225px;height:313px;"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>{str_cut($r[title],58)}</h2></a>
+                    <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
                     <div class="xxl_line"></div>
                     <p>{str_cut($r[description],96)}</p>
                 </div>
@@ -70,7 +70,7 @@
     <div class="business">
         <a class="title1" href="#" title="">商务合作</a>
         <ul class="clearfix">
-            {pc:content action="lists" catid="22" order="id DESC" num=5}
+            {pc:content action="lists" catid="22" order="listorder ASC" num=5}
             {loop $data $r}
             <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" alt="{$r[title]}"></a></li>
             {/loop}
@@ -80,12 +80,12 @@
     <div class="picture">
         <a class="title1" href="http://www.tvmcloud.com/home/mall/index/s/TWqbL" title="">网上选片</a>
         <ul class="clearfix">
-            {pc:content action="lists" catid="31" order="id DESC" num=4}
+            {pc:content action="lists" catid="70" order="id DESC" num=4}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" style="height:320px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:320px;"></a>
                 <div class="bottomtext">
-                    <a href=""><h2>{str_cut($r[title],58)}</h2></a>
+                    <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
                     <div class="xxl_line"></div>
                     <p>{str_cut($r[description],96)}</p>
                 </div>

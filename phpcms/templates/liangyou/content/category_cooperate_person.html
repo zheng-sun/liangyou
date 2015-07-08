@@ -53,13 +53,14 @@
                         {/pc}
                     </div>
                     <ul class="people">
-                        {pc:content  action="lists" catid="46" order="listorder ASC"}
+                        {pc:content  action="lists" catid="46" order="listorder ASC" num="20" page="$page"}
                         {loop $data $r}
                         <li><a href="{$r[url]}" title="{$r[title]}"><div><img src="{$r[thumb]}" alt=""></div><span>{$r[title]}</span></a></li>
                         {/loop}
                         {/pc}
                     </ul>
                 </div>
+                <div class="paging">{$pages}</div>
             </div>
         </div>
 
