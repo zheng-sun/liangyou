@@ -39,11 +39,11 @@
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" style="width:225px;height:313px;"><img src="{$r[thumb]}" style="width:225px;height:313px;" alt="{$r[title]}"></a>
-                <div class="bottomtext">
+                <!-- <div class="bottomtext">
                     <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
                     <div class="xxl_line"></div>
                     <p>{str_cut($r[description],96)}</p>
-                </div>
+                </div> -->
             </li>
             {/loop}
             {/pc}
@@ -53,15 +53,10 @@
     <div class="picture">
         <a class="title1" href="/index.php?m=content&c=index&a=lists&catid=30" title="">正在发行</a>
         <ul class="clearfix">
-            {pc:content  action="position" posid="22" order="listorder DESC" num="4"}
+            {pc:content  action="position" posid="22" order="listorder ASC" num="4"}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" style="width:225px;height:313px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:225px;height:313px;"></a>
-                <div class="bottomtext">
-                    <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
-                    <div class="xxl_line"></div>
-                    <p>{str_cut($r[description],96)}</p>
-                </div>
             </li>
             {/loop}
             {/pc}
@@ -80,15 +75,10 @@
     <div class="picture">
         <a class="title1" href="http://www.tvmcloud.com/home/mall/index/s/TWqbL" title="">网上选片</a>
         <ul class="clearfix">
-            {pc:content action="lists" catid="70" order="id DESC" num=4}
+            {pc:content action="lists" catid="70" order="listorder ASC" num=4}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" style="height:320px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:320px;"></a>
-                <div class="bottomtext">
-                    <a href="{$r[url]}"><h2>{str_cut($r[title],58)}</h2></a>
-                    <div class="xxl_line"></div>
-                    <p>{str_cut($r[description],96)}</p>
-                </div>
             </li>
             {/loop}
             {/pc}

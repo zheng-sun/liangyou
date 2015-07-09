@@ -35,7 +35,7 @@
   <div class="block4 container-900 mg-auto overflow clearfix xxl_clear">
       <div class="left">
         <ul class="clearfix">
-            {pc:content  action="lists" catid="$catid" order="id DESC" num="9"  page="$page"}
+            {pc:content  action="lists" catid="$catid" order="listorder ASC" num="9"  page="$page"}
             {loop $data $r}
             <li class="dl_li">
                 <a href="{$r[url]}"><img src="{$r[thumb]}" alt="{$r[title]}" style="width: 200px;height: 270px;"/></a>
@@ -81,7 +81,7 @@
           <div class="links links3">
               <h2 class="linls-title">最新活动</h2>
               <ul class="clearfix">
-                  {pc:content action="lists" catid="16" num="5" order="id DESC"}
+                  {pc:content action="lists" catid="16" num="5" order="listorder ASC"}
                   <?php $i=0;?>
                   {loop $data $r}
                   <?php if($i == 0){ ?>

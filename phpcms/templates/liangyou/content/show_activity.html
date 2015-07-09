@@ -62,7 +62,7 @@
         <div class="links xxl_links3">
             <h2 class="linls-title">最新活动</h2>
             <ul class="clearfix">
-                {pc:content action="lists" catid="32" num="5" order="id DESC"}
+                {pc:content action="lists" catid="32" num="5" order="listorder ASC"}
                 <?php $i=1;?>
                 {loop $data $r}
                 <?php if($i == 1) { ?>
@@ -81,7 +81,7 @@
         <div class="links links3">
             <h2 class="linls-title">精彩回顾</h2>
             <ul class="clearfix">
-                {pc:content action="lists" catid="25" num="2" order="id DESC"}
+                {pc:content action="lists" catid="25" num="2" order="listorder ASC"}
                 {loop $data $r}
                 <li style="height:185px;margin-top5px;">
                     <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" /></a>

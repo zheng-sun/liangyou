@@ -1,0 +1,34 @@
+{template "content","header"}
+<!-- 面包屑 -->
+<div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:20px;">
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
+</div>
+<!-- 主要内容 -->
+<div class="page8 container-900 mg-auto clearfix" style="margin-top:20px;">
+   <div class="title">
+       <a href="/index.php?m=content&c=index&a=lists&catid=44" title="良友纪录片栏目《记录时间》">良友纪录片栏目《记录时间》</a>
+       <a class="current" href="/index.php?m=content&c=index&a=lists&catid=72" title="良友推送">良友推送</a>
+   </div>
+    <div class="maincontent">
+      <ul class="con_ul">
+        {pc:content  action="lists" catid="$catid" order="listorder ASC" num="15"  page="$page"}
+        {loop $data $r}
+        <li>
+          <div class="con_img">
+            <img src="{$r[thumb]}" />
+          </div>
+          <div class="con_center">
+            <div class="con_title"><a href="{$r[url]}" >{$r[title]}</a></div>
+            <div class="xxl_line"></div>
+            <div class="con_time">{date('Y年m月d日',$r[inputtime])}</div>
+            <div class="con_message">{str_cut($r[description],356,'...')}</div>
+          </div>
+        </li>
+        {/loop}
+        {/pc}
+      </ul>
+    <div class="paging">{$pages}</div>
+    </div>
+</div>
+
+{template "content","footer"}

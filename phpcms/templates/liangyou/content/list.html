@@ -5,7 +5,7 @@
 <div class="zxzx">
 	<div class="xxl_top_5">
 		<p class="xxl_top5_title">TOP 5</p>
-        {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="0" num="5" cache="3600" return="data"}
+        {pc:get sql="select * from v9_news where catid = $catid order by listorder ASC" start="0" num="5" cache="3600" return="data"}
 		<ul class="xxl_clear" style="float:left;">
         {loop $data $r}
 			<li>
@@ -25,7 +25,7 @@
 <div class="content">
     <div class="xxl_clear"></div>
 	<div class="zx-con">
-    {pc:get sql="select * from v9_news where catid = $catid order by id desc" start="5" num="5" cache="3600" page="$page" return="data"}
+    {pc:get sql="select * from v9_news where catid = $catid order by listorder ASC" start="5" num="5" cache="3600" page="$page" return="data"}
 		<ul>
         {loop $data $r}
 			<li>

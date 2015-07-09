@@ -4,7 +4,7 @@
     <div class="slideinner overflow">
     <ul class="clearfix overflow">
         <li>
-            {pc:get sql="select * from v9_activity where catid = 32 order by id desc" start="0" num="4" cache="3600" return="data"}
+            {pc:get sql="select * from v9_activity where catid = 32 order by listorder ASC" start="0" num="4" cache="3600" return="data"}
             {loop $data $r}
             <div class="list-inner fl tianstion">
                 <div class="time">{$r[activity_time]}</div>
@@ -23,7 +23,7 @@
             {/pc}
         </li>
         <li>
-            {pc:get sql="select * from v9_activity where catid = 32 order by id desc" start="4" num="4" cache="3600" return="data"}
+            {pc:get sql="select * from v9_activity where catid = 32 order by listorder ASC" start="4" num="4" cache="3600" return="data"}
             {loop $data $r}
             <div class="list-inner fl tianstion">
                 <div class="time">{$r[activity_time]}</div>
@@ -56,7 +56,7 @@
        {/pc}
        </p>
        <ul class="clearfix">
-            {pc:content  action="lists" catid="25" order="id DESC" num="4"}
+            {pc:content  action="lists" catid="25" order="listorder ASC" num="4"}
             {loop $data $r}
             <li>
                <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="" style="width:200px;height:278px;"></a>
@@ -80,7 +80,7 @@
         {/pc}
         </p>
         <ul class="clearfix">
-            {pc:content  action="lists" catid="26" order="id DESC" num="4"}
+            {pc:content  action="lists" catid="26" order="listorder ASC" num="4"}
             {loop $data $r}
             <li>
                <a class="leftpic" href="{$r[url]}" class="title"><img src="{$r[thumb]}" alt="{$r[title]}" style="width:200px;height:278px;"></a>
@@ -105,7 +105,7 @@
         {/pc}
         </p>
         <ul class="clearfix">
-            {pc:content  action="lists" catid="27" order="id DESC" num="4"}
+            {pc:content  action="lists" catid="27" order="listorder ASC" num="4"}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" class="title" style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>
@@ -129,7 +129,7 @@
         {/pc}
             </p>
         <ul class="clearfix">
-            {pc:content  action="lists" catid="28" order="id DESC" num="4"}
+            {pc:content  action="lists" catid="28" order="listorder ASC" num="4"}
             {loop $data $r}
             <li>
                 <a class="toptpic" href="{$r[url]}" class="title"  style="height:312px;"><img src="{$r[thumb]}" alt="{$r[title]}" style="height:312px;"></a>

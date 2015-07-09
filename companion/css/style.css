@@ -263,7 +263,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     width: 125px;
     height: 23px;
     line-height: 23px;
-    margin-top: 2px;
+    margin-top: 2px; 
     position: absolute;
     left: 14px;
     color: #fff;
@@ -1797,6 +1797,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     background: #9e9e9e;
     height: 31px;
     font: 400 14px/31px "";
+    font-family: "microsoft yahei";
     color: #ffffff;
     border-radius: 5px 5px 0 0;
 }
@@ -1807,8 +1808,8 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 
 .page8 .maincontent {
     width: 738px;
-    height: 1000px;
-    box-shadow: 0 0 35px #eeeeee;
+    /*height: 1000px;*/
+    box-shadow: 0 0 35px #666666;
     margin: 0 auto;
     padding: 0 80px;
     overflow: hidden;
@@ -1821,13 +1822,16 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     width: 100%;
     text-align: center;
     font: 400 16px/50px "";
+    font-family: "microsoft yahei";
 }
 
 .page8 .maincontent h3 {
     height: 30px;
     width: 100%;
     text-align: center;
+    margin-top: 40px;
     font: 400 28px/30px "";
+    font-family: "microsoft yahei";
 }
 
 .page8 .maincontent .middle {
@@ -1854,7 +1858,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 }
 
 .page8 .maincontent .middle ul li.current {
-    color: #000000;
+    color: #9F343A;
 }
 
 .page8 #con {
@@ -1878,6 +1882,7 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     display: block;
     height: 20px;
     line-height: 20px;
+    overflow: hidden;
 }
 
 .page8 #con li .dot {
@@ -1890,4 +1895,33 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     color: #ffffff;
     margin: 20px auto;
 
+}
+
+/*良友推荐*/
+.maincontent ul.con_ul{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    float: left;
+}
+.maincontent ul li{
+    width:100%;
+    margin-top: 15px;
+    float: left;
+}
+
+.maincontent ul li .con_img{
+    width: 142px;
+    height: 142px;
+    float: left;
+}
+.maincontent ul li .con_img img{
+    width: 142px;
+    height: 142px;
+}
+.maincontent ul li .con_center{
+    width: 550px;
+    font-size: 12px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
 }
