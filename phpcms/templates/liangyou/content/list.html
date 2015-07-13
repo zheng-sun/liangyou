@@ -5,7 +5,7 @@
 <div class="zxzx">
 	<div class="xxl_top_5">
 		<p class="xxl_top5_title">TOP 5</p>
-        {pc:get sql="select * from v9_news where catid = $catid order by listorder ASC" start="0" num="5" cache="3600" return="data"}
+        {pc:get sql="select * from v9_news where catid = $catid order by id DESC" start="0" num="5" cache="3600" return="data"}
 		<ul class="xxl_clear" style="float:left;">
         {loop $data $r}
 			<li>
@@ -14,7 +14,7 @@
 				</div>
 				<div class="top5_title"><a href="{$r[url]}" >{str_cut($r[title],44,'...')}</a></div>
 				<div class="xxl_line"></div>
-				<div class="zx_message top5_message"><a href="#" >{str_cut($r[description],84,'...')}</a></div>
+				<div class="zx_message top5_message"><a href="{$r[url]}" >{str_cut($r[description],84,'...')}</a></div>
 			</li>
         {/loop}
 		</ul>
@@ -25,7 +25,7 @@
 <div class="content">
     <div class="xxl_clear"></div>
 	<div class="zx-con">
-    {pc:get sql="select * from v9_news where catid = $catid order by listorder ASC" start="5" num="5" cache="3600" page="$page" return="data"}
+    {pc:get sql="select * from v9_news where catid = $catid order by listorder DESC" start="5" num="5" cache="3600" page="$page" return="data"}
 		<ul>
         {loop $data $r}
 			<li>

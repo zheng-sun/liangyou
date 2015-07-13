@@ -43,7 +43,7 @@ var _hmt = _hmt || [];
   {pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
       <ul class="ul">
           {loop $data $r}
-          <li><a href="{$r[url]}" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '38'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
+          <li><a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '38'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
           {/loop}
       </ul>
       {/pc}
@@ -101,14 +101,14 @@ var _hmt = _hmt || [];
             {pc:get sql="select * from v9_category where parentid=$r[catid] order by listorder ASC" return="data1"}
                 <?php if(count($data1) > 0){?>
                     <div class="ali<?php echo $i-5;?> xxl_nav_js" style="display:none;">
-                        <?php $j = 1;?>
+                        <?php $j = 1; ?>
                         {loop $data1 $r1}
                           <?php
                             if(in_array($r1[catid],array(18,19,22,29,30,70))){
                               continue;
                             }
                           ?>
-                            <a href="{$r1[url]}" class="a a{$j}">{$r1[catname]}</a>
+                            <a href="{$r1[url]}" target="_blank" class="a a{$j}">{$r1[catname]}</a>
                         <?php $j++;?>
                         {/loop}
                     </div>

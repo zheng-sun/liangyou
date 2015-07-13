@@ -1,0 +1,84 @@
+{template "content","header"}
+<!-- 面包屑 -->
+<div class="block3 container-900 mg-auto overflow clearfix" style="margin-top:20px;">
+    <a href="{siteurl($siteid)}">首页</a><span> &gt; </span>{catpos($catid)} 列表</div>
+</div>
+  <!-- 主要内容 -->
+  <div class="plan_content plan_c">
+    <div class="plan_top">
+      <ul>
+        {pc:content action="category" catid="43" siteid="$siteid" order="listorder ASC"}
+        {loop $data $r}
+        <li <?php if($catid == $r['catid']){?> class="ptop_select"<?php }?>><a href="{$r[url]}">{$r[catname]}</a></li>
+        {/loop}
+        {/pc}
+      </ul>
+    </div>
+    <div class="plan_center">
+      <div class="plan_left">
+        <ul>
+          <li class="xxl_mes">
+            <span>简介</span>
+            <span>About us</span>
+            <p class="xxl_line afr"></p>
+          </li>
+          <li class="xxl_consg">
+            <span>导师</span>
+            <span>Consultant</span>
+            <p class="xxl_line afr"></p>
+          </li>
+          <li class="xxl_team">
+            <span>团队</span>
+            <span>Our Team</span>
+            <p class="xxl_line afr"></p>
+          </li>
+          <li class="xxl_schedule">
+            <span>日程</span>
+            <span>Schedule</span>
+            <p class="xxl_line afr"></p>
+          </li>
+          <li class="xxl_successs">
+            <span>优秀案例</span>
+            <span>Success Stories</span>
+            <p class="xxl_line afr"></p>
+          </li>
+          <li class="xxl_join">
+            <span>加入Youthdoc</span>
+            <span>Join Youthdoc</span>
+          </li>
+        </ul>
+      </div>
+      <div class="plan_right xxl_plan_message">
+      {pc:get sql="select content from v9_news_data where id=345" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+      <div class="plan_right xxl_plan_con" style="display:none;">
+          {pc:get sql="select content from v9_news_data where id=347" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+      <div class="plan_right xxl_plan_team" style="display:none;">
+          {pc:get sql="select content from v9_news_data where id=351" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+      <div class="plan_right xxl_plan_schedule" style="display:none;">
+          {pc:get sql="select content from v9_news_data where id=352" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+      <div class="plan_right xxl_plan_success" style="display:none;">
+          {pc:get sql="select content from v9_news_data where id=356" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+      <div class="plan_right xxl_plan_join" style="display:none;">
+          {pc:get sql="select content from v9_news_data where id=371" return="data"}
+          {$data[0]['content']}
+      {/pc}
+      </div>
+    </div>
+  </div>
+<div class="xxl_clear"></div>
+{template "content","footer"}

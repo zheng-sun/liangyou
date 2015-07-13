@@ -23,7 +23,7 @@
                 <h3 class="coontitle">最新合作需求信息</h3>
                 <h3 class="coontime">发布时间</h3>
                 <ul>
-                    {pc:content  action="lists" catid="45" order="listorder ASC" num="8"}
+                    {pc:content  action="lists" catid="45" order="listorder DESC" num="8"}
                     {loop $data $r}
                     <li>
                         <span><?php if($r['typeid'] == 63){ echo '广告';}else if($r['typeid'] == 64){ echo '摄制';}else if($r['typeid'] == 70){echo '招聘';}else if($r['typeid'] == 71){ echo '项目';}?>&nbsp;&nbsp;</span><span>|</span>

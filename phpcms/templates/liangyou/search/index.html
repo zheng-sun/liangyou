@@ -33,7 +33,25 @@
     </div>
     <div class="right">
        <div class="alllinks" style="margin-top:20px;">
-           <span class="xxxl_zixun">资讯</span>
+           <?php
+                if($typeid == 1){
+            ?>
+            <span class="xxxl_zixun">资讯</span>
+            <?php
+                }elseif($typeid == 72){
+            ?>
+            <span class="xxxl_zixun">电影</span>
+            <?php
+                }elseif($typeid == 52){
+            ?>
+            <span class="xxxl_zixun">专题</span>
+           <?php
+                }else{
+            ?>
+            <span class="xxxl_zixun">资讯</span>
+            <?php
+                }
+            ?>
            {php $j=0}
            {php $search_model = getcache('search_model_'.$siteid, 'search');}
            {loop $search_model $k=>$v}

@@ -60,7 +60,25 @@
         </div>
 
         <div id="dropdown">
+            <?php
+                if($typeid == 1){
+            ?>
+            <input class="input_select" type="text" value="资讯"/>
+            <?php
+                }elseif($typeid == 72){
+            ?>
+            <input class="input_select" type="text" value="电影"/>
+            <?php
+                }elseif($typeid == 52){
+            ?>
+            <input class="input_select" type="text" value="专题"/>
+           <?php
+                }else{
+            ?>
             <input class="input_select" type="text" value="类型"/>
+            <?php
+                }
+            ?>
             <ul>
                 {php $j=0}
                 {php $search_model = getcache('search_model_'.$siteid, 'search');}
