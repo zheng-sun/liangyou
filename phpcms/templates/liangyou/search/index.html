@@ -19,7 +19,7 @@
             <li class="article">
                 <a class="pic" href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"/></a>
                 <div class="text">
-                    <a href=""><h2>{$r[title]}</h2></a>
+                    <a href="{$r[url]}"><h2>{$r[title]}</h2></a>
                     <span>{date('Y年m月d日',$r[inputtime])}</span>
                     <p>{str_cut($r[description],356,'...')}</p>
                 </div>

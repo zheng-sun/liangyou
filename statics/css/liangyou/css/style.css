@@ -1241,13 +1241,25 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
 .page5 .article-detail  .content-right p {
     margin: 3px 0;
 }
-
+.page5 .article-detail  .content-right .bbutton{
+    display: block;
+    width: 94px;
+    height:27px;
+    float: left;
+    margin-left: 15px;
+    margin-top:15px;
+    background-repeat: no-repeat;
+    background: url(../../../images/liangyou/images/bbutton.jpg);
+}
 .page5 .article-detail  .content-right .abutton {
     display: block;
-    width: 145px;
-    height: 43px;
-    background: url(../../../images/liangyou/images/abutton.png);
+    width: 94px;
+    height: 27px;
+    float: left;
+    margin-left: 15px;
     margin-top:15px;
+    background-repeat: no-repeat;
+    background: url(../../../images/liangyou/images/abutton.jpg);
 }
 
 .page5 .article h2 {

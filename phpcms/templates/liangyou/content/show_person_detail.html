@@ -61,11 +61,11 @@
       </div>
       <div class="right">
           <div class="links links1">
-              <h2 class="linls-title">相关阅读</h2>
+              <h2 class="linls-title">相关推荐</h2>
               <ul class="clearfix">
                   {pc:content action="lists" catid="19" num="2" order="id DESC"}
                   {loop $data $r}
-                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}"><span>{$r[title]}</span></a></li>
+                  <li><a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" style="widht:150px;height:83px;" /><span>{$r[title]}</span></a></li>
                   {/loop}
                   {/pc}
               </ul>
