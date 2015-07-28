@@ -51,12 +51,22 @@
                 <?php  }?>
                 </p>
                 <p>国家/地区: {$area}</p>
-                <p>出品: {$produced}</p>
+                <p>时长: {$duration}</p>
                 <p>摘要:</p>
                 <p>{$description}</p>
                 <p>标签：<a href="" title="">{$title}</a></p>
+                <?php
+                    if($link_url){
+                ?>
                 <a class="abutton" href="{$link_url}" title="{$title}" target="_blank"></a>
+                <?php
+                    }
+                    if($link_all_url){
+                ?>
                 <a class="bbutton" href="{$link_all_url}" title="{$title}" target="_blank"></a>
+                <?php
+                    }
+                ?>
             </div>
         </div>
         <div class="article">
