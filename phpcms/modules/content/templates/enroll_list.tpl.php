@@ -8,6 +8,7 @@ include $this->admin_tpl('header','admin');?>
         <thead>
 	<tr>
 	<th width="5%">ID</th>
+		<th width="20%"><?php echo '活动名称';?></th>
 	<th width="20%"><?php echo '手机';?></th>
 	<th width="*"><?php echo '邮箱';?></th>
     <th width="*"><?php echo '姓名';?></th>
@@ -23,6 +24,7 @@ foreach($datas as $r) {
 ?>
 <tr>
 <td align="center"><?php echo $r['id']?></td>
+<td align="center"><?php echo $r['activity_name']?></td>
 <td align="center"><?php echo $r['phone']?></td>
 <td align="center"><?php echo $r['email']?></td>
 <td align="center"><?php echo $r['name']?></td>

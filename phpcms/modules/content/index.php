@@ -360,6 +360,7 @@ class index {
     //添加报名信息
     public function add_enroll(){
         $enroll_model = pc_base::load_model('enroll_model');
+		$info['activity_id'] = $_POST['activity_id'];
         $info['phone'] = $_POST['phone'];
         $info['email'] = $_POST['email'];
         $info['name'] = $_POST['name'];

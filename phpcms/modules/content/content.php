@@ -1201,6 +1201,11 @@ class content extends admin {
         $where = '';
         $datas = $enroll_model->listinfo($where,'',$page,15);
         $pages = $enroll_model->pages;
+		$this->db->set_model(13);
+		foreach($datas as $key=>$data){
+			$array = $this->db->select('id = '.$data['activity_id'],'title');
+			$datas[$key]['activity_name'] = $array[0]['title'];
+		}
         include $this->admin_tpl('enroll_list');
 	}
 
