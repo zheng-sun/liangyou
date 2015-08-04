@@ -62,7 +62,7 @@
         <div class="links xxl_links3">
             <h2 class="linls-title">最新活动</h2>
             <ul class="clearfix">
-                {pc:content action="lists" catid="32" num="5" order="listorder ASC"}
+                {pc:content action="lists" catid="32" num="5" order="id DESC"}
                 <?php $i=1;?>
                 {loop $data $r}
                 <?php if($i == 1) { ?>
@@ -81,7 +81,7 @@
         <div class="links links3">
             <h2 class="linls-title">精彩回顾</h2>
             <ul class="clearfix">
-                {pc:content action="lists" catid="25" num="2" order="listorder ASC"}
+                {pc:content action="lists" catid="25" num="2" order="id DESC"}
                 {loop $data $r}
                 <li style="height:185px;margin-top5px;">
                     <a href="{$r[url]}" title="{$r[title]}"><img src="{$r[thumb]}" /></a>
@@ -125,18 +125,20 @@
         <input type="text" class="info-input" id="unit" name="unit" placeholder="请填写您的单位，限20字以内"/></dd>
     </dl>
     <div class="operation_button">
+        <input type="hidden" name="activity_id" id="activity_id" value="{$id}" />
       <a href="javascript:void(0);" class="btn-primary xxl_action_okbtn" onclick="do_sumbit();">确定</a>
       <a href="javascript:void(0);" class="btn-primary btn-block xxl_action_nobtn">返回</a>
     </div>
   </div>
   <script type="text/javascript">
   function do_sumbit(){
+    var activity_id = $("#activity_id").val();
     var phone = $("#phone").val();
     var email = $("#email").val();
     var name = $("#name").val();
     var sex = $("#sex").val();
     var unit = $("#unit").val();
-    $.post('index.php?m=content&a=add_enroll&c=index',{phone:phone,email:email,name:name,sex:sex,unit:unit},function(data){
+    $.post('index.php?m=content&a=add_enroll&c=index',{activity_id:activity_id,phone:phone,email:email,name:name,sex:sex,unit:unit},function(data){
       if(data == 1){
           alert('添加成功!');
       }
