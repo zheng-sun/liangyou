@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>良友书院</title>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}liangyou/css/style.css" />
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}liangyou/js/index.js"></script>
+
+</head>
+<body>
+  <div class="bg shu_yuan1">
+      <div class="middle bg"></div>
+  </div>
+  <div class="bg shu_yuan2">
+      <div class="container-900 area1 mg-auto"></div>
+      <div class="container-900 area2 mg-auto">
+         <div class="left">
+             <h2>最新功能</h2>
+             <div class="box3">
+                 <div class="box3_con">
+                     <ul>
+                        {pc:content  action="position" posid="25" order="listorder DESC" num="3"}
+                        {loop $data $r}
+                         <li>
+                             <div class="pic">
+                                 <a href="{$r[url]}" title="" target="_blank">
+                                     <img src="{$r[thumb]}" alt="" title="">
+                                 </a>
+                             </div>
+                             <div class="txt">
+                                 <div class="txt_title"><a href="{$r[url]}" title="" target="_blank">{$r[title]}</a></div>
+                                 <div class="summary">{$r[description]}</div>
+                             </div>
+                         </li>
+                         {/loop}
+                         {/pc}
+                     </ul>
+                 </div>
+             </div>
+         </div>
+         <div class="right">
+             <h2>课程预告</h2>
+             <div id="new_slider_shu">
+                 <ul>
+                    {pc:content  action="position" posid="24" order="listorder DESC" num="4"}
+                    {loop $data $r}
+                     <li><a href="{$r[url]}"><img src="{$r[thumb]}" title="{$r[title]}" /></a></li>
+                     {/loop}
+                     {/pc}
+                 </ul>
+             </div>
+         </div>
+     </div>
+      <div class="container-900 area3 mg-auto">
+          <h2>国学师资</h2>
+          <div class="person">
+              <h3 class="h3_1">尊师</h3>
+              <ul>
+                {pc:content  action="position" posid="28" order="listorder DESC" num="8"}
+                {loop $data $r}
+                  <li>
+                      <a href="{$r[url]}" title="{$r[title]}">
+                          <div class="pic">
+                              <img src="{$r[thumb]}">
+                          </div>
+                          <p>{$r[title]}</p>
+                      </a>
+                  </li>
+                {/loop}
+                {/pc}
+              </ul>
+          </div>
+          <div class="person">
+              <h3 class="h3_2">尊师</h3>
+              <ul>
+                {pc:content  action="position" posid="26" order="listorder DESC" num="8"}
+                {loop $data $r}
+                  <li>
+                      <a href="{$r[url]}" title="{$r[title]}">
+                          <div class="pic">
+                              <img src="{$r[thumb]}">
+                          </div>
+                          <p>{$r[title]}</p>
+                      </a>
+                  </li>
+                {/loop}
+                {/pc}
+              </ul>
+          </div>
+          <div class="person">
+              <h3 class="h3_3">尊师</h3>
+              <ul>
+                {pc:content  action="position" posid="27" order="listorder DESC" num="8"}
+                {loop $data $r}
+                  <li>
+                      <a href="{$r[url]}" title="{$r[title]}">
+                          <div class="pic">
+                              <img src="{$r[thumb]}">
+                          </div>
+                          <p>{$r[title]}</p>
+                      </a>
+                  </li>
+                {/loop}
+                {/pc}
+              </ul>
+          </div>
+      </div>
+      <div class="container-900 area4 mg-auto">
+          <h2>书院小札</h2>
+          <ul>
+                {pc:content  action="position" posid="30" order="listorder DESC" num="8"}
+                {loop $data $r}
+                  <li>
+                      <a href="{$r[url]}" title="">
+                          <div class="pic">
+                              <img src="{$r[thumb]}" alt="{$r[title]}">
+                          </div>
+                          <p>{$r[title]}</p>
+                      </a>
+                  </li>
+              {/loop}
+              {/pc}
+          </ul>
+      </div>
+      <div class="container-900 area5 mg-auto">
+          <h2>国学基地</h2>
+          <ul>
+                {pc:content  action="position" posid="29" order="listorder DESC" num="4"}
+                {loop $data $r}
+                  <li>
+                      <a href="{$r[url]}" title="">
+                          <img src="{$r[thumb]}" alt="{$r[title]}">
+                      </a>
+                  </li>
+                 {/loop}
+                 {/pc}
+          </ul>
+      </div>
+  </div>
+
+  <script>
+      new_slider('#new_slider_shu',3000,150,10);
+  </script>
+ {template "content","footer"}

@@ -43,7 +43,7 @@ var _hmt = _hmt || [];
   {pc:content action="category" catid="0" num="5" siteid="$siteid" order="listorder ASC"}
       <ul class="ul">
           {loop $data $r}
-          <li><a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '38'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
+          <li><a href="{$r[url]}" target="_blank" title="{$r[catname]}">{$r[catname]}<span><?php if($r['catid'] == '35'){echo 'Oriental Companion';}elseif($r['catid'] == '34'){echo 'Shanghai';}elseif($r['catid'] == '36'){echo 'Beijing';}elseif($r['catid'] == '37'){echo 'Hong Kong';}elseif($r['catid'] == '74'){echo 'Shuyuan';}else{echo $r['description'];}?></span></a></li>
           {/loop}
       </ul>
       {/pc}

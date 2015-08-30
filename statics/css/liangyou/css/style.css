@@ -1947,3 +1947,244 @@ img{ max-width:100%;border: 0 none; vertical-align: top;}
     margin-left: 30px;
     margin-top: 20px;
 }
+
+/*shu_yuan*/
+.bg {
+    overflow: hidden;
+    clear: both;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+.shu_yuan1 {
+    background-image: url(../../../images/liangyou/images/header.jpg);
+    height: 165px;
+    width: 100%;
+    background-size: cover;
+}
+
+.shu_yuan1 .middle {
+    background-image: url(../../../images/liangyou/images/headermiddle.png);
+    height: 165px;
+}
+
+.shu_yuan2 {
+    background: url(../../../images/liangyou/images/bg.jpg);
+    background-color: #d6c3a3;
+    height: 2120px;
+    background-size: cover;
+}
+
+.shu_yuan2 .area1 {
+    height: 340px;
+    background: url(../../../images/liangyou/images/title.png) no-repeat center;
+}
+
+.shu_yuan2 .left {
+    width: 600px;
+    float: left;
+    margin-right: 50px;
+    height: 530px;
+    overflow: hidden;
+}
+
+.shu_yuan2 .right {
+    width: 250px;
+    float: left;
+    height: 530px;
+}
+
+.shu_yuan2 h2 {
+    text-indent: -1000em;
+    height: 50px;
+    width: 200px;
+}
+
+.shu_yuan2 .left h2 {
+    background: url(../../../images/liangyou/images/title1.png) no-repeat left center;
+}
+
+.shu_yuan2 .right h2 {
+    background: url(../../../images/liangyou/images/title2.png) no-repeat left center;
+}
+
+.shu_yuan2 .area2 {
+    height: 520px;
+    margin-bottom: 20px;
+}
+
+.shu_yuan2 .box3{border: 0px solid #c9c9c9;zoom:1;background: rgba(255, 255, 255, 0.5);}
+.shu_yuan2 .box3_con ul li .txt_title a{color:#474747;}
+.shu_yuan2 .box3_con ul li .pic img{width:160px;height:120px;border: 5px solid rgba(219, 219, 219, 0);}
+.box3_con ul{overflow:hidden;width:668px;margin:-2px 0 0;}
+.box3_con ul li{width:575px;border-top:1px solid #cdcccc;padding:12px 10px 12px 15px;overflow:hidden;height: 135px;}
+.box3_con ul li .pic{float:left;width:180px;}
+.box3_con ul li .pic img{width:180px;height:162px;border:5px solid #dbdbdb;}
+.box3_con ul li .txt{float:right;width:380px;}
+.box3_con ul li .txt_title{font-size:14px;font-weight:700;padding:0 0 10px;}
+.box3_con ul li .txt_title a{color:#0005cb;}
+.box3_con ul li .txt .summary{line-height:24px;}
+
+.shu_yuan2 .area3 h2 {
+    background: url(../../../images/liangyou/images/title3.png) no-repeat left center;
+}
+
+.shu_yuan2 .area3 .person h3 {
+    text-indent: -1000em;
+    height: 30px;
+    width: 200px;
+}
+
+.shu_yuan2 .area3 .person h3 {
+    text-indent: -1000em;
+    height: 30px;
+    width: 200px;
+}
+
+.shu_yuan2 .area3 .person .h3_1 {
+    background: url(../../../images/liangyou/images/title4.png) no-repeat left center;
+}
+
+.shu_yuan2 .area3 .person .h3_2 {
+    background: url(../../../images/liangyou/images/title5.png) no-repeat left center;
+}
+
+.shu_yuan2 .area3 .person .h3_3 {
+    background: url(../../../images/liangyou/images/title6.png) no-repeat left center;
+}
+.shu_yuan2 .area3 {
+    overflow: hidden;
+}
+
+.shu_yuan2 .area3 .person {
+    overflow: hidden;
+    width: 120%;
+}
+
+.shu_yuan2 .area3 .person ul {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.shu_yuan2 .area3 .person ul li {
+    width: 100px;
+    height: 130px;
+    margin: 0 6px;
+    float: left;
+}
+
+.shu_yuan2 .area3 .person ul li a {
+    display: block;
+    width: 100px;
+    height: 130px;
+}
+
+.shu_yuan2 .area3 .person ul li .pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -moz-border-radius: 100px;
+    overflow: hidden;
+}
+
+.shu_yuan2 .area3 .person ul li p {
+    text-align: center;
+    height: 30px;
+    font: 16px/30px "";
+}
+
+.shu_yuan2 .area4 {
+    width: 900px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.shu_yuan2 .area4 h2 {
+    background: url(../../../images/liangyou/images/title7.png) no-repeat left center;
+}
+
+.shu_yuan2 .area4 ul {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px 15px 0 15px;
+    overflow: hidden;
+    width: 120%;
+}
+
+.shu_yuan2 .area4 ul li {
+    width: 198px;
+    height: 170px;
+    float: left;
+    margin-right: 25px;
+    color: #3e1b04;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.shu_yuan2 .area4 ul li a {
+    display: block;
+    width: 198px;
+    height: 170px;
+}
+
+.shu_yuan2 .area4 ul li img {
+    display: block;
+    width: 198px;
+    height: 120px;
+}
+.shu_yuan2 .area4 ul li a {
+    color: #3e1b04;
+}
+
+.shu_yuan2 .area5 h2 {
+    background: url(../../../images/liangyou/images/title8.png) no-repeat left center;
+}
+.shu_yuan2 .area5 ul {
+    width: 120%;
+}
+.shu_yuan2 .area5 {
+    overflow: hidden;
+}
+
+.shu_yuan2 .area5 ul li {
+    width: 200px;
+    height: 140px;
+    float: left;
+    margin-right: 36px;
+}
+
+.shu_yuan2 .area5 ul li a, .shu_yuan2 .area5 ul li a img {
+    display: block;
+    width: 190px;
+    height: 150px;
+}
+
+#new_slider_shu{width:250px; height:480px; overflow:hidden; position:relative;}
+#new_slider_shu ul{height:150px;}
+#new_slider_shu ul li{width:250px; height:480px; float:left; text-align:center;}
+#new_slider_shu ul li img{width:250px; height:480px; display:block; border:none;}
+#new_slider_shu #slider_counter{bottom:0; left:0; position:absolute; height:13px;width: 332px;background: url(../../../images/liangyou/images/player_num_bg.png);}
+#new_slider_shu #slider_counter li{cursor:pointer;float: left;
+    cursor: pointer;
+    height: 13px;
+    width: 24px;
+    line-height: 14px;
+    text-align: center;
+    display: inline;
+    color: #fff;
+    border-left: 1px solid #fff;
+    border-radius: 0;
+    margin-right: 0;
+    font-size: 12px;
+    background: none;
+    position: relative;
+    left: 150px;
+}
+#new_slider_shu #slider_counter .current{background:#ff0000; color:#ffffff; font-weight:bold;}
+#new_slider_shu #slider_title{width:250px; height:40px; bottom:0; left:0; position:absolute; background:#000000; color:#ffffff; opacity:0.5; -moz-opacity:0.5; filter:alpha(opacity=50);display: none;}
+
+.shu_yuan2 .area4 ul li a:hover, .shu_yuan2 .box3_con ul li .txt_title a:hover {
+   color: #9f343a
+}
