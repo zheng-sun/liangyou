@@ -8,6 +8,10 @@
  */
 define('PHPCMS_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 include PHPCMS_PATH.'phpcms/base.php';
+
+
+
+
 $param = pc_base::load_sys_class('param');
 $_userid = param::get_cookie('_userid');
 if($_userid) {
